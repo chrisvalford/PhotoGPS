@@ -20,6 +20,7 @@
 		2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */; };
 		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
 		2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */; };
+		2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FE9F015265FAEA200F7DBC1 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsView.swift; sourceTree = "<group>"; };
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
 		2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
+		2FE9F015265FAEA200F7DBC1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		2F6F059A265E5EED00BEAB00 = {
 			isa = PBXGroup;
 			children = (
+				2FE9F015265FAEA200F7DBC1 /* .gitignore */,
 				2F6F05A5265E5EED00BEAB00 /* PhotoGPS */,
 				2F6F05BC265E5EED00BEAB00 /* PhotoGPSTests */,
 				2F6F05C7265E5EED00BEAB00 /* PhotoGPSUITests */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */,
+				2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */,
 				2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
