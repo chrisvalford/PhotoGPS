@@ -20,12 +20,24 @@ struct HistoryView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(saves) { item in
+            List{
+                ForEach(saves, id: \.identifier) { item in
                     HistoryViewRow(gpsData: item)
-                }
+                }.onDelete(perform: self.deleteRows)
             }
-            .navigationBarTitle("History", displayMode: .inline)
+        }
+        .navigationBarTitle("History", displayMode: .inline)
+    }
+    
+    private func deleteRows(at indexSet: IndexSet) {
+        for index in indexSet {
+            let item = saves[index]
+            viewContext.delete(item)
+        }
+        do {
+            try viewContext.save()
+        } catch {
+            print("Error saving context: \(error.localizedDescription)")
         }
     }
 }
