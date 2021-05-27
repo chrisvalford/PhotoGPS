@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "CompasArrow.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

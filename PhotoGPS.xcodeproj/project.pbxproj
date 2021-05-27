@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */; };
+		2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */; };
+		2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F05AD265E5EED00BEAB00 /* Preview Assets.xcassets */; };
+		2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05AF265E5EED00BEAB00 /* Persistence.swift */; };
+		2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05B1265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld */; };
+		2F6F05BE265E5EED00BEAB00 /* VideoGPSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05BD265E5EED00BEAB00 /* VideoGPSTests.swift */; };
+		2F6F05C9265E5EED00BEAB00 /* VideoGPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05C8265E5EED00BEAB00 /* VideoGPSUITests.swift */; };
+		2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05D8265E642900BEAB00 /* MasterView.swift */; };
+		2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05DA265E822400BEAB00 /* HeadingService.swift */; };
+		2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */; };
+		2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */; };
+		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
+		2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F6F05BA265E5EED00BEAB00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F6F059B265E5EED00BEAB00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F6F05A2265E5EED00BEAB00;
+			remoteInfo = VideoGPS;
+		};
+		2F6F05C5265E5EED00BEAB00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F6F059B265E5EED00BEAB00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F6F05A2265E5EED00BEAB00;
+			remoteInfo = VideoGPS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F6F05A3265E5EED00BEAB00 /* PhotoGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGPSApp.swift; sourceTree = "<group>"; };
+		2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F6F05AD265E5EED00BEAB00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F6F05AF265E5EED00BEAB00 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2F6F05B2265E5EED00BEAB00 /* VideoGPS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoGPS.xcdatamodel; sourceTree = "<group>"; };
+		2F6F05B4265E5EED00BEAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F6F05B9265E5EED00BEAB00 /* PhotoGPSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGPSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6F05BD265E5EED00BEAB00 /* VideoGPSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGPSTests.swift; sourceTree = "<group>"; };
+		2F6F05BF265E5EED00BEAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F6F05C4265E5EED00BEAB00 /* PhotoGPSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGPSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6F05C8265E5EED00BEAB00 /* VideoGPSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGPSUITests.swift; sourceTree = "<group>"; };
+		2F6F05CA265E5EED00BEAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F6F05D8265E642900BEAB00 /* MasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		2F6F05DA265E822400BEAB00 /* HeadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingService.swift; sourceTree = "<group>"; };
+		2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
+		2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsView.swift; sourceTree = "<group>"; };
+		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
+		2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F6F05A0265E5EED00BEAB00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6F05B6265E5EED00BEAB00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6F05C1265E5EED00BEAB00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F6F059A265E5EED00BEAB00 = {
+			isa = PBXGroup;
+			children = (
+				2F6F05A5265E5EED00BEAB00 /* PhotoGPS */,
+				2F6F05BC265E5EED00BEAB00 /* PhotoGPSTests */,
+				2F6F05C7265E5EED00BEAB00 /* PhotoGPSUITests */,
+				2F6F05A4265E5EED00BEAB00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F6F05A4265E5EED00BEAB00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F05A3265E5EED00BEAB00 /* PhotoGPS.app */,
+				2F6F05B9265E5EED00BEAB00 /* PhotoGPSTests.xctest */,
+				2F6F05C4265E5EED00BEAB00 /* PhotoGPSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F6F05A5265E5EED00BEAB00 /* PhotoGPS */ = {
+			isa = PBXGroup;
+			children = (
+				2FE9F014265F8A0100F7DBC1 /* Services */,
+				2FE9F013265F89F200F7DBC1 /* Views */,
+				2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */,
+				2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */,
+				2F6F05AF265E5EED00BEAB00 /* Persistence.swift */,
+				2F6F05B4265E5EED00BEAB00 /* Info.plist */,
+				2F6F05B1265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld */,
+				2F6F05AC265E5EED00BEAB00 /* Preview Content */,
+			);
+			path = PhotoGPS;
+			sourceTree = "<group>";
+		};
+		2F6F05AC265E5EED00BEAB00 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F05AD265E5EED00BEAB00 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2F6F05BC265E5EED00BEAB00 /* PhotoGPSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F05BD265E5EED00BEAB00 /* VideoGPSTests.swift */,
+				2F6F05BF265E5EED00BEAB00 /* Info.plist */,
+			);
+			path = PhotoGPSTests;
+			sourceTree = "<group>";
+		};
+		2F6F05C7265E5EED00BEAB00 /* PhotoGPSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F05C8265E5EED00BEAB00 /* VideoGPSUITests.swift */,
+				2F6F05CA265E5EED00BEAB00 /* Info.plist */,
+			);
+			path = PhotoGPSUITests;
+			sourceTree = "<group>";
+		};
+		2FE9F013265F89F200F7DBC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F05D8265E642900BEAB00 /* MasterView.swift */,
+				2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */,
+				2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */,
+				2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */,
+				2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2FE9F014265F8A0100F7DBC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F05DA265E822400BEAB00 /* HeadingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F6F05A2265E5EED00BEAB00 /* PhotoGPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F6F05CD265E5EED00BEAB00 /* Build configuration list for PBXNativeTarget "PhotoGPS" */;
+			buildPhases = (
+				2F6F059F265E5EED00BEAB00 /* Sources */,
+				2F6F05A0265E5EED00BEAB00 /* Frameworks */,
+				2F6F05A1265E5EED00BEAB00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoGPS;
+			productName = VideoGPS;
+			productReference = 2F6F05A3265E5EED00BEAB00 /* PhotoGPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F6F05B8265E5EED00BEAB00 /* PhotoGPSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F6F05D0265E5EED00BEAB00 /* Build configuration list for PBXNativeTarget "PhotoGPSTests" */;
+			buildPhases = (
+				2F6F05B5265E5EED00BEAB00 /* Sources */,
+				2F6F05B6265E5EED00BEAB00 /* Frameworks */,
+				2F6F05B7265E5EED00BEAB00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F6F05BB265E5EED00BEAB00 /* PBXTargetDependency */,
+			);
+			name = PhotoGPSTests;
+			productName = VideoGPSTests;
+			productReference = 2F6F05B9265E5EED00BEAB00 /* PhotoGPSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F6F05C3265E5EED00BEAB00 /* PhotoGPSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F6F05D3265E5EED00BEAB00 /* Build configuration list for PBXNativeTarget "PhotoGPSUITests" */;
+			buildPhases = (
+				2F6F05C0265E5EED00BEAB00 /* Sources */,
+				2F6F05C1265E5EED00BEAB00 /* Frameworks */,
+				2F6F05C2265E5EED00BEAB00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F6F05C6265E5EED00BEAB00 /* PBXTargetDependency */,
+			);
+			name = PhotoGPSUITests;
+			productName = VideoGPSUITests;
+			productReference = 2F6F05C4265E5EED00BEAB00 /* PhotoGPSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F6F059B265E5EED00BEAB00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2F6F05A2265E5EED00BEAB00 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					2F6F05B8265E5EED00BEAB00 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2F6F05A2265E5EED00BEAB00;
+					};
+					2F6F05C3265E5EED00BEAB00 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2F6F05A2265E5EED00BEAB00;
+					};
+				};
+			};
+			buildConfigurationList = 2F6F059E265E5EED00BEAB00 /* Build configuration list for PBXProject "PhotoGPS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F6F059A265E5EED00BEAB00;
+			productRefGroup = 2F6F05A4265E5EED00BEAB00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F6F05A2265E5EED00BEAB00 /* PhotoGPS */,
+				2F6F05B8265E5EED00BEAB00 /* PhotoGPSTests */,
+				2F6F05C3265E5EED00BEAB00 /* PhotoGPSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F6F05A1265E5EED00BEAB00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */,
+				2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6F05B7265E5EED00BEAB00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6F05C2265E5EED00BEAB00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F6F059F265E5EED00BEAB00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
+				2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */,
+				2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */,
+				2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */,
+				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
+				2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */,
+				2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */,
+				2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */,
+				2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6F05B5265E5EED00BEAB00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6F05BE265E5EED00BEAB00 /* VideoGPSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6F05C0265E5EED00BEAB00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6F05C9265E5EED00BEAB00 /* VideoGPSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F6F05BB265E5EED00BEAB00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F6F05A2265E5EED00BEAB00 /* PhotoGPS */;
+			targetProxy = 2F6F05BA265E5EED00BEAB00 /* PBXContainerItemProxy */;
+		};
+		2F6F05C6265E5EED00BEAB00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F6F05A2265E5EED00BEAB00 /* PhotoGPS */;
+			targetProxy = 2F6F05C5265E5EED00BEAB00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F6F05CB265E5EED00BEAB00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F6F05CC265E5EED00BEAB00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F6F05CE265E5EED00BEAB00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PhotoGPS/Preview Content\"";
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PhotoGPS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = digital.marine.PhotoGPS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F6F05CF265E5EED00BEAB00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PhotoGPS/Preview Content\"";
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PhotoGPS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = digital.marine.PhotoGPS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F6F05D1265E5EED00BEAB00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				INFOPLIST_FILE = PhotoGPSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = digital.marine.PhotoGPSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoGPS.app/PhotoGPS";
+			};
+			name = Debug;
+		};
+		2F6F05D2265E5EED00BEAB00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				INFOPLIST_FILE = PhotoGPSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = digital.marine.PhotoGPSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoGPS.app/PhotoGPS";
+			};
+			name = Release;
+		};
+		2F6F05D4265E5EED00BEAB00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				INFOPLIST_FILE = PhotoGPSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = digital.marine.PhotoGPSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhotoGPS;
+			};
+			name = Debug;
+		};
+		2F6F05D5265E5EED00BEAB00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				INFOPLIST_FILE = PhotoGPSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = digital.marine.PhotoGPSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhotoGPS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F6F059E265E5EED00BEAB00 /* Build configuration list for PBXProject "PhotoGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6F05CB265E5EED00BEAB00 /* Debug */,
+				2F6F05CC265E5EED00BEAB00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F6F05CD265E5EED00BEAB00 /* Build configuration list for PBXNativeTarget "PhotoGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6F05CE265E5EED00BEAB00 /* Debug */,
+				2F6F05CF265E5EED00BEAB00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F6F05D0265E5EED00BEAB00 /* Build configuration list for PBXNativeTarget "PhotoGPSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6F05D1265E5EED00BEAB00 /* Debug */,
+				2F6F05D2265E5EED00BEAB00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F6F05D3265E5EED00BEAB00 /* Build configuration list for PBXNativeTarget "PhotoGPSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6F05D4265E5EED00BEAB00 /* Debug */,
+				2F6F05D5265E5EED00BEAB00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F6F05B1265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F6F05B2265E5EED00BEAB00 /* VideoGPS.xcdatamodel */,
+			);
+			currentVersion = 2F6F05B2265E5EED00BEAB00 /* VideoGPS.xcdatamodel */;
+			path = PhotoGPS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2F6F059B265E5EED00BEAB00 /* Project object */;
+}
