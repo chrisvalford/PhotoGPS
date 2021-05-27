@@ -12,6 +12,7 @@ struct MasterView: View {
     
     @ObservedObject private var headingService: HeadingService
     @State private var imageCount = 0
+    @Environment(\.managedObjectContext) private var viewContext
     
     var customCameraRepresentable = CustomCameraRepresentable(
         cameraFrame: .zero,
@@ -88,9 +89,14 @@ struct MasterView: View {
                     .background(Color.white.opacity(0.5))
                     .cornerRadius(10)
                     .allowsHitTesting(false) // Pass the tap to the lower view
-                    
                 }
                 .navigationBarTitle(Text("Photo GPS"), displayMode: .inline)
+                .navigationBarItems(trailing:
+                                        NavigationLink(destination: HistoryView()
+                                                        .environment(\.managedObjectContext, self.viewContext)) {
+                                            Image(systemName: "clock").imageScale(.large)
+                                        }
+                )
             }
         }
     }
