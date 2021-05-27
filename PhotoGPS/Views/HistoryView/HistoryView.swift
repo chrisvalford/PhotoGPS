@@ -10,11 +10,14 @@ import CoreData
 
 struct HistoryView: View {
     
+    @State private var selectedGPSData = [GPSData]()
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \GPSData.saved, ascending: false)],
         animation: .default)
+    
+    
     
     private var saves: FetchedResults<GPSData>
     
@@ -22,7 +25,15 @@ struct HistoryView: View {
         NavigationView {
             List{
                 ForEach(saves, id: \.identifier) { item in
-                    HistoryViewRow(gpsData: item)
+                    HistoryViewRow(gpsData: item, isSelected: selectedGPSData.contains(item)) { }
+                    .contentShape(Rectangle())
+                                .onTapGesture {
+                                    if self.selectedGPSData.contains(item) {
+                                        self.selectedGPSData.removeAll(where: { $0 == item })
+                                    } else {
+                                        self.selectedGPSData.append(item)
+                                    }
+                                }
                 }.onDelete(perform: self.deleteRows)
             }
         }

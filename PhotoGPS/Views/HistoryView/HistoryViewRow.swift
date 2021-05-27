@@ -10,6 +10,8 @@ import SwiftUI
 struct HistoryViewRow: View {
     
     var gpsData: GPSData
+    var isSelected: Bool
+    var action: () -> Void
     
     var body: some View {
         HStack {
@@ -19,7 +21,12 @@ struct HistoryViewRow: View {
                 .frame(width: 80, height: 80)
             Text(localizedDate(gpsData.saved))
                 .font(.caption)
+            if self.isSelected {
+                Spacer()
+                Image(systemName: "checkmark")
+            }
         }
+        
     }
     
     func localizedDate(_ date: Date?) -> String {
