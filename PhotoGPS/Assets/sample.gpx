@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  version="1.1" 
+  creator="marine.digital">
+  <metadata>
+      <link href="http://www.marine.digital">
+        <text>Marine & Digital Services</text>
+      </link>
+      <time>2021-05-28T09:20:00Z</time>
+    </metadata>
+  <wpt lat="36.688785" lon="-4.405046">
+    <time>2021-05-28T09:22:11Z</time>
+    <name>Malaga</name>
+  </wpt>
+  <trk>
+      <name>Example GPX Document</name>
+      <trkseg>
+        <trkpt lat="36.688785" lon="-4.405046">
+          <ele>4.46</ele>
+          <hdg>96.2</hdg>
+          <time>20021-05-01T18:37:26Z</time>
+        </trkpt>
+        <trkpt lat="36.688785" lon="-4.405046">
+          <ele>4.94</ele>
+          <hdg>92.112</hdg>
+          <time>20021-05-01T18:37:31Z</time>
+        </trkpt>
+        <trkpt lat="36.688785" lon="-4.405046">
+          <ele>6.87</ele>
+          <hdg>89.0076</hdg>
+          <time>20021-05-01T18:37:34Z</time>
+        </trkpt>
+      </trkseg>
+    </trk>
+</gpx>

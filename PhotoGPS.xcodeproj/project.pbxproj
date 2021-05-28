@@ -16,6 +16,10 @@
 		2F6F05C9265E5EED00BEAB00 /* VideoGPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05C8265E5EED00BEAB00 /* VideoGPSUITests.swift */; };
 		2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05D8265E642900BEAB00 /* MasterView.swift */; };
 		2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05DA265E822400BEAB00 /* HeadingService.swift */; };
+		2FD545D72660EC0000C020A6 /* UTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD545D62660EC0000C020A6 /* UTI.swift */; };
+		2FD545D92660ECBC00C020A6 /* GpxParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD545D82660ECBC00C020A6 /* GpxParse.swift */; };
+		2FD545DB2660EDEF00C020A6 /* sample.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2FD545DA2660EDEF00C020A6 /* sample.gpx */; };
+		2FD545DC2660EDF700C020A6 /* sample.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2FD545DA2660EDEF00C020A6 /* sample.gpx */; };
 		2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */; };
 		2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */; };
 		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
@@ -58,6 +62,9 @@
 		2F6F05CA265E5EED00BEAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F6F05D8265E642900BEAB00 /* MasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		2F6F05DA265E822400BEAB00 /* HeadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingService.swift; sourceTree = "<group>"; };
+		2FD545D62660EC0000C020A6 /* UTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTI.swift; sourceTree = "<group>"; };
+		2FD545D82660ECBC00C020A6 /* GpxParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpxParse.swift; sourceTree = "<group>"; };
+		2FD545DA2660EDEF00C020A6 /* sample.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample.gpx; sourceTree = "<group>"; };
 		2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsView.swift; sourceTree = "<group>"; };
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
@@ -116,6 +123,7 @@
 		2F6F05A5265E5EED00BEAB00 /* PhotoGPS */ = {
 			isa = PBXGroup;
 			children = (
+				2FD545D52660EBDD00C020A6 /* Utility */,
 				2FE9F01E265FB29D00F7DBC1 /* Assets */,
 				2FE9F014265F8A0100F7DBC1 /* Services */,
 				2FE9F01D265FB29100F7DBC1 /* Models */,
@@ -151,6 +159,15 @@
 				2F6F05CA265E5EED00BEAB00 /* Info.plist */,
 			);
 			path = PhotoGPSUITests;
+			sourceTree = "<group>";
+		};
+		2FD545D52660EBDD00C020A6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2FD545D62660EC0000C020A6 /* UTI.swift */,
+				2FD545D82660ECBC00C020A6 /* GpxParse.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		2FE9F013265F89F200F7DBC1 /* Views */ = {
@@ -203,6 +220,7 @@
 		2FE9F01E265FB29D00F7DBC1 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2FD545DA2660EDEF00C020A6 /* sample.gpx */,
 				2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -312,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */,
+				2FD545DB2660EDEF00C020A6 /* sample.gpx in Resources */,
 				2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */,
 				2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */,
 			);
@@ -321,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FD545DC2660EDF700C020A6 /* sample.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +360,7 @@
 			files = (
 				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
 				2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */,
+				2FD545D72660EC0000C020A6 /* UTI.swift in Sources */,
 				2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */,
 				2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */,
 				2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */,
@@ -349,6 +370,7 @@
 				2FE9F01A265FB22100F7DBC1 /* HistoryView.swift in Sources */,
 				2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */,
 				2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */,
+				2FD545D92660ECBC00C020A6 /* GpxParse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

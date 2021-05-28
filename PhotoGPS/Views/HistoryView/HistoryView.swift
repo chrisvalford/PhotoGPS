@@ -17,8 +17,6 @@ struct HistoryView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \GPSData.saved, ascending: false)],
         animation: .default)
     
-    
-    
     private var saves: FetchedResults<GPSData>
     
     var body: some View {
@@ -38,6 +36,9 @@ struct HistoryView: View {
             }
         }
         .navigationBarTitle("History", displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: actionSheet, label: {
+            Image(systemName: "square.and.arrow.up.on.square")
+        }))
     }
     
     private func deleteRows(at indexSet: IndexSet) {
@@ -51,6 +52,15 @@ struct HistoryView: View {
             print("Error saving context: \(error.localizedDescription)")
         }
     }
+    
+    func actionSheet() {
+        // Build the document here
+        
+        // Then provide share sheet
+            guard let urlShare = URL(string: "https://developer.apple.com/xcode/swiftui/") else { return }
+            let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        }
 }
 
 struct HistoryView_Previews: PreviewProvider {
