@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gpx version="1.1" creator="MacENC"
+xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<rte>
+<name>RT0001</name>
+<rtept lat="36.410828" lon="-5.159586">
+<name>WP0001</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.503872" lon="-4.881374">
+<name>WP0002</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.449135" lon="-4.621791">
+<name>WP0003</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.587852" lon="-4.468787">
+<name>WP0004</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.628517" lon="-4.223526">
+<name>WP0005</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.633930" lon="-3.920119">
+<name>WP0006</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.611938" lon="-3.509512">
+<name>WP0007</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.610142" lon="-3.245531">
+<name>WP0008</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.611214" lon="-2.897782">
+<name>WP0009</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.696865" lon="-2.803372">
+<name>WP0010</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.688450" lon="-2.792083">
+<name>PHOTO3</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="36.606785" lon="-2.721950">
+<name>WP0012</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.645565" lon="-2.562000">
+<name>PHOTO4</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="36.656017" lon="-2.522683">
+<name>PHOTO5</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="36.660522" lon="-2.181653">
+<name>WP0013</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.763077" lon="-1.961988">
+<name>WP0014</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="36.972370" lon="-1.759415">
+<name>WP0015</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="37.223717" lon="-1.610638">
+<name>WP0016</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="37.407452" lon="-1.518233">
+<name>PHOTO6</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="37.522808" lon="-1.090826">
+<name>WP0018</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="37.575268" lon="-1.005750">
+<name>PHOTO7</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="37.557785" lon="-0.972650">
+<name>PHOTO9</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="37.525230" lon="-0.833333">
+<name>WP0020</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="37.619934" lon="-0.699667">
+<name>PHOTO8</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="37.630383" lon="-0.685883">
+<name>PHOTO10</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="37.653717" lon="-0.679350">
+<name>PHOTO11</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="37.957565" lon="-0.678986">
+<name>WP0022</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="38.180660" lon="-0.498095">
+<name>WP0023</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="38.321239" lon="-0.476576">
+<name>WP0024</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="38.332401" lon="-0.485717">
+<name>PHOTO12</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="38.338169" lon="-0.320063">
+<name>WP0025</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="38.438202" lon="-0.219950">
+<name>PHOTO14</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="38.496323" lon="-0.077873">
+<name>WP0026</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="38.578999" lon="-0.045700">
+<name>PHOTO15</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="38.715935" lon="0.270063">
+<name>WP0027</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="38.739784" lon="0.238500">
+<name>PHOTO16</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="38.745567" lon="0.240550">
+<name>PHOTO17</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="38.836182" lon="0.272717">
+<name>PHOTO18</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="38.846317" lon="0.275500">
+<name>PHOTO19</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="38.860687" lon="0.195744">
+<name>WP0028</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="39.005630" lon="0.086721">
+<name>WP0029</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="39.256592" lon="0.035130">
+<name>WP0030</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="39.560307" lon="0.038701">
+<name>WP0031</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="39.859917" lon="0.071800">
+<name>PHOTO20</name>
+<sym>BOATSLIP</sym>
+</rtept>
+<rtept lat="40.414799" lon="0.432283">
+<name>PHOTO21</name>
+<sym>BOATSLIP</sym>
+</rtept>
+<rtept lat="40.452232" lon="0.554117">
+<name>PHOTO22</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="40.504436" lon="0.664377">
+<name>WP0034</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="40.702007" lon="0.927237">
+<name>WP0035</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="41.078377" lon="1.270979">
+<name>WP0036</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="41.171413" lon="1.748873">
+<name>WP0037</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="41.221050" lon="1.960600">
+<name>PHOTO2</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="41.271252" lon="2.106267">
+<name>PHOTO23</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="41.287090" lon="2.159877">
+<name>WP0038</name>
+<sym>BLANK</sym>
+</rtept>
+<rtept lat="41.343285" lon="2.205333">
+<name>PHOTO1</name>
+<sym>SAILBOAT</sym>
+</rtept>
+<rtept lat="41.416668" lon="2.275000">
+<name>WP0039</name>
+<sym>BLANK</sym>
+</rtept>
+</rte>
+</gpx>

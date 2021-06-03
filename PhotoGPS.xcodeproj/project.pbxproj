@@ -27,6 +27,14 @@
 		2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FE9F015265FAEA200F7DBC1 /* .gitignore */; };
 		2FE9F01A265FB22100F7DBC1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F019265FB22100F7DBC1 /* HistoryView.swift */; };
 		2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F01B265FB23300F7DBC1 /* HistoryViewRow.swift */; };
+		2FEA064E2667CD670087EBA0 /* Waypoints.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA06482667CD670087EBA0 /* Waypoints.gpx */; };
+		2FEA064F2667CD670087EBA0 /* RT0001.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA06492667CD670087EBA0 /* RT0001.gpx */; };
+		2FEA06502667CD670087EBA0 /* RT0001.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA064A2667CD670087EBA0 /* RT0001.csv */; };
+		2FEA06512667CD670087EBA0 /* RT0001.kml in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA064B2667CD670087EBA0 /* RT0001.kml */; };
+		2FEA06522667CD670087EBA0 /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA064C2667CD670087EBA0 /* Waypoints.csv */; };
+		2FEA06532667CD670087EBA0 /* Waypoints.kml in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA064D2667CD670087EBA0 /* Waypoints.kml */; };
+		2FEA06702668EF760087EBA0 /* FileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA066F2668EF760087EBA0 /* FileBuilder.swift */; };
+		2FEA06722668F03D0087EBA0 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA06712668F03D0087EBA0 /* FileType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +80,14 @@
 		2FE9F015265FAEA200F7DBC1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2FE9F019265FB22100F7DBC1 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		2FE9F01B265FB23300F7DBC1 /* HistoryViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewRow.swift; sourceTree = "<group>"; };
+		2FEA06482667CD670087EBA0 /* Waypoints.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Waypoints.gpx; sourceTree = "<group>"; };
+		2FEA06492667CD670087EBA0 /* RT0001.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RT0001.gpx; sourceTree = "<group>"; };
+		2FEA064A2667CD670087EBA0 /* RT0001.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RT0001.csv; sourceTree = "<group>"; };
+		2FEA064B2667CD670087EBA0 /* RT0001.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RT0001.kml; sourceTree = "<group>"; };
+		2FEA064C2667CD670087EBA0 /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Waypoints.csv; sourceTree = "<group>"; };
+		2FEA064D2667CD670087EBA0 /* Waypoints.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Waypoints.kml; sourceTree = "<group>"; };
+		2FEA066F2668EF760087EBA0 /* FileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBuilder.swift; sourceTree = "<group>"; };
+		2FEA06712668F03D0087EBA0 /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +182,8 @@
 			children = (
 				2FD545D62660EC0000C020A6 /* UTI.swift */,
 				2FD545D82660ECBC00C020A6 /* GpxParse.swift */,
+				2FEA066F2668EF760087EBA0 /* FileBuilder.swift */,
+				2FEA06712668F03D0087EBA0 /* FileType.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -220,10 +238,24 @@
 		2FE9F01E265FB29D00F7DBC1 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2FEA06472667CD540087EBA0 /* MacEnc */,
 				2FD545DA2660EDEF00C020A6 /* sample.gpx */,
 				2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		2FEA06472667CD540087EBA0 /* MacEnc */ = {
+			isa = PBXGroup;
+			children = (
+				2FEA064A2667CD670087EBA0 /* RT0001.csv */,
+				2FEA06492667CD670087EBA0 /* RT0001.gpx */,
+				2FEA064B2667CD670087EBA0 /* RT0001.kml */,
+				2FEA064C2667CD670087EBA0 /* Waypoints.csv */,
+				2FEA06482667CD670087EBA0 /* Waypoints.gpx */,
+				2FEA064D2667CD670087EBA0 /* Waypoints.kml */,
+			);
+			path = MacEnc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +364,13 @@
 				2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */,
 				2FD545DB2660EDEF00C020A6 /* sample.gpx in Resources */,
 				2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */,
+				2FEA06532667CD670087EBA0 /* Waypoints.kml in Resources */,
+				2FEA06512667CD670087EBA0 /* RT0001.kml in Resources */,
+				2FEA06522667CD670087EBA0 /* Waypoints.csv in Resources */,
 				2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */,
+				2FEA064F2667CD670087EBA0 /* RT0001.gpx in Resources */,
+				2FEA064E2667CD670087EBA0 /* Waypoints.gpx in Resources */,
+				2FEA06502667CD670087EBA0 /* RT0001.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +403,12 @@
 				2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */,
 				2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
+				2FEA06722668F03D0087EBA0 /* FileType.swift in Sources */,
 				2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */,
 				2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */,
 				2FE9F01A265FB22100F7DBC1 /* HistoryView.swift in Sources */,
 				2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */,
+				2FEA06702668EF760087EBA0 /* FileBuilder.swift in Sources */,
 				2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */,
 				2FD545D92660ECBC00C020A6 /* GpxParse.swift in Sources */,
 			);
