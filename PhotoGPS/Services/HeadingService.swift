@@ -15,9 +15,12 @@ class HeadingService: NSObject, ObservableObject {
     @Published var headingText: String = ""
     @Published var latitudeText: String = ""
     @Published var longitudeText: String = ""
-    @Published var heading: Double = 0
+    @Published var headingT: Double = 0
+    @Published var headingM: Double = 0
     @Published var latitude: Double = 0
     @Published var longitude: Double = 0
+    @Published var elevation: Double = 0
+    @Published var accuracy: Double = 0
     @Published var rotation: Double = 0
     
     var locationManager: CLLocationManager
@@ -84,6 +87,8 @@ extension HeadingService: CLLocationManagerDelegate {
         // manager.stopUpdatingLocation()
         latitude = userLocation.coordinate.latitude
         longitude = userLocation.coordinate.longitude
+        elevation = userLocation.altitude
+        accuracy = userLocation.horizontalAccuracy
         latitudeText = String(format: "%f", userLocation.coordinate.latitude)
         longitudeText = String(format: "%f", userLocation.coordinate.longitude)
     }
@@ -94,7 +99,8 @@ extension HeadingService: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         self.rotation = Double(Int(newHeading.trueHeading * -1))
-        self.heading = newHeading.trueHeading
+        self.headingT = newHeading.trueHeading
+        self.headingM = newHeading.magneticHeading
         self.headingText = String(format: "%f", self.computeNewAngle(with: CGFloat(newHeading.trueHeading)).radiansToDegrees * -1)
     }
 }

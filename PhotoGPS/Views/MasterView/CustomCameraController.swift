@@ -165,7 +165,10 @@ extension CustomCameraRepresentable {
                 gpsData.saved = Date()
                 gpsData.latitude = headingService.latitude
                 gpsData.longitude = headingService.longitude
-                gpsData.trueHeading = headingService.heading
+                gpsData.trueHeading = headingService.headingT
+                gpsData.magneticHeading = headingService.headingM
+                gpsData.elevation = headingService.elevation
+                gpsData.accuracy = headingService.accuracy
                 gpsData.image = imageData
                 
                 do {

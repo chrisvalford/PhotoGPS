@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import MapKit
 
 struct HistoryView: View {
     
@@ -18,68 +19,125 @@ struct HistoryView: View {
         animation: .default)
     
     private var saves: FetchedResults<GPSData>
+    @State private var selectedCount = 0
     
     var body: some View {
         NavigationView {
             List{
                 ForEach(saves, id: \.identifier) { item in
-                    HistoryViewRow(gpsData: item, isSelected: selectedGPSData.contains(item)) { }
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            if self.selectedGPSData.contains(item) {
-                                self.selectedGPSData.removeAll(where: { $0 == item })
-                            } else {
-                                self.selectedGPSData.append(item)
+                    NavigationLink(destination: HistoryDetailView(item: item)) {
+                        HistoryViewRow(gpsData: item, isSelected: selectedGPSData.contains(item)) { }
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                if self.selectedGPSData.contains(item) {
+                                    self.selectedGPSData.removeAll(where: { $0 == item })
+                                    self.selectedCount -= 1
+                                } else {
+                                    self.selectedGPSData.append(item)
+                                    self.selectedCount += 1
+                                }
                             }
-                        }
+                    }//.navigationTitle("GPS Data")
                 }.onDelete(perform: self.deleteRows)
             }
-        }
-        .navigationBarTitle("History", displayMode: .inline)
-//        .navigationBarItems(trailing: Button(action: actionSheet, label: {
-//            Image(systemName: "square.and.arrow.up.on.square")
-//        }))
-//        .toolbar {
-//            ToolbarItem(placement: .primaryAction) {
-                Menu {
-                    Button(action: {
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Menu(content: {
+
+                        Button(action: {
                             buildFile(forFileType: .waypoints)
-                    }, label: {
-                        Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
-                    })
+                        }, label: {
+                            Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
+                        })
 
-                    Button(action: {
-                        buildFile(forFileType: .route)
-                    }, label: {
-                        Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
-                    })
+                        Button(action: {
+                            buildFile(forFileType: .route)
+                        }, label: {
+                            Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
+                        })
 
-                    Button(action: {
-                        buildFile(forFileType: .track)
-                    }, label: {
-                        Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
-                    })
+                        Button(action: {
+                            buildFile(forFileType: .track)
+                        }, label: {
+                            Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
+                        })
 
-                    Button(action: {}, label: {
-                        Label("Share as text", systemImage: "doc.plaintext")
-                    })
+                        Button(action: {
+                            buildFile(forFileType: .text)
+                        }, label: {
+                            Label("Share as text", systemImage: "doc.plaintext")
+                        })
 
-                    Button(action: {}, label: {
-                        Label("Share as a CSV", systemImage: "doc.text")
-                    })
+                        Button(action: {
+                            buildFile(forFileType: .csv)
+                        }, label: {
+                            Label("Share as a CSV", systemImage: "doc.text")
+                        })
 
-                    Button(action: {}, label: {
-                        Label("Share as a document", systemImage: "doc.richtext")
-                    })
+                        Button(action: {
+                            buildFile(forFileType: .document)
+                        }, label: {
+                            Label("Share as a document", systemImage: "doc.richtext")
+                        })
 
-                    Button(action: {}, label: {
-                        Label("Show in Maps", systemImage: "map")
-                    })
+                        Button(action: {
+                            openInMaps()
+                        }, label: {
+                            Label("Show in Maps", systemImage: "map")
+                        })
+
+                    }) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .disabled(selectedCount == 0)
                 }
-                label: {
-                    Label("Add", systemImage: "square.and.arrow.up")
-                }
-//            }
+            }
+            .navigationBarTitle("History", displayMode: .inline)
+        }
+
+//        Menu {
+//            Button(action: {
+//                buildFile(forFileType: .waypoints)
+//            }, label: {
+//                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
+//            })
+//
+//            Button(action: {
+//                buildFile(forFileType: .route)
+//            }, label: {
+//                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
+//            })
+//
+//            Button(action: {
+//                buildFile(forFileType: .track)
+//            }, label: {
+//                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
+//            })
+//
+//            Button(action: {
+//                buildFile(forFileType: .text)
+//            }, label: {
+//                Label("Share as text", systemImage: "doc.plaintext")
+//            })
+//
+//            Button(action: {
+//                buildFile(forFileType: .csv)
+//            }, label: {
+//                Label("Share as a CSV", systemImage: "doc.text")
+//            })
+//
+//            Button(action: {
+//                buildFile(forFileType: .document)
+//            }, label: {
+//                Label("Share as a document", systemImage: "doc.richtext")
+//            })
+//
+//            Button(action: {}, label: {
+//                Label("Show in Maps", systemImage: "map")
+//            })
+//        }
+//        label: {
+//            Label("Add", systemImage: "square.and.arrow.up")
 //        }
     }
     
@@ -105,30 +163,47 @@ struct HistoryView: View {
             }
         case .route:
             print("Building route GPX file")
-            if let documentURL = FileBuilder.output(forType: .waypoints, selectedGPSData: selectedGPSData) {
+            if let documentURL = FileBuilder.output(forType: .route, selectedGPSData: selectedGPSData) {
                 actionSheet(sharing: documentURL)
             }
         case .track:
             print("Building track GPX file")
-            if let documentURL = FileBuilder.output(forType: .waypoints, selectedGPSData: selectedGPSData) {
+            if let documentURL = FileBuilder.output(forType: .track, selectedGPSData: selectedGPSData) {
                 actionSheet(sharing: documentURL)
             }
         case .text:
             print("Building plain text file")
-            if let documentURL = FileBuilder.output(forType: .waypoints, selectedGPSData: selectedGPSData) {
+            if let documentURL = FileBuilder.output(forType: .text, selectedGPSData: selectedGPSData) {
                 actionSheet(sharing: documentURL)
             }
         case .csv:
             print("Building CSV file")
-            if let documentURL = FileBuilder.output(forType: .waypoints, selectedGPSData: selectedGPSData) {
+            if let documentURL = FileBuilder.output(forType: .csv, selectedGPSData: selectedGPSData) {
                 actionSheet(sharing: documentURL)
             }
         case .document:
             print("Building Rich Text file")
-            if let documentURL = FileBuilder.output(forType: .waypoints, selectedGPSData: selectedGPSData) {
+            if let documentURL = FileBuilder.output(forType: .document, selectedGPSData: selectedGPSData) {
                 actionSheet(sharing: documentURL)
             }
         }
+    }
+
+    func openInMaps() {
+        //TODO:
+        let item = selectedGPSData.first
+
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(item!.latitude, item!.longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = item!.saved.debugDescription
+        mapItem.openInMaps(launchOptions: options)
     }
     
     func actionSheet(sharing url: URL) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5CECB7266A7DAF009D68C4 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CECB6266A7DAF009D68C4 /* HistoryDetailView.swift */; };
+		2F5CECB9266A9BCC009D68C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CECB8266A9BCC009D68C4 /* HomeView.swift */; };
 		2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */; };
 		2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */; };
 		2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F05AD265E5EED00BEAB00 /* Preview Assets.xcassets */; };
@@ -18,8 +20,6 @@
 		2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05DA265E822400BEAB00 /* HeadingService.swift */; };
 		2FD545D72660EC0000C020A6 /* UTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD545D62660EC0000C020A6 /* UTI.swift */; };
 		2FD545D92660ECBC00C020A6 /* GpxParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD545D82660ECBC00C020A6 /* GpxParse.swift */; };
-		2FD545DB2660EDEF00C020A6 /* sample.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2FD545DA2660EDEF00C020A6 /* sample.gpx */; };
-		2FD545DC2660EDF700C020A6 /* sample.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2FD545DA2660EDEF00C020A6 /* sample.gpx */; };
 		2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */; };
 		2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */; };
 		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
@@ -27,12 +27,6 @@
 		2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FE9F015265FAEA200F7DBC1 /* .gitignore */; };
 		2FE9F01A265FB22100F7DBC1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F019265FB22100F7DBC1 /* HistoryView.swift */; };
 		2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F01B265FB23300F7DBC1 /* HistoryViewRow.swift */; };
-		2FEA064E2667CD670087EBA0 /* Waypoints.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA06482667CD670087EBA0 /* Waypoints.gpx */; };
-		2FEA064F2667CD670087EBA0 /* RT0001.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA06492667CD670087EBA0 /* RT0001.gpx */; };
-		2FEA06502667CD670087EBA0 /* RT0001.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA064A2667CD670087EBA0 /* RT0001.csv */; };
-		2FEA06512667CD670087EBA0 /* RT0001.kml in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA064B2667CD670087EBA0 /* RT0001.kml */; };
-		2FEA06522667CD670087EBA0 /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA064C2667CD670087EBA0 /* Waypoints.csv */; };
-		2FEA06532667CD670087EBA0 /* Waypoints.kml in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA064D2667CD670087EBA0 /* Waypoints.kml */; };
 		2FEA06702668EF760087EBA0 /* FileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA066F2668EF760087EBA0 /* FileBuilder.swift */; };
 		2FEA06722668F03D0087EBA0 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA06712668F03D0087EBA0 /* FileType.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F5CECB6266A7DAF009D68C4 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
+		2F5CECB8266A9BCC009D68C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2F5CECBB266B3DEF009D68C4 /* Tracks.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Tracks.gpx; sourceTree = "<group>"; };
+		2F5CECBC266B3DEF009D68C4 /* Routes.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Routes.gpx; sourceTree = "<group>"; };
 		2F6F05A3265E5EED00BEAB00 /* PhotoGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGPSApp.swift; sourceTree = "<group>"; };
 		2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		2FD545D62660EC0000C020A6 /* UTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTI.swift; sourceTree = "<group>"; };
 		2FD545D82660ECBC00C020A6 /* GpxParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpxParse.swift; sourceTree = "<group>"; };
 		2FD545DA2660EDEF00C020A6 /* sample.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample.gpx; sourceTree = "<group>"; };
+		2FDD1731266A04CA00994F51 /* sample.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = sample.rtf; sourceTree = "<group>"; };
+		2FDD1732266A177600994F51 /* PhotoGPS.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = PhotoGPS.rtf; sourceTree = "<group>"; };
 		2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsView.swift; sourceTree = "<group>"; };
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
@@ -115,6 +115,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F5CECB5266A7D94009D68C4 /* HistoryDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2F5CECB6266A7DAF009D68C4 /* HistoryDetailView.swift */,
+			);
+			path = HistoryDetailView;
+			sourceTree = "<group>";
+		};
+		2F5CECBA266B3DEF009D68C4 /* Imray */ = {
+			isa = PBXGroup;
+			children = (
+				2F5CECBB266B3DEF009D68C4 /* Tracks.gpx */,
+				2F5CECBC266B3DEF009D68C4 /* Routes.gpx */,
+			);
+			path = Imray;
+			sourceTree = "<group>";
+		};
 		2F6F059A265E5EED00BEAB00 = {
 			isa = PBXGroup;
 			children = (
@@ -191,8 +208,10 @@
 		2FE9F013265F89F200F7DBC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2F5CECB5266A7D94009D68C4 /* HistoryDetailView */,
 				2FE9F018265FB20A00F7DBC1 /* HistoryView */,
 				2FE9F017265FB20000F7DBC1 /* MasterView */,
+				2F5CECB8266A9BCC009D68C4 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,8 +257,11 @@
 		2FE9F01E265FB29D00F7DBC1 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				2FEA06472667CD540087EBA0 /* MacEnc */,
+				2F5CECBA266B3DEF009D68C4 /* Imray */,
+				2FDD1732266A177600994F51 /* PhotoGPS.rtf */,
 				2FD545DA2660EDEF00C020A6 /* sample.gpx */,
+				2FDD1731266A04CA00994F51 /* sample.rtf */,
+				2FEA06472667CD540087EBA0 /* MacEnc */,
 				2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -362,15 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */,
-				2FD545DB2660EDEF00C020A6 /* sample.gpx in Resources */,
 				2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */,
-				2FEA06532667CD670087EBA0 /* Waypoints.kml in Resources */,
-				2FEA06512667CD670087EBA0 /* RT0001.kml in Resources */,
-				2FEA06522667CD670087EBA0 /* Waypoints.csv in Resources */,
 				2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */,
-				2FEA064F2667CD670087EBA0 /* RT0001.gpx in Resources */,
-				2FEA064E2667CD670087EBA0 /* Waypoints.gpx in Resources */,
-				2FEA06502667CD670087EBA0 /* RT0001.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +393,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FD545DC2660EDF700C020A6 /* sample.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,8 +412,10 @@
 			files = (
 				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
 				2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */,
+				2F5CECB7266A7DAF009D68C4 /* HistoryDetailView.swift in Sources */,
 				2FD545D72660EC0000C020A6 /* UTI.swift in Sources */,
 				2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */,
+				2F5CECB9266A9BCC009D68C4 /* HomeView.swift in Sources */,
 				2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */,
 				2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,

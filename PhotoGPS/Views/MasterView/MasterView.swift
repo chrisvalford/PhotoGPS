@@ -13,6 +13,8 @@ struct MasterView: View {
     @ObservedObject private var headingService: HeadingService
     @State private var imageCount = 0
     @Environment(\.managedObjectContext) private var viewContext
+
+    //    @State private var isShowingHistory = false
     
     var customCameraRepresentable = CustomCameraRepresentable(
         cameraFrame: .zero,
@@ -91,14 +93,22 @@ struct MasterView: View {
                     .allowsHitTesting(false) // Pass the tap to the lower view
                 }
                 .navigationBarTitle(Text("Photo GPS"), displayMode: .inline)
-                .navigationBarItems(trailing:
-                                        NavigationLink(destination: HistoryView()
-                                                        .environment(\.managedObjectContext, self.viewContext)) {
-                                            Image(systemName: "clock").imageScale(.large)
-                                        }
-                )
+                //                .navigationBarItems(trailing: Button(action: {
+                //                    isShowingHistory.toggle()
+                //                }, label: {
+                //                    Image(systemName: "clock").imageScale(.large)
+                //                })
+//                .navigationBarItems(trailing:
+//                                        NavigationLink(destination: HistoryView()
+//                                                        .environment(\.managedObjectContext, self.viewContext)) {
+//                                            Image(systemName: "clock").imageScale(.large)
+//                                        }
+//                )
             }
         }
+        //        .sheet(isPresented: $isShowingHistory) {
+        //            HistoryView()
+        //        }
     }
 }
 
