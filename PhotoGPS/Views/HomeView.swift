@@ -12,6 +12,10 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var selection = 0
     
+    init() {
+        UITabBar.appearance().barTintColor = UIColor.black
+    }
+    
     var body: some View {
         TabView(selection: $selection) {
             MasterView()
@@ -28,13 +32,11 @@ struct HomeView: View {
                     Text("History")
                 }
                 .tag(1)
-//            SettingsView(settings: Settings(), userSettings: UserSettings())
-//                .tabItem {
-//                    Image(systemName: "gearshape")
-//                    Text("Settings")
-//                }
-//                .tag(2)
         }
+        .onAppear() {
+            UITabBar.appearance().barTintColor = .blue
+        }
+        .accentColor(.white)
     }
 }
 

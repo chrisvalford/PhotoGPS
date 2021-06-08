@@ -13,8 +13,6 @@ struct MasterView: View {
     @ObservedObject private var headingService: HeadingService
     @State private var imageCount = 0
     @Environment(\.managedObjectContext) private var viewContext
-
-    //    @State private var isShowingHistory = false
     
     var customCameraRepresentable = CustomCameraRepresentable(
         cameraFrame: .zero,
@@ -49,10 +47,12 @@ struct MasterView: View {
                     HStack {
                         VStack {
                             Text("Heading")
+                                .foregroundColor(.white)
                                 .font(.body)
                                 .fontWeight(.bold)
                                 .frame(maxWidth: 200, alignment: .leading)
                             Text(headingService.headingText)
+                                .foregroundColor(.white)
                                 .frame(maxWidth: 200, alignment: .leading)
                         }
                         Spacer()
@@ -63,8 +63,7 @@ struct MasterView: View {
                             .rotationEffect(.degrees( headingService.rotation))
                     }.padding()
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color.white.opacity(0.75))
-                    .cornerRadius(10)
+                    .background(Color.black.opacity(0.50))
                     Spacer()
                     HStack {
 
@@ -73,42 +72,33 @@ struct MasterView: View {
                     HStack {
                         VStack {
                             Text("Latitude")
+                                .foregroundColor(.white)
                                 .font(.body)
                                 .fontWeight(.bold)
                                 .frame(maxWidth: 100, alignment: .trailing)
                             Text("Longitude")
+                                .foregroundColor(.white)
                                 .font(.body)
                                 .fontWeight(.bold)
                                 .frame(maxWidth: 100, alignment: .trailing)
                         }
                         VStack {
                             Text(headingService.latitudeText)
+                                .foregroundColor(.white)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Text(headingService.longitudeText)
+                                .foregroundColor(.white)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }.padding()
-                    .background(Color.white.opacity(0.5))
-                    .cornerRadius(10)
+                    .background(Color.black.opacity(0.5))
                     .allowsHitTesting(false) // Pass the tap to the lower view
                 }
                 .navigationBarTitle(Text("Photo GPS"), displayMode: .inline)
-                //                .navigationBarItems(trailing: Button(action: {
-                //                    isShowingHistory.toggle()
-                //                }, label: {
-                //                    Image(systemName: "clock").imageScale(.large)
-                //                })
-//                .navigationBarItems(trailing:
-//                                        NavigationLink(destination: HistoryView()
-//                                                        .environment(\.managedObjectContext, self.viewContext)) {
-//                                            Image(systemName: "clock").imageScale(.large)
-//                                        }
-//                )
+                .navigationBarColor(backgroundColor: .black
+                                    , titleColor: .white)
             }
         }
-        //        .sheet(isPresented: $isShowingHistory) {
-        //            HistoryView()
-        //        }
     }
 }
 

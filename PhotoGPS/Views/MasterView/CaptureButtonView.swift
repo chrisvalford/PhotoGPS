@@ -13,6 +13,7 @@ struct CaptureButtonView: View {
     
     var body: some View {
         Image(systemName: "camera")
+            .foregroundColor(.white)
             .font(.headline)
             .padding(14)
             .background(Color("ArrowColor"))

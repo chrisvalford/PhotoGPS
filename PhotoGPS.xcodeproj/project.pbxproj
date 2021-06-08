@@ -29,6 +29,7 @@
 		2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F01B265FB23300F7DBC1 /* HistoryViewRow.swift */; };
 		2FEA06702668EF760087EBA0 /* FileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA066F2668EF760087EBA0 /* FileBuilder.swift */; };
 		2FEA06722668F03D0087EBA0 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA06712668F03D0087EBA0 /* FileType.swift */; };
+		2FFFF6A6266F584C00886629 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFF6A5266F584C00886629 /* NavigationBarModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		2FEA064D2667CD670087EBA0 /* Waypoints.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Waypoints.kml; sourceTree = "<group>"; };
 		2FEA066F2668EF760087EBA0 /* FileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBuilder.swift; sourceTree = "<group>"; };
 		2FEA06712668F03D0087EBA0 /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
+		2FFFF6A5266F584C00886629 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				2FD545D82660ECBC00C020A6 /* GpxParse.swift */,
 				2FEA066F2668EF760087EBA0 /* FileBuilder.swift */,
 				2FEA06712668F03D0087EBA0 /* FileType.swift */,
+				2FFFF6A5266F584C00886629 /* NavigationBarModifier.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			files = (
 				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
 				2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */,
+				2FFFF6A6266F584C00886629 /* NavigationBarModifier.swift in Sources */,
 				2F5CECB7266A7DAF009D68C4 /* HistoryDetailView.swift in Sources */,
 				2FD545D72660EC0000C020A6 /* UTI.swift in Sources */,
 				2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */,
