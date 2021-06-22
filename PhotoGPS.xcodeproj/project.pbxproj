@@ -21,8 +21,6 @@
 		2FD545D72660EC0000C020A6 /* UTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD545D62660EC0000C020A6 /* UTI.swift */; };
 		2FD545D92660ECBC00C020A6 /* GpxParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD545D82660ECBC00C020A6 /* GpxParse.swift */; };
 		2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */; };
-		2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */; };
-		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
 		2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */; };
 		2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FE9F015265FAEA200F7DBC1 /* .gitignore */; };
 		2FE9F01A265FB22100F7DBC1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F019265FB22100F7DBC1 /* HistoryView.swift */; };
@@ -420,11 +418,9 @@
 				2FD545D72660EC0000C020A6 /* UTI.swift in Sources */,
 				2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */,
 				2F5CECB9266A9BCC009D68C4 /* HomeView.swift in Sources */,
-				2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */,
 				2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
 				2FEA06722668F03D0087EBA0 /* FileType.swift in Sources */,
-				2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */,
 				2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */,
 				2FE9F01A265FB22100F7DBC1 /* HistoryView.swift in Sources */,
 				2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */,

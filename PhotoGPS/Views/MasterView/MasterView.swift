@@ -11,8 +11,8 @@ import SwiftUI
 struct MasterView: View {
     
     @ObservedObject private var headingService: HeadingService
-    @State private var imageCount = 0
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var captureCount = UserDefaults.standard.integer(forKey: "Captured")
     
     var customCameraRepresentable = CustomCameraRepresentable(
         cameraFrame: .zero,
@@ -31,8 +31,9 @@ struct MasterView: View {
                     customCameraRepresentable: customCameraRepresentable,
                     imageCompletion: { success in
                         if success == true {
-                            self.imageCount += 1
-                            print("Saved \(self.imageCount) positions")
+                            self.captureCount += 1
+                            print("Saved \(self.captureCount) positions")
+                            captureCount += 1
                         }
                     }
                 )
@@ -90,13 +91,21 @@ struct MasterView: View {
                                 .foregroundColor(.white)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
+                        Button(action:{
+                            customCameraRepresentable.takePhoto()
+                        }, label: {
+                            Image(systemName: "camera")
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .padding(14)
+                                .background(Color("ArrowColor"))
+                                .clipShape(Circle())
+                        })
                     }.padding()
                     .background(Color.black.opacity(0.5))
-                    .allowsHitTesting(false) // Pass the tap to the lower view
                 }
                 .navigationBarTitle(Text("Photo GPS"), displayMode: .inline)
-                .navigationBarColor(backgroundColor: .black
-                                    , titleColor: .white)
+                .navigationBarColor(backgroundColor: .black, titleColor: .white)
             }
         }
     }

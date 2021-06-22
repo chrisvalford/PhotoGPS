@@ -19,6 +19,7 @@ struct HistoryView: View {
         animation: .default)
     
     private var saves: FetchedResults<GPSData>
+    @State private var captureCount = UserDefaults.standard.integer(forKey: "Captured")
     @State private var selectedCount = 0
     
     var body: some View {
@@ -93,6 +94,10 @@ struct HistoryView: View {
                 }
             }
             .navigationBarTitle("History", displayMode: .inline)
+        }
+        .onAppear() {
+            // Reset the badge count
+            captureCount = 0
         }
 
 //        Menu {

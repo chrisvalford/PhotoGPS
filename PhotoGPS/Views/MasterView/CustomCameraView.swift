@@ -16,13 +16,13 @@ struct CustomCameraView: View {
             VStack {
                 cameraView(frame:  UIScreen.main.bounds)
                 
-                HStack {
-                    Spacer()
-                    CameraControlsView(captureButtonAction: { [weak customCameraRepresentable] in
-                        customCameraRepresentable?.takePhoto()
-                    })
-                    .padding()
-                }
+//                HStack {
+//                    Spacer()
+//                    CameraControlsView(captureButtonAction: { [weak customCameraRepresentable] in
+//                        customCameraRepresentable?.takePhoto()
+//                    })
+//                    .padding()
+//                }
             }
         }
     }
