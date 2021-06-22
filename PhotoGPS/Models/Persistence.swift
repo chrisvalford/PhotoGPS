@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import UIKit
 
 struct PersistenceController {
     static let shared = PersistenceController()
@@ -14,8 +15,18 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let gpsData = GPSData(context: viewContext)
+            gpsData.identifier = UUID()
+            gpsData.saved = Date()
+            gpsData.latitude = 41.372
+            gpsData.longitude = 2.1599
+            gpsData.trueHeading = 320
+            gpsData.magneticHeading = 320.7
+            gpsData.elevation = 0
+            gpsData.accuracy = 0
+//            if let image = sampleImage() {
+//                gpsData.image = image.jpegData(compressionQuality: 1.0)
+//            }
         }
         do {
             try viewContext.save()
@@ -51,5 +62,13 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+    }
+    
+    static func sampleImage() -> UIImage? {
+        var image: UIImage?
+        if let imgPath = Bundle.main.path(forResource: "ainvar", ofType: ".jpeg") {
+            image = UIImage(contentsOfFile: imgPath)
+        }
+        return image
     }
 }
