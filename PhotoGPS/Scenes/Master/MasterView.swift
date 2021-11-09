@@ -11,7 +11,9 @@ import SwiftUI
 struct MasterView: View {
     
     @ObservedObject private var headingService: HeadingService
+    @Environment(\.managedObjectContext) private var viewContext
     @State private var imageCount = 0
+    @State private var isShowingHistory = false
     
     var customCameraRepresentable = CustomCameraRepresentable(
         cameraFrame: .zero,
@@ -90,7 +92,20 @@ struct MasterView: View {
                     .allowsHitTesting(false) // Pass the tap to the lower view
                     
                 }
-                .navigationBarTitle(Text("Photo GPS"), displayMode: .inline)
+                .navigationTitle("Home")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {},
+                               label: {
+                            NavigationLink(destination: HistoryView()
+                                            .environment(\.managedObjectContext, viewContext)) {
+                                Image(systemName: "photo.on.rectangle.angled")
+                                    .foregroundColor(.orange)
+                            }
+                        }
+                        )
+                    }
+                }
             }
         }
     }
