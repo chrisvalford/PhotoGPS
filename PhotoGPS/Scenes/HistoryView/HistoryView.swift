@@ -13,7 +13,7 @@ struct HistoryView: View {
     
     @State private var selectedGPSData = [GPSData]()
     @Environment(\.managedObjectContext) private var viewContext
-
+    @Environment(\.presentationMode) var presentation
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \GPSData.saved, ascending: false)],
         animation: .default)
@@ -40,7 +40,16 @@ struct HistoryView: View {
                 }
             }.onDelete(perform: self.deleteRows)
         }
+        .navigationTitle("History")
+        .navigationBarBackButtonHidden(true)
         .toolbar {
+            ToolbarItem (placement: .navigation)  {
+                Image(systemName: "chevron.left")
+                    .foregroundColor(.orange)
+                    .onTapGesture {
+                        self.presentation.wrappedValue.dismiss()
+                    }
+            }
             ToolbarItem(placement: .primaryAction) {
                 Menu(content: {
                     Button(action: {
