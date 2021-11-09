@@ -23,132 +23,92 @@ struct HistoryView: View {
     @State private var selectedCount = 0
     
     var body: some View {
-        List{
-            ForEach(saves, id: \.identifier) { item in
-                NavigationLink(destination: HistoryDetailView(item: item)) {
-                    HistoryViewRow(gpsData: item, isSelected: selectedGPSData.contains(item)) { }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        if self.selectedGPSData.contains(item) {
-                            self.selectedGPSData.removeAll(where: { $0 == item })
-                            self.selectedCount -= 1
-                        } else {
-                            self.selectedGPSData.append(item)
-                            self.selectedCount += 1
+        NavigationView {
+            List{
+                ForEach(saves, id: \.identifier) { item in
+                    NavigationLink(destination: HistoryDetailView(item: item)) {
+                        HistoryViewRow(gpsData: item, isSelected: selectedGPSData.contains(item)) { }
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            if self.selectedGPSData.contains(item) {
+                                self.selectedGPSData.removeAll(where: { $0 == item })
+                                self.selectedCount -= 1
+                            } else {
+                                self.selectedGPSData.append(item)
+                                self.selectedCount += 1
+                            }
                         }
                     }
-                }
-            }.onDelete(perform: self.deleteRows)
-        }
-        .navigationTitle("History")
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem (placement: .navigation)  {
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.orange)
-                    .onTapGesture {
-                        self.presentation.wrappedValue.dismiss()
+                }.onDelete(perform: self.deleteRows)
+            }.navigationTitle("PhotoGPS")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {},
+                               label: {
+                            NavigationLink(destination: CameraView()
+                                            .environment(\.managedObjectContext, viewContext)) {
+                                Image(systemName: "camera")
+                                    .foregroundColor(.orange)
+                            }
+                        }
+                        )
                     }
-            }
-            ToolbarItem(placement: .primaryAction) {
-                Menu(content: {
-                    Button(action: {
-                        buildFile(forFileType: .waypoints)
-                    }, label: {
-                        Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
-                    })
+                    ToolbarItem(placement: .primaryAction) {
+                        Menu(content: {
+                            Button(action: {
+                                buildFile(forFileType: .waypoints)
+                            }, label: {
+                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
+                            })
 
-                    Button(action: {
-                        buildFile(forFileType: .route)
-                    }, label: {
-                        Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
-                    })
+                            Button(action: {
+                                buildFile(forFileType: .route)
+                            }, label: {
+                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
+                            })
 
-                    Button(action: {
-                        buildFile(forFileType: .track)
-                    }, label: {
-                        Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
-                    })
+                            Button(action: {
+                                buildFile(forFileType: .track)
+                            }, label: {
+                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
+                            })
 
-                    Button(action: {
-                        buildFile(forFileType: .text)
-                    }, label: {
-                        Label("Share as text", systemImage: "doc.plaintext")
-                    })
+                            Button(action: {
+                                buildFile(forFileType: .text)
+                            }, label: {
+                                Label("Share as text", systemImage: "doc.plaintext")
+                            })
 
-                    Button(action: {
-                        buildFile(forFileType: .csv)
-                    }, label: {
-                        Label("Share as a CSV", systemImage: "doc.text")
-                    })
+                            Button(action: {
+                                buildFile(forFileType: .csv)
+                            }, label: {
+                                Label("Share as a CSV", systemImage: "doc.text")
+                            })
 
-                    Button(action: {
-                        buildFile(forFileType: .document)
-                    }, label: {
-                        Label("Share as a document", systemImage: "doc.richtext")
-                    })
+                            Button(action: {
+                                buildFile(forFileType: .document)
+                            }, label: {
+                                Label("Share as a document", systemImage: "doc.richtext")
+                            })
 
-                    Button(action: {
-                        openInMaps()
-                    }, label: {
-                        Label("Show in Maps", systemImage: "map")
-                    })
+                            Button(action: {
+                                openInMaps()
+                            }, label: {
+                                Label("Show in Maps", systemImage: "map")
+                            })
 
-                }) {
-                    Image(systemName: "square.and.arrow.up")
+                        }) {
+                            Image(systemName: "square.and.arrow.up")
+                        }
+                        .disabled(selectedCount == 0)
+                    }
                 }
-                .disabled(selectedCount == 0)
-            }
         }
         .onAppear() {
             // Reset the badge count
             captureCount = 0
         }
-
-        //        Menu {
-        //            Button(action: {
-        //                buildFile(forFileType: .waypoints)
-        //            }, label: {
-        //                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
-        //            })
-        //
-        //            Button(action: {
-        //                buildFile(forFileType: .route)
-        //            }, label: {
-        //                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
-        //            })
-        //
-        //            Button(action: {
-        //                buildFile(forFileType: .track)
-        //            }, label: {
-        //                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
-        //            })
-        //
-        //            Button(action: {
-        //                buildFile(forFileType: .text)
-        //            }, label: {
-        //                Label("Share as text", systemImage: "doc.plaintext")
-        //            })
-        //
-        //            Button(action: {
-        //                buildFile(forFileType: .csv)
-        //            }, label: {
-        //                Label("Share as a CSV", systemImage: "doc.text")
-        //            })
-        //
-        //            Button(action: {
-        //                buildFile(forFileType: .document)
-        //            }, label: {
-        //                Label("Share as a document", systemImage: "doc.richtext")
-        //            })
-        //
-        //            Button(action: {}, label: {
-        //                Label("Show in Maps", systemImage: "map")
-        //            })
-        //        }
-        //        label: {
-        //            Label("Add", systemImage: "square.and.arrow.up")
-        //        }
     }
     
     private func deleteRows(at indexSet: IndexSet) {

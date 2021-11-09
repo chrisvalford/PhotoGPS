@@ -15,26 +15,21 @@ struct HistoryViewRow: View {
     
     var body: some View {
         HStack {
+            if self.isSelected {
+                Image(systemName: "checkmark.circle")
+                    .frame(width: 20, height: 20)
+            } else {
+                Image(systemName: "circle")
+                    .frame(width: 20, height: 20)
+            }
             Image(data: gpsData.image!)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 80, height: 80)
-            Text(localizedDate(gpsData.saved))
+            Text(gpsData.saved?.localizedDate() ?? " - ")
                 .font(.caption)
-            if self.isSelected {
-                Spacer()
-                Image(systemName: "checkmark")
-            }
+
         }
-        
-    }
-    
-    func localizedDate(_ date: Date?) -> String {
-        guard let date = date else { return "Missing!" }
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .long
-        return formatter.string(from: date)
     }
 }
 

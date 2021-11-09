@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct MasterView: View {
+struct CameraView: View {
     
     @ObservedObject private var headingService = HeadingService.shared
     @Environment(\.managedObjectContext) private var viewContext
@@ -20,7 +20,6 @@ struct MasterView: View {
     )
     
     var body: some View {
-        NavigationView {
             ZStack {
                 CustomCameraView(
                     customCameraRepresentable: customCameraRepresentable,
@@ -37,40 +36,20 @@ struct MasterView: View {
                 .onDisappear {
                     customCameraRepresentable.stopRunningCaptureSession()
                 }
-                
                 VStack {
                     HeadingView()
                     Spacer()
                     HStack {
-
-
                     }.padding()
                     LatLongView()
                     .allowsHitTesting(false) // Pass the tap to the lower view
-                    
                 }
-                .navigationTitle("PhotoGPS")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {},
-                               label: {
-                            NavigationLink(destination: HistoryView()
-                                            .environment(\.managedObjectContext, viewContext)) {
-                                Image(systemName: "photo.on.rectangle.angled")
-                                    .foregroundColor(.orange)
-                            }
-                        }
-                        )
-                    }
-                }
-            }
         }.accentColor(.orange)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MasterView()
+        CameraView()
     }
 }
