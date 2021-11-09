@@ -21,6 +21,14 @@
 		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
 		2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */; };
 		2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FE9F015265FAEA200F7DBC1 /* .gitignore */; };
+		2FFFD2342739834600F9AC14 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2332739834600F9AC14 /* HistoryDetailView.swift */; };
+		2FFFD2382739835100F9AC14 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2362739835100F9AC14 /* HistoryView.swift */; };
+		2FFFD2392739835100F9AC14 /* HistoryViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2372739835100F9AC14 /* HistoryViewRow.swift */; };
+		2FFFD240273983FF00F9AC14 /* FileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD23B273983FF00F9AC14 /* FileBuilder.swift */; };
+		2FFFD241273983FF00F9AC14 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD23C273983FF00F9AC14 /* FileType.swift */; };
+		2FFFD242273983FF00F9AC14 /* GpxParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD23D273983FF00F9AC14 /* GpxParse.swift */; };
+		2FFFD243273983FF00F9AC14 /* UTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD23E273983FF00F9AC14 /* UTI.swift */; };
+		2FFFD244273983FF00F9AC14 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD23F273983FF00F9AC14 /* NavigationBarModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,14 @@
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
 		2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		2FE9F015265FAEA200F7DBC1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2FFFD2332739834600F9AC14 /* HistoryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
+		2FFFD2362739835100F9AC14 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		2FFFD2372739835100F9AC14 /* HistoryViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewRow.swift; sourceTree = "<group>"; };
+		2FFFD23B273983FF00F9AC14 /* FileBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileBuilder.swift; sourceTree = "<group>"; };
+		2FFFD23C273983FF00F9AC14 /* FileType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
+		2FFFD23D273983FF00F9AC14 /* GpxParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpxParse.swift; sourceTree = "<group>"; };
+		2FFFD23E273983FF00F9AC14 /* UTI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTI.swift; sourceTree = "<group>"; };
+		2FFFD23F273983FF00F9AC14 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +128,11 @@
 		2F6F05A5265E5EED00BEAB00 /* PhotoGPS */ = {
 			isa = PBXGroup;
 			children = (
+				2FFFD23A273983FF00F9AC14 /* Utility */,
 				2FE9F014265F8A0100F7DBC1 /* Services */,
-				2FE9F013265F89F200F7DBC1 /* Views */,
+				2FE9F013265F89F200F7DBC1 /* Scenes */,
 				2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */,
 				2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */,
-				2F6F05AF265E5EED00BEAB00 /* Persistence.swift */,
 				2F6F05B4265E5EED00BEAB00 /* Info.plist */,
 				2F6F05B1265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld */,
 				2F6F05AC265E5EED00BEAB00 /* Preview Content */,
@@ -150,7 +166,26 @@
 			path = PhotoGPSUITests;
 			sourceTree = "<group>";
 		};
-		2FE9F013265F89F200F7DBC1 /* Views */ = {
+		2FE9F013265F89F200F7DBC1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2FFFD2352739835100F9AC14 /* HistoryView */,
+				2FFFD2322739834600F9AC14 /* HistoryDetailView */,
+				2FFFD2312739832000F9AC14 /* Master */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2FE9F014265F8A0100F7DBC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F05AF265E5EED00BEAB00 /* Persistence.swift */,
+				2F6F05DA265E822400BEAB00 /* HeadingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2FFFD2312739832000F9AC14 /* Master */ = {
 			isa = PBXGroup;
 			children = (
 				2F6F05D8265E642900BEAB00 /* MasterView.swift */,
@@ -159,15 +194,36 @@
 				2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */,
 				2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */,
 			);
-			path = Views;
+			path = Master;
 			sourceTree = "<group>";
 		};
-		2FE9F014265F8A0100F7DBC1 /* Services */ = {
+		2FFFD2322739834600F9AC14 /* HistoryDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				2F6F05DA265E822400BEAB00 /* HeadingService.swift */,
+				2FFFD2332739834600F9AC14 /* HistoryDetailView.swift */,
 			);
-			path = Services;
+			path = HistoryDetailView;
+			sourceTree = "<group>";
+		};
+		2FFFD2352739835100F9AC14 /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				2FFFD2362739835100F9AC14 /* HistoryView.swift */,
+				2FFFD2372739835100F9AC14 /* HistoryViewRow.swift */,
+			);
+			path = HistoryView;
+			sourceTree = "<group>";
+		};
+		2FFFD23A273983FF00F9AC14 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2FFFD23B273983FF00F9AC14 /* FileBuilder.swift */,
+				2FFFD23C273983FF00F9AC14 /* FileType.swift */,
+				2FFFD23D273983FF00F9AC14 /* GpxParse.swift */,
+				2FFFD23E273983FF00F9AC14 /* UTI.swift */,
+				2FFFD23F273983FF00F9AC14 /* NavigationBarModifier.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,11 +358,19 @@
 			files = (
 				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
 				2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */,
+				2FFFD2342739834600F9AC14 /* HistoryDetailView.swift in Sources */,
 				2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */,
+				2FFFD240273983FF00F9AC14 /* FileBuilder.swift in Sources */,
+				2FFFD2392739835100F9AC14 /* HistoryViewRow.swift in Sources */,
+				2FFFD243273983FF00F9AC14 /* UTI.swift in Sources */,
 				2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */,
+				2FFFD241273983FF00F9AC14 /* FileType.swift in Sources */,
+				2FFFD2382739835100F9AC14 /* HistoryView.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
+				2FFFD242273983FF00F9AC14 /* GpxParse.swift in Sources */,
 				2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */,
 				2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */,
+				2FFFD244273983FF00F9AC14 /* NavigationBarModifier.swift in Sources */,
 				2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */,
 				2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */,
 			);
