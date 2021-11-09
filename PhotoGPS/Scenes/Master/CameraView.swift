@@ -11,7 +11,6 @@ import SwiftUI
 struct CameraView: View {
     
     @ObservedObject private var headingService = HeadingService.shared
-//    @Environment(\.managedObjectContext) private var viewContext
     @State private var imageCount = 0
     
     var customCameraRepresentable = CustomCameraRepresentable(
@@ -44,7 +43,11 @@ struct CameraView: View {
                 LatLongView()
                     .allowsHitTesting(false) // Pass the tap to the lower view
             }
-        }.accentColor(.orange)
+        }
+        .accentColor(.orange)
+        .navigationTitle("Camera")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButton())
     }
 }
 

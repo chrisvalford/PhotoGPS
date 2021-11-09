@@ -39,13 +39,3 @@ struct HistoryViewRow: View {
 //        HistoryViewRow()
 //    }
 //}
-
-extension Image {
-    init(data: Data) {
-        if let uiImage = UIImage(data: data) {
-            self = Image(uiImage: uiImage)
-        } else {
-            self = Image(systemName: "xmark.octagon")
-        }
-    }
-}

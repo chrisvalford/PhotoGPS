@@ -14,4 +14,11 @@ extension Date {
         formatter.timeStyle = .long
         return formatter.string(from: self)
     }
+
+    func titleDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: self)
+    }
 }

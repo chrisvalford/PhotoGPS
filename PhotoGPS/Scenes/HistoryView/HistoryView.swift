@@ -13,7 +13,7 @@ struct HistoryView: View {
     
     @State private var selectedGPSData = [GPSData]()
     @Environment(\.managedObjectContext) private var viewContext
-    @Environment(\.presentationMode) var presentation
+//    @Environment(\.presentationMode) var presentation
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \GPSData.saved, ascending: false)],
         animation: .default)
