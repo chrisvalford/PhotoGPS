@@ -10,22 +10,16 @@ import SwiftUI
 
 struct MasterView: View {
     
-    @ObservedObject private var headingService: HeadingService
+    @ObservedObject private var headingService = HeadingService.shared
     @Environment(\.managedObjectContext) private var viewContext
     @State private var imageCount = 0
-    @State private var isShowingHistory = false
     
     var customCameraRepresentable = CustomCameraRepresentable(
         cameraFrame: .zero,
         imageCompletion: { _ in }
     )
     
-    init() {
-        headingService = HeadingService.shared
-    }
-    
     var body: some View {
-        
         NavigationView {
             ZStack {
                 CustomCameraView(
@@ -45,54 +39,18 @@ struct MasterView: View {
                 }
                 
                 VStack {
-                    HStack {
-                        VStack {
-                            Text("Heading")
-                                .font(.body)
-                                .fontWeight(.bold)
-                                .frame(maxWidth: 200, alignment: .leading)
-                            Text(headingService.headingText)
-                                .frame(maxWidth: 200, alignment: .leading)
-                        }
-                        Spacer()
-                        Image("CompasArrow")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50.0, height: 50.0)
-                            .rotationEffect(.degrees( headingService.rotation))
-                    }.padding()
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color.white.opacity(0.75))
-                    .cornerRadius(10)
+                    HeadingView()
                     Spacer()
                     HStack {
 
 
                     }.padding()
-                    HStack {
-                        VStack {
-                            Text("Latitude")
-                                .font(.body)
-                                .fontWeight(.bold)
-                                .frame(maxWidth: 100, alignment: .trailing)
-                            Text("Longitude")
-                                .font(.body)
-                                .fontWeight(.bold)
-                                .frame(maxWidth: 100, alignment: .trailing)
-                        }
-                        VStack {
-                            Text(headingService.latitudeText)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text(headingService.longitudeText)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                        }
-                    }.padding()
-                    .background(Color.white.opacity(0.5))
-                    .cornerRadius(10)
+                    LatLongView()
                     .allowsHitTesting(false) // Pass the tap to the lower view
                     
                 }
-                .navigationTitle("Home")
+                .navigationTitle("PhotoGPS")
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {},
@@ -107,7 +65,7 @@ struct MasterView: View {
                     }
                 }
             }
-        }
+        }.accentColor(.orange)
     }
 }
 
