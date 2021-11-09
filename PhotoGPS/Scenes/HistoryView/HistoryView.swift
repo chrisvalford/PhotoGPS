@@ -46,8 +46,7 @@ struct HistoryView: View {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {},
                                label: {
-                            NavigationLink(destination: CameraView()
-                                            .environment(\.managedObjectContext, viewContext)) {
+                            NavigationLink(destination: CameraView()) {
                                 Image(systemName: "camera")
                                     .foregroundColor(.orange)
                             }
@@ -103,7 +102,7 @@ struct HistoryView: View {
                         }
                         .disabled(selectedCount == 0)
                     }
-                }
+                }.accentColor(.orange)
         }
         .onAppear() {
             // Reset the badge count

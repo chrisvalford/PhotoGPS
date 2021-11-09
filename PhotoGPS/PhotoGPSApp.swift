@@ -12,7 +12,6 @@ struct PhotoGPSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            //CameraView()
             HistoryView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }

@@ -11,7 +11,7 @@ import SwiftUI
 struct CameraView: View {
     
     @ObservedObject private var headingService = HeadingService.shared
-    @Environment(\.managedObjectContext) private var viewContext
+//    @Environment(\.managedObjectContext) private var viewContext
     @State private var imageCount = 0
     
     var customCameraRepresentable = CustomCameraRepresentable(
@@ -20,30 +20,30 @@ struct CameraView: View {
     )
     
     var body: some View {
-            ZStack {
-                CustomCameraView(
-                    customCameraRepresentable: customCameraRepresentable,
-                    imageCompletion: { success in
-                        if success == true {
-                            self.imageCount += 1
-                            print("Saved \(self.imageCount) positions")
-                        }
+        ZStack {
+            CustomCameraView(
+                customCameraRepresentable: customCameraRepresentable,
+                imageCompletion: { success in
+                    if success == true {
+                        self.imageCount += 1
+                        print("Saved \(self.imageCount) positions")
                     }
-                )
+                }
+            )
                 .onAppear {
                     customCameraRepresentable.startRunningCaptureSession()
                 }
                 .onDisappear {
                     customCameraRepresentable.stopRunningCaptureSession()
                 }
-                VStack {
-                    HeadingView()
-                    Spacer()
-                    HStack {
-                    }.padding()
-                    LatLongView()
+            VStack {
+                HeadingView()
+                Spacer()
+                HStack {
+                }.padding()
+                LatLongView()
                     .allowsHitTesting(false) // Pass the tap to the lower view
-                }
+            }
         }.accentColor(.orange)
     }
 }

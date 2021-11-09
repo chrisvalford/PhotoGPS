@@ -18,9 +18,11 @@ struct HistoryViewRow: View {
             if self.isSelected {
                 Image(systemName: "checkmark.circle")
                     .frame(width: 20, height: 20)
+                    .foregroundColor(.orange)
             } else {
                 Image(systemName: "circle")
                     .frame(width: 20, height: 20)
+                    .foregroundColor(.orange)
             }
             Image(data: gpsData.image!)
                 .resizable()
@@ -28,7 +30,6 @@ struct HistoryViewRow: View {
                 .frame(width: 80, height: 80)
             Text(gpsData.saved?.localizedDate() ?? " - ")
                 .font(.caption)
-
         }
     }
 }
