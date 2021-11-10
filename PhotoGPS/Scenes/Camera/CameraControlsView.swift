@@ -15,6 +15,8 @@ struct CameraControlsView: View {
     var body: some View {
         CaptureButtonView()
             .onTapGesture {
+                let haptic = UIImpactFeedbackGenerator(style: .heavy)
+                haptic.impactOccurred(intensity: 0.5)
                 captureButtonAction()
             }
     }
