@@ -10,10 +10,16 @@ import SwiftUI
 @main
 struct PhotoGPSApp: App {
 
+    @AppStorage("ShowOnboarding") var showOnboarding: Bool = true
+
     var body: some Scene {
         WindowGroup {
-            HistoryView()
-                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+            if showOnboarding {
+                Welcome(showOnboarding: $showOnboarding)
+            } else {
+                HistoryView()
+                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+            }
         }
     }
 }

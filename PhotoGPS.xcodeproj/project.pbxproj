@@ -27,6 +27,8 @@
 		2FE819D3273BD08700408C7A /* CLLocation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D2273BD08700408C7A /* CLLocation+.swift */; };
 		2FE819D5273BD12800408C7A /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D4273BD12800408C7A /* CGFloat+.swift */; };
 		2FE819D7273BD16900408C7A /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D6273BD16900408C7A /* UserDefaults+.swift */; };
+		2FE819DA273BE2D800408C7A /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D9273BE2D800408C7A /* Welcome.swift */; };
+		2FE819DD273BEC2E00408C7A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819DC273BEC2E00408C7A /* SettingsView.swift */; };
 		2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */; };
 		2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */; };
 		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
@@ -85,6 +87,8 @@
 		2FE819D2273BD08700408C7A /* CLLocation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+.swift"; sourceTree = "<group>"; };
 		2FE819D4273BD12800408C7A /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
 		2FE819D6273BD16900408C7A /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		2FE819D9273BE2D800408C7A /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		2FE819DC273BEC2E00408C7A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsView.swift; sourceTree = "<group>"; };
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
@@ -212,9 +216,27 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2FE819D8273BE2BC00408C7A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2FE819D9273BE2D800408C7A /* Welcome.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2FE819DB273BEC1A00408C7A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2FE819DC273BEC2E00408C7A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		2FE9F013265F89F200F7DBC1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2FE819DB273BEC1A00408C7A /* Settings */,
+				2FE819D8273BE2BC00408C7A /* Onboarding */,
 				2FD963FA273A6A2B00DD2A87 /* Components */,
 				2FFFD2352739835100F9AC14 /* HistoryView */,
 				2FFFD2322739834600F9AC14 /* HistoryDetailView */,
@@ -420,10 +442,12 @@
 				2FFFD2382739835100F9AC14 /* HistoryView.swift in Sources */,
 				2FD963FC273A6A4600DD2A87 /* LatLongView.swift in Sources */,
 				2FD963F9273A698900DD2A87 /* HeadingView.swift in Sources */,
+				2FE819DD273BEC2E00408C7A /* SettingsView.swift in Sources */,
 				2FE819D5273BD12800408C7A /* CGFloat+.swift in Sources */,
 				2FE819D7273BD16900408C7A /* UserDefaults+.swift in Sources */,
 				2FE819D3273BD08700408C7A /* CLLocation+.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
+				2FE819DA273BE2D800408C7A /* Welcome.swift in Sources */,
 				2FFFD242273983FF00F9AC14 /* GpxParse.swift in Sources */,
 				2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */,
 				2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */,

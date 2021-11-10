@@ -12,8 +12,8 @@ import MapKit
 struct HistoryView: View {
     
     @State private var selectedGPSData = [GPSData]()
+    @State private var showSettings = false
     @Environment(\.managedObjectContext) private var viewContext
-//    @Environment(\.presentationMode) var presentation
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \GPSData.saved, ascending: false)],
         animation: .default)
@@ -47,9 +47,18 @@ struct HistoryView: View {
                         Button(action: {},
                                label: {
                             NavigationLink(destination: CameraView()) {
-                                Image(systemName: "camera")
+                                Image(systemName: "camera.viewfinder")
                                     .foregroundColor(.orange)
                             }
+                        }
+                        )
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            showSettings = true
+                        }, label: {
+                                Image(systemName: "gearshape.circle")
+                                    .foregroundColor(.orange)
                         }
                         )
                     }
@@ -98,7 +107,7 @@ struct HistoryView: View {
                             })
 
                         }) {
-                            Image(systemName: "square.and.arrow.up")
+                            Image(systemName: "square.and.arrow.up.circle")
                         }
                         .disabled(selectedCount == 0)
                     }
@@ -108,6 +117,9 @@ struct HistoryView: View {
             // Reset the badge count
             captureCount = 0
         }
+        .sheet(isPresented: $showSettings, content: {
+            SettingsView()
+        })
     }
     
     private func deleteRows(at indexSet: IndexSet) {
