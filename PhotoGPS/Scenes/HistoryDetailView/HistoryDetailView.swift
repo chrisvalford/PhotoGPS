@@ -6,18 +6,11 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct HistoryDetailView: View {
-    @State var item: GPSData {
-        didSet {
-            region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude),
-                                        span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
-        }
-    }
 
-    @State var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 0),
-                                                               span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State var item: GPSData
+    
     var body: some View {
         Form {
             Section {
@@ -55,10 +48,7 @@ struct HistoryDetailView: View {
                     Text("\(item.accuracy)")
                 }
             }
-            //               Map(coordinateRegion: $region, showsUserLocation: false, userTrackingMode: .constant(.follow))
-            //                            .frame(width: 400, height: 300)
-            Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))), interactionModes: [.zoom])
-                .frame(width: 400, height: 300)
+            MapView(item: $item)
         }
         .navigationTitle("\(item.saved?.titleDate() ?? "")")
         .navigationBarBackButtonHidden(true)
