@@ -10,7 +10,6 @@ import SwiftUI
 
 struct PhotoPin: Identifiable {
     let id = UUID()
-    //var taken: String
     var coordinate: CLLocationCoordinate2D
 }
 

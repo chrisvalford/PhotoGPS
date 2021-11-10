@@ -37,4 +37,9 @@ extension Double {
         let rs = (s * 10).rounded() / 10.0
         return (d, m, rs)
     }
+
+
+    var degreesToRadians: Double { return Double(CGFloat(self).degreesToRadians) }
+    var radiansToDegrees: Double { return Double(CGFloat(self).radiansToDegrees) }
+
 }
