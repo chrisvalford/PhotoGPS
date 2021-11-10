@@ -28,11 +28,9 @@ final class CustomCameraController: UIViewController {
     
     func configurePreviewLayer(with frame: CGRect) {
         let cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-
         cameraPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         cameraPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
         cameraPreviewLayer.frame = frame
-        
         view.layer.insertSublayer(cameraPreviewLayer, at: 0)
     }
     
@@ -42,7 +40,6 @@ final class CustomCameraController: UIViewController {
     
     func stopRunningCaptureSession() {
         captureSession.stopRunning()
-        
     }
     
     func takePhoto() {
@@ -166,6 +163,8 @@ extension CustomCameraRepresentable {
                 gpsData.latitude = headingService.latitude
                 gpsData.longitude = headingService.longitude
                 gpsData.trueHeading = headingService.heading
+                gpsData.elevation = headingService.elevation
+                gpsData.accuracy = headingService.accuracy
                 gpsData.image = imageData
                 
                 do {

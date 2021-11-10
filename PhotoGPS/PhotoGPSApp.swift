@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct PhotoGPSApp: App {
-    
+
     var body: some Scene {
         WindowGroup {
-            MasterView()
-                //.environment(\.managedObjectContext, persistenceController.container.viewContext)
+            HistoryView()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
     }
 }
