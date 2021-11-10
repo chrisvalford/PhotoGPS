@@ -23,6 +23,10 @@
 		2FD96403273A761000DD2A87 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD96402273A761000DD2A87 /* Double+.swift */; };
 		2FD96405273A8E3900DD2A87 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD96404273A8E3900DD2A87 /* BackButton.swift */; };
 		2FD96407273A8F0600DD2A87 /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD96406273A8F0600DD2A87 /* Image+.swift */; };
+		2FE819D1273BC41A00408C7A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D0273BC41A00408C7A /* MapView.swift */; };
+		2FE819D3273BD08700408C7A /* CLLocation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D2273BD08700408C7A /* CLLocation+.swift */; };
+		2FE819D5273BD12800408C7A /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D4273BD12800408C7A /* CGFloat+.swift */; };
+		2FE819D7273BD16900408C7A /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D6273BD16900408C7A /* UserDefaults+.swift */; };
 		2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */; };
 		2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */; };
 		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
@@ -77,6 +81,10 @@
 		2FD96402273A761000DD2A87 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		2FD96404273A8E3900DD2A87 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		2FD96406273A8F0600DD2A87 /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
+		2FE819D0273BC41A00408C7A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		2FE819D2273BD08700408C7A /* CLLocation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+.swift"; sourceTree = "<group>"; };
+		2FE819D4273BD12800408C7A /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
+		2FE819D6273BD16900408C7A /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsView.swift; sourceTree = "<group>"; };
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 				2FD963F8273A698900DD2A87 /* HeadingView.swift */,
 				2FD963FB273A6A4600DD2A87 /* LatLongView.swift */,
 				2FD96404273A8E3900DD2A87 /* BackButton.swift */,
+				2FE819D0273BC41A00408C7A /* MapView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -196,6 +205,9 @@
 				2FD96400273A756A00DD2A87 /* Date+.swift */,
 				2FD96402273A761000DD2A87 /* Double+.swift */,
 				2FD96406273A8F0600DD2A87 /* Image+.swift */,
+				2FE819D2273BD08700408C7A /* CLLocation+.swift */,
+				2FE819D4273BD12800408C7A /* CGFloat+.swift */,
+				2FE819D6273BD16900408C7A /* UserDefaults+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -206,7 +218,7 @@
 				2FD963FA273A6A2B00DD2A87 /* Components */,
 				2FFFD2352739835100F9AC14 /* HistoryView */,
 				2FFFD2322739834600F9AC14 /* HistoryDetailView */,
-				2FFFD2312739832000F9AC14 /* Master */,
+				2FFFD2312739832000F9AC14 /* Camera */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -220,7 +232,7 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		2FFFD2312739832000F9AC14 /* Master */ = {
+		2FFFD2312739832000F9AC14 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
 				2F6F05D8265E642900BEAB00 /* CameraView.swift */,
@@ -229,7 +241,7 @@
 				2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */,
 				2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */,
 			);
-			path = Master;
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		2FFFD2322739834600F9AC14 /* HistoryDetailView */ = {
@@ -391,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FD96407273A8F0600DD2A87 /* Image+.swift in Sources */,
+				2FE819D1273BC41A00408C7A /* MapView.swift in Sources */,
 				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
 				2FD96403273A761000DD2A87 /* Double+.swift in Sources */,
 				2FD96405273A8E3900DD2A87 /* BackButton.swift in Sources */,
@@ -407,6 +420,9 @@
 				2FFFD2382739835100F9AC14 /* HistoryView.swift in Sources */,
 				2FD963FC273A6A4600DD2A87 /* LatLongView.swift in Sources */,
 				2FD963F9273A698900DD2A87 /* HeadingView.swift in Sources */,
+				2FE819D5273BD12800408C7A /* CGFloat+.swift in Sources */,
+				2FE819D7273BD16900408C7A /* UserDefaults+.swift in Sources */,
+				2FE819D3273BD08700408C7A /* CLLocation+.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
 				2FFFD242273983FF00F9AC14 /* GpxParse.swift in Sources */,
 				2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */,
