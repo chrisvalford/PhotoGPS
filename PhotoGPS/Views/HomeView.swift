@@ -20,44 +20,74 @@ struct HomeView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .bottomLeading) {
-                TabView(selection: $selection) {
-                    MasterView()
-                        .environment(\.managedObjectContext, viewContext)
-                        .tabItem {
-                            Image(systemName: "camera")
-                            Text("Live")
-                        }
-                        
-                        .tag(0)
-                    HistoryView()
-                        .tabItem {
-                            Image(systemName: "clock")
-                            Text("History")
-                        }
-                        .tag(1)
+        NavigationView {
+            VStack {
+                Spacer()
+                NavigationLink(destination: CameraMasterView()
+                                .environment(\.managedObjectContext, viewContext)
+                ) {
+                    Image(systemName: "camera")
+                        .font(.system(size: 80.0))
+                        .imageScale(.large)
                 }
-                .onAppear() {
-                    UITabBar.appearance().barTintColor = .blue
-                }
-                .accentColor(.white)
+                .padding(30)
+                .background(Color.green)
+                .foregroundColor(Color.white)
+                .cornerRadius(90)
                 
-                if captureCount > 0 {
-                    ZStack {
-                        Circle()
-                            .foregroundColor(.red)
-                        
-                        Text("\(captureCount)")
-                            .foregroundColor(.white)
-                            .font(Font.system(size: 12))
-                    }
-                    .frame(width: 15, height: 15)
-                    .offset(x: ( ( 2 * self.badgePosition) - 0.95 ) * ( geometry.size.width / ( 2 * self.tabsCount ) ) + 2, y: -30)
-                    .opacity(1.0)
+                Spacer()
+                
+                NavigationLink(destination: HistoryView()) {
+                    Image(systemName: "clock")
+                        .font(.system(size: 80.0))
+                        .imageScale(.large)
                 }
+                .padding(30)
+                .background(Color.green)
+                .foregroundColor(Color.white)
+                .cornerRadius(90)
+                Spacer()
             }
+            .navigationTitle("PhotoGPS")
         }
+//        GeometryReader { geometry in
+//            ZStack(alignment: .bottomLeading) {
+//                TabView(selection: $selection) {
+//                    CameraMasterView()
+//                        .environment(\.managedObjectContext, viewContext)
+//                        .tabItem {
+//                            Image(systemName: "camera")
+//                            Text("Live")
+//                        }
+//
+//                        .tag(0)
+//                    HistoryView()
+//                        .tabItem {
+//                            Image(systemName: "clock")
+//                            Text("History")
+//                        }
+//                        .tag(1)
+//                }
+//                .onAppear() {
+//                    UITabBar.appearance().barTintColor = .blue
+//                }
+//                .accentColor(.white)
+//
+//                if captureCount > 0 {
+//                    ZStack {
+//                        Circle()
+//                            .foregroundColor(.red)
+//
+//                        Text("\(captureCount)")
+//                            .foregroundColor(.white)
+//                            .font(Font.system(size: 12))
+//                    }
+//                    .frame(width: 15, height: 15)
+//                    .offset(x: ( ( 2 * self.badgePosition) - 0.95 ) * ( geometry.size.width / ( 2 * self.tabsCount ) ) + 2, y: -30)
+//                    .opacity(1.0)
+//                }
+//            }
+//        }
     }
 }
 

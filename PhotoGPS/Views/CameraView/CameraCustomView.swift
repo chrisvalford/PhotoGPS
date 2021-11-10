@@ -1,5 +1,5 @@
 //
-//  CustomCameraView.swift
+//  CameraCustomView.swift
 //  PhotoGPS
 //
 //  Created by Christopher Alford on 27/5/21.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CustomCameraView: View {
-    var customCameraRepresentable: CustomCameraRepresentable
+struct CameraCustomView: View {
+    var customCameraRepresentable: CameraCustomRepresentable
     var imageCompletion: ((Bool) -> Void)
     
     var body: some View {
@@ -27,7 +27,7 @@ struct CustomCameraView: View {
         }
     }
     
-    private func cameraView(frame: CGRect) -> CustomCameraRepresentable {
+    private func cameraView(frame: CGRect) -> CameraCustomRepresentable {
         customCameraRepresentable.cameraFrame = frame
         customCameraRepresentable.imageCompletion = imageCompletion
         return customCameraRepresentable

@@ -16,13 +16,12 @@
 		2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05B1265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld */; };
 		2F6F05BE265E5EED00BEAB00 /* VideoGPSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05BD265E5EED00BEAB00 /* VideoGPSTests.swift */; };
 		2F6F05C9265E5EED00BEAB00 /* VideoGPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05C8265E5EED00BEAB00 /* VideoGPSUITests.swift */; };
-		2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05D8265E642900BEAB00 /* MasterView.swift */; };
+		2F6F05D9265E642900BEAB00 /* CameraMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05D8265E642900BEAB00 /* CameraMasterView.swift */; };
 		2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05DA265E822400BEAB00 /* HeadingService.swift */; };
 		2FD545D72660EC0000C020A6 /* UTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD545D62660EC0000C020A6 /* UTI.swift */; };
 		2FD545D92660ECBC00C020A6 /* GpxParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD545D82660ECBC00C020A6 /* GpxParse.swift */; };
-		2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */; };
-		2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */; };
-		2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FE9F015265FAEA200F7DBC1 /* .gitignore */; };
+		2FE9F00C265F889400F7DBC1 /* CameraCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CameraCustomView.swift */; };
+		2FE9F012265F88E900F7DBC1 /* CameraCustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F011265F88E900F7DBC1 /* CameraCustomController.swift */; };
 		2FE9F01A265FB22100F7DBC1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F019265FB22100F7DBC1 /* HistoryView.swift */; };
 		2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F01B265FB23300F7DBC1 /* HistoryViewRow.swift */; };
 		2FEA06702668EF760087EBA0 /* FileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA066F2668EF760087EBA0 /* FileBuilder.swift */; };
@@ -65,17 +64,17 @@
 		2F6F05C4265E5EED00BEAB00 /* PhotoGPSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGPSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6F05C8265E5EED00BEAB00 /* VideoGPSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGPSUITests.swift; sourceTree = "<group>"; };
 		2F6F05CA265E5EED00BEAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F6F05D8265E642900BEAB00 /* MasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		2F6F05D8265E642900BEAB00 /* CameraMasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraMasterView.swift; sourceTree = "<group>"; };
 		2F6F05DA265E822400BEAB00 /* HeadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingService.swift; sourceTree = "<group>"; };
 		2FD545D62660EC0000C020A6 /* UTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTI.swift; sourceTree = "<group>"; };
 		2FD545D82660ECBC00C020A6 /* GpxParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpxParse.swift; sourceTree = "<group>"; };
 		2FD545DA2660EDEF00C020A6 /* sample.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample.gpx; sourceTree = "<group>"; };
 		2FDD1731266A04CA00994F51 /* sample.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = sample.rtf; sourceTree = "<group>"; };
 		2FDD1732266A177600994F51 /* PhotoGPS.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = PhotoGPS.rtf; sourceTree = "<group>"; };
-		2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
+		2FE9F00B265F889400F7DBC1 /* CameraCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCustomView.swift; sourceTree = "<group>"; };
 		2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsView.swift; sourceTree = "<group>"; };
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
-		2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
+		2FE9F011265F88E900F7DBC1 /* CameraCustomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCustomController.swift; sourceTree = "<group>"; };
 		2FE9F015265FAEA200F7DBC1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2FE9F019265FB22100F7DBC1 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		2FE9F01B265FB23300F7DBC1 /* HistoryViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewRow.swift; sourceTree = "<group>"; };
@@ -211,7 +210,7 @@
 			children = (
 				2F5CECB5266A7D94009D68C4 /* HistoryDetailView */,
 				2FE9F018265FB20A00F7DBC1 /* HistoryView */,
-				2FE9F017265FB20000F7DBC1 /* MasterView */,
+				2FE9F017265FB20000F7DBC1 /* CameraView */,
 				2F5CECB8266A9BCC009D68C4 /* HomeView.swift */,
 			);
 			path = Views;
@@ -225,16 +224,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		2FE9F017265FB20000F7DBC1 /* MasterView */ = {
+		2FE9F017265FB20000F7DBC1 /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
-				2F6F05D8265E642900BEAB00 /* MasterView.swift */,
-				2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */,
+				2F6F05D8265E642900BEAB00 /* CameraMasterView.swift */,
+				2FE9F00B265F889400F7DBC1 /* CameraCustomView.swift */,
 				2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */,
 				2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */,
-				2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */,
+				2FE9F011265F88E900F7DBC1 /* CameraCustomController.swift */,
 			);
-			path = MasterView;
+			path = CameraView;
 			sourceTree = "<group>";
 		};
 		2FE9F018265FB20A00F7DBC1 /* HistoryView */ = {
@@ -385,7 +384,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */,
-				2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */,
 				2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,11 +410,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
-				2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */,
+				2FE9F012265F88E900F7DBC1 /* CameraCustomController.swift in Sources */,
 				2FFFF6A6266F584C00886629 /* NavigationBarModifier.swift in Sources */,
 				2F5CECB7266A7DAF009D68C4 /* HistoryDetailView.swift in Sources */,
 				2FD545D72660EC0000C020A6 /* UTI.swift in Sources */,
-				2F6F05D9265E642900BEAB00 /* MasterView.swift in Sources */,
+				2F6F05D9265E642900BEAB00 /* CameraMasterView.swift in Sources */,
 				2F5CECB9266A9BCC009D68C4 /* HomeView.swift in Sources */,
 				2FE9F01C265FB23300F7DBC1 /* HistoryViewRow.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
@@ -425,7 +423,7 @@
 				2FE9F01A265FB22100F7DBC1 /* HistoryView.swift in Sources */,
 				2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */,
 				2FEA06702668EF760087EBA0 /* FileBuilder.swift in Sources */,
-				2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */,
+				2FE9F00C265F889400F7DBC1 /* CameraCustomView.swift in Sources */,
 				2FD545D92660ECBC00C020A6 /* GpxParse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

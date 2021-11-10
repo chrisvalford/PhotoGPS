@@ -1,5 +1,5 @@
 //
-//  CustomCameraController.swift
+//  CameraCustomController.swift
 //  PhotoGPS
 //
 //  Created by Christopher Alford on 27/5/21.
@@ -9,8 +9,8 @@ import SwiftUI
 import AVFoundation
 import CoreData
 
-final class CustomCameraController: UIViewController {
-    static let shared = CustomCameraController()
+final class CameraCustomController: UIViewController {
+    static let shared = CameraCustomController()
     
     private var captureSession = AVCaptureSession()
     private var backCamera: AVCaptureDevice?
@@ -109,7 +109,7 @@ final class CustomCameraController: UIViewController {
     }
 }
 
-final class CustomCameraRepresentable: UIViewControllerRepresentable {
+final class CameraCustomRepresentable: UIViewControllerRepresentable {
     
     init(cameraFrame: CGRect, imageCompletion: @escaping ((Bool) -> Void)) {
         self.cameraFrame = cameraFrame
@@ -123,35 +123,35 @@ final class CustomCameraRepresentable: UIViewControllerRepresentable {
         Coordinator(self)
     }
     
-    func makeUIViewController(context: Context) -> CustomCameraController {
-        CustomCameraController.shared.configurePreviewLayer(with: cameraFrame)
-        CustomCameraController.shared.captureDelegate = context.coordinator
-        return CustomCameraController.shared
+    func makeUIViewController(context: Context) -> CameraCustomController {
+        CameraCustomController.shared.configurePreviewLayer(with: cameraFrame)
+        CameraCustomController.shared.captureDelegate = context.coordinator
+        return CameraCustomController.shared
     }
     
-    func updateUIViewController(_ cameraViewController: CustomCameraController, context: Context) {}
+    func updateUIViewController(_ cameraViewController: CameraCustomController, context: Context) {}
     
     func takePhoto() {
-        CustomCameraController.shared.takePhoto()
+        CameraCustomController.shared.takePhoto()
     }
     
     func startRunningCaptureSession() {
-        CustomCameraController.shared.startRunningCaptureSession()
+        CameraCustomController.shared.startRunningCaptureSession()
     }
     
     func stopRunningCaptureSession() {
-        CustomCameraController.shared.stopRunningCaptureSession()
+        CameraCustomController.shared.stopRunningCaptureSession()
     }
 }
 
-extension CustomCameraRepresentable {
+extension CameraCustomRepresentable {
     final class Coordinator: NSObject, AVCapturePhotoCaptureDelegate {
         
         private var context = PersistenceController.shared.container.viewContext
-        private let parent: CustomCameraRepresentable
+        private let parent: CameraCustomRepresentable
         private let headingService = HeadingService.shared
         
-        init(_ parent: CustomCameraRepresentable) {
+        init(_ parent: CameraCustomRepresentable) {
             self.parent = parent
         }
         

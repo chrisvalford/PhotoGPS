@@ -93,7 +93,7 @@ struct HistoryView: View {
                     .disabled(selectedCount == 0)
                 }
             }
-            .navigationBarTitle("History", displayMode: .inline)
+            //.navigationBarTitle("History", displayMode: .inline)
         }
         .onAppear() {
             // Reset the badge count

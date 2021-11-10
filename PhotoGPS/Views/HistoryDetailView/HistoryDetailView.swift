@@ -21,36 +21,28 @@ struct HistoryDetailView: View {
                                                                span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     
     var body: some View {
-//        NavigationView {
             Form {
                 Section {
-                Text("Taken")
-                Text("\(localizedDate(item.saved))")
+                    Image(data: item.image!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
-                Section {
-                Text("Latitude")
-                    Text("\(formatLatitude(from: item.latitude))")
-                //Text("\(item.latitude)")
-                Text("Longitude")
-                    Text("\(formatLongitude(from: item.longitude))")
-                //Text("\(item.longitude)")
+                Section(header: Text("Taken")) {
+                    Text("\(localizedDate(item.saved))")
                 }
-                Section {
-                    Text("Heading")
+                Section(header: Text("Location")) {
+                    Text("Latitude:  \(formatLatitude(from: item.latitude))")
+                    Text("Longitude: \(formatLongitude(from: item.longitude))")
+                }
+                Section(header: Text("Heading")) {
                     Text("\(formatHeading(from: item.trueHeading)) º (T)")
                     Text("\(formatHeading(from: item.magneticHeading)) º (M)")
-                    Text("Elevation")
-                    Text("\(item.elevation) m")
-                    Text("Accuracy")
-                    Text("\(item.accuracy)")
+                    Text("Elevation: \(item.elevation) m")
+                    Text("Accuracy: \(item.accuracy)")
                 }
-//               Map(coordinateRegion: $region, showsUserLocation: false, userTrackingMode: .constant(.follow))
-//                            .frame(width: 400, height: 300)
                 Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))), interactionModes: [.zoom])
                     .frame(width: 400, height: 300)
             }
-//        }
-//        .navigationTitle("GPS Data")
     }
 
     func localizedDate(_ date: Date?) -> String {
@@ -92,8 +84,9 @@ struct HistoryDetailView: View {
     }
 }
 
-//struct HistoryDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HistoryDetailView(item: GPSData())
-//    }
-//}
+struct HistoryDetailView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        HistoryDetailView(item: GPSData()).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
+}

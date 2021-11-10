@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-struct MasterView: View {
+struct CameraMasterView: View {
     
     @ObservedObject private var headingService: HeadingService
     @Environment(\.managedObjectContext) private var viewContext
     @State private var captureCount = UserDefaults.standard.integer(forKey: "Captured")
     
-    var customCameraRepresentable = CustomCameraRepresentable(
+    var customCameraRepresentable = CameraCustomRepresentable(
         cameraFrame: .zero,
         imageCompletion: { _ in }
     )
@@ -27,7 +27,7 @@ struct MasterView: View {
         
         NavigationView {
             ZStack {
-                CustomCameraView(
+                CameraCustomView(
                     customCameraRepresentable: customCameraRepresentable,
                     imageCompletion: { success in
                         if success == true {
@@ -104,8 +104,8 @@ struct MasterView: View {
                     }.padding()
                     .background(Color.black.opacity(0.5))
                 }
-                .navigationBarTitle(Text("Photo GPS"), displayMode: .inline)
-                .navigationBarColor(backgroundColor: .black, titleColor: .white)
+                //.navigationBarTitle(Text("Photo GPS"), displayMode: .inline)
+                //.navigationBarColor(backgroundColor: .black, titleColor: .white)
             }
         }
     }
@@ -113,6 +113,6 @@ struct MasterView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MasterView()
+        CameraMasterView()
     }
 }
