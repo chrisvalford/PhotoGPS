@@ -16,6 +16,7 @@
 		2F6F05C9265E5EED00BEAB00 /* VideoGPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05C8265E5EED00BEAB00 /* VideoGPSUITests.swift */; };
 		2F6F05D9265E642900BEAB00 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05D8265E642900BEAB00 /* CameraView.swift */; };
 		2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05DA265E822400BEAB00 /* HeadingService.swift */; };
+		2F7D5FE8273D316900D10A46 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D5FE7273D316900D10A46 /* CustomAlertView.swift */; };
 		2FD963F9273A698900DD2A87 /* HeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD963F8273A698900DD2A87 /* HeadingView.swift */; };
 		2FD963FC273A6A4600DD2A87 /* LatLongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD963FB273A6A4600DD2A87 /* LatLongView.swift */; };
 		2FD963FF273A753B00DD2A87 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD963FE273A753B00DD2A87 /* String+.swift */; };
@@ -27,6 +28,9 @@
 		2FE819D3273BD08700408C7A /* CLLocation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D2273BD08700408C7A /* CLLocation+.swift */; };
 		2FE819D5273BD12800408C7A /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D4273BD12800408C7A /* CGFloat+.swift */; };
 		2FE819D7273BD16900408C7A /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D6273BD16900408C7A /* UserDefaults+.swift */; };
+		2FE819DA273BE2D800408C7A /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819D9273BE2D800408C7A /* Welcome.swift */; };
+		2FE819DD273BEC2E00408C7A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819DC273BEC2E00408C7A /* SettingsView.swift */; };
+		2FE819DF273C1BB700408C7A /* PrivacyPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE819DE273C1BB700408C7A /* PrivacyPermissions.swift */; };
 		2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */; };
 		2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */; };
 		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
@@ -74,6 +78,7 @@
 		2F6F05CA265E5EED00BEAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F6F05D8265E642900BEAB00 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		2F6F05DA265E822400BEAB00 /* HeadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingService.swift; sourceTree = "<group>"; };
+		2F7D5FE7273D316900D10A46 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		2FD963F8273A698900DD2A87 /* HeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingView.swift; sourceTree = "<group>"; };
 		2FD963FB273A6A4600DD2A87 /* LatLongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLongView.swift; sourceTree = "<group>"; };
 		2FD963FE273A753B00DD2A87 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -85,6 +90,9 @@
 		2FE819D2273BD08700408C7A /* CLLocation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+.swift"; sourceTree = "<group>"; };
 		2FE819D4273BD12800408C7A /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
 		2FE819D6273BD16900408C7A /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		2FE819D9273BE2D800408C7A /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		2FE819DC273BEC2E00408C7A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2FE819DE273C1BB700408C7A /* PrivacyPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPermissions.swift; sourceTree = "<group>"; };
 		2FE9F00B265F889400F7DBC1 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		2FE9F00D265F88B300F7DBC1 /* CameraControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsView.swift; sourceTree = "<group>"; };
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
@@ -187,6 +195,14 @@
 			path = PhotoGPSUITests;
 			sourceTree = "<group>";
 		};
+		2F7D5FE6273D315000D10A46 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2F7D5FE7273D316900D10A46 /* CustomAlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		2FD963FA273A6A2B00DD2A87 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,9 +228,28 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2FE819D8273BE2BC00408C7A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2FE819D9273BE2D800408C7A /* Welcome.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2FE819DB273BEC1A00408C7A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2FE819DC273BEC2E00408C7A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		2FE9F013265F89F200F7DBC1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2F7D5FE6273D315000D10A46 /* Alert */,
+				2FE819DB273BEC1A00408C7A /* Settings */,
+				2FE819D8273BE2BC00408C7A /* Onboarding */,
 				2FD963FA273A6A2B00DD2A87 /* Components */,
 				2FFFD2352739835100F9AC14 /* HistoryView */,
 				2FFFD2322739834600F9AC14 /* HistoryDetailView */,
@@ -268,6 +303,7 @@
 				2FFFD23C273983FF00F9AC14 /* FileType.swift */,
 				2FFFD23D273983FF00F9AC14 /* GpxParse.swift */,
 				2FFFD23E273983FF00F9AC14 /* UTI.swift */,
+				2FE819DE273C1BB700408C7A /* PrivacyPermissions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -405,6 +441,8 @@
 				2FD96407273A8F0600DD2A87 /* Image+.swift in Sources */,
 				2FE819D1273BC41A00408C7A /* MapView.swift in Sources */,
 				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
+				2FE819DF273C1BB700408C7A /* PrivacyPermissions.swift in Sources */,
+				2F7D5FE8273D316900D10A46 /* CustomAlertView.swift in Sources */,
 				2FD96403273A761000DD2A87 /* Double+.swift in Sources */,
 				2FD96405273A8E3900DD2A87 /* BackButton.swift in Sources */,
 				2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */,
@@ -420,10 +458,12 @@
 				2FFFD2382739835100F9AC14 /* HistoryView.swift in Sources */,
 				2FD963FC273A6A4600DD2A87 /* LatLongView.swift in Sources */,
 				2FD963F9273A698900DD2A87 /* HeadingView.swift in Sources */,
+				2FE819DD273BEC2E00408C7A /* SettingsView.swift in Sources */,
 				2FE819D5273BD12800408C7A /* CGFloat+.swift in Sources */,
 				2FE819D7273BD16900408C7A /* UserDefaults+.swift in Sources */,
 				2FE819D3273BD08700408C7A /* CLLocation+.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
+				2FE819DA273BE2D800408C7A /* Welcome.swift in Sources */,
 				2FFFD242273983FF00F9AC14 /* GpxParse.swift in Sources */,
 				2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */,
 				2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */,
@@ -515,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -570,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

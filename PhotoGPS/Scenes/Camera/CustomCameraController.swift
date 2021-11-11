@@ -52,7 +52,7 @@ final class CustomCameraController: UIViewController {
         photoOutput?.capturePhoto(with: settings, delegate: delegate)
     }
     
-    // MARK: Private
+    // MARK: - Private
     
     private func setup() {
         setupCaptureSession()

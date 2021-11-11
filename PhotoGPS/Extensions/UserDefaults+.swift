@@ -16,6 +16,16 @@ extension UserDefaults {
             longitude = newValue.coordinate.longitude }
     }
 
+//    var showOnboarding: Bool {
+//        get {
+//            if let _ = object(forKey: #function) {
+//                return bool(forKey: #function)
+//            }
+//            return true
+//        }
+//        set { set(newValue, forKey: #function) }
+//    }
+
     private var latitude: Double? {
         get {
             if let _ = object(forKey: #function) {
