@@ -1,6 +1,7 @@
 # OS X temporary files
-.DS_Store
-.Trashes
+*.DS_Store
+*.Trashes
+*.xcuserstate
 
 # Xcode User settings
 xcuserdata/
