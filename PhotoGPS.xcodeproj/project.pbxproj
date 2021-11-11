@@ -16,6 +16,7 @@
 		2F6F05C9265E5EED00BEAB00 /* VideoGPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05C8265E5EED00BEAB00 /* VideoGPSUITests.swift */; };
 		2F6F05D9265E642900BEAB00 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05D8265E642900BEAB00 /* CameraView.swift */; };
 		2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05DA265E822400BEAB00 /* HeadingService.swift */; };
+		2F7D5FE8273D316900D10A46 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D5FE7273D316900D10A46 /* CustomAlertView.swift */; };
 		2FD963F9273A698900DD2A87 /* HeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD963F8273A698900DD2A87 /* HeadingView.swift */; };
 		2FD963FC273A6A4600DD2A87 /* LatLongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD963FB273A6A4600DD2A87 /* LatLongView.swift */; };
 		2FD963FF273A753B00DD2A87 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD963FE273A753B00DD2A87 /* String+.swift */; };
@@ -77,6 +78,7 @@
 		2F6F05CA265E5EED00BEAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F6F05D8265E642900BEAB00 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		2F6F05DA265E822400BEAB00 /* HeadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingService.swift; sourceTree = "<group>"; };
+		2F7D5FE7273D316900D10A46 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		2FD963F8273A698900DD2A87 /* HeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingView.swift; sourceTree = "<group>"; };
 		2FD963FB273A6A4600DD2A87 /* LatLongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLongView.swift; sourceTree = "<group>"; };
 		2FD963FE273A753B00DD2A87 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -193,6 +195,14 @@
 			path = PhotoGPSUITests;
 			sourceTree = "<group>";
 		};
+		2F7D5FE6273D315000D10A46 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2F7D5FE7273D316900D10A46 /* CustomAlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		2FD963FA273A6A2B00DD2A87 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +247,7 @@
 		2FE9F013265F89F200F7DBC1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2F7D5FE6273D315000D10A46 /* Alert */,
 				2FE819DB273BEC1A00408C7A /* Settings */,
 				2FE819D8273BE2BC00408C7A /* Onboarding */,
 				2FD963FA273A6A2B00DD2A87 /* Components */,
@@ -431,6 +442,7 @@
 				2FE819D1273BC41A00408C7A /* MapView.swift in Sources */,
 				2F6F05B0265E5EED00BEAB00 /* Persistence.swift in Sources */,
 				2FE819DF273C1BB700408C7A /* PrivacyPermissions.swift in Sources */,
+				2F7D5FE8273D316900D10A46 /* CustomAlertView.swift in Sources */,
 				2FD96403273A761000DD2A87 /* Double+.swift in Sources */,
 				2FD96405273A8E3900DD2A87 /* BackButton.swift in Sources */,
 				2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */,

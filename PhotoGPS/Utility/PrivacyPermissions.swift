@@ -22,6 +22,11 @@ class PrivacyPermissions: ObservableObject {
 
     static let shared = PrivacyPermissions()
 
+    init() {
+        checkCameraPermission()
+        checkLocationPermission()
+    }
+
     func askCameraPermission() {
         AVCaptureDevice.requestAccess(for: .video) { authorized in
             if !authorized {
@@ -41,7 +46,7 @@ class PrivacyPermissions: ObservableObject {
         case .denied:
             cameraPrivacy = .unauthorized
         case .authorized:
-            break
+            cameraPrivacy = .authorized
         @unknown default:
             cameraPrivacy = .unauthorized
         }
