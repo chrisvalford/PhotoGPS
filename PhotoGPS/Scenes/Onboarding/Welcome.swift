@@ -104,5 +104,6 @@ struct Welcome: View {
 struct Welcome_Previews: PreviewProvider {
     static var previews: some View {
         Welcome(showOnboarding: .constant(true))
+            .preferredColorScheme(.dark)
     }
 }
