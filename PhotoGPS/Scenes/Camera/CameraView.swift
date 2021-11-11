@@ -13,7 +13,7 @@ struct CameraView: View {
     @ObservedObject private var headingService = HeadingService.shared
     @State private var cameraPrivacy = PrivacyPermissions.shared.cameraPrivacy
     @State private var locationPrivacy = PrivacyPermissions.shared.locationPrivacy
-    @State private var imageCount = 0
+    @Binding var imageCount: Int
     @State private var permissionsAlertIsVisible = false
     @State private var permissionsString: String = "You have not granted:"
     
@@ -91,6 +91,6 @@ struct CameraView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraView()
+        CameraView(imageCount: .constant(0))
     }
 }
