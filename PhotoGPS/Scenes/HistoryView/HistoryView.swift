@@ -64,23 +64,23 @@ struct HistoryView: View {
                     }
                     ToolbarItem(placement: .primaryAction) {
                         Menu(content: {
-                            Button(action: {
-                                buildFile(forFileType: .waypoints)
-                            }, label: {
-                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
-                            })
+//                            Button(action: {
+//                                buildFile(forFileType: .waypoints)
+//                            }, label: {
+//                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
+//                            })
 
-                            Button(action: {
-                                buildFile(forFileType: .route)
-                            }, label: {
-                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
-                            })
+//                            Button(action: {
+//                                buildFile(forFileType: .route)
+//                            }, label: {
+//                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
+//                            })
 
-                            Button(action: {
-                                buildFile(forFileType: .track)
-                            }, label: {
-                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
-                            })
+//                            Button(action: {
+//                                buildFile(forFileType: .track)
+//                            }, label: {
+//                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
+//                            })
 
                             Button(action: {
                                 buildFile(forFileType: .text)
@@ -94,11 +94,11 @@ struct HistoryView: View {
                                 Label("Share as a CSV", systemImage: "doc.text")
                             })
 
-                            Button(action: {
-                                buildFile(forFileType: .document)
-                            }, label: {
-                                Label("Share as a document", systemImage: "doc.richtext")
-                            })
+//                            Button(action: {
+//                                buildFile(forFileType: .document)
+//                            }, label: {
+//                                Label("Share as a document", systemImage: "doc.richtext")
+//                            })
 
                             Button(action: {
                                 openInMaps()
