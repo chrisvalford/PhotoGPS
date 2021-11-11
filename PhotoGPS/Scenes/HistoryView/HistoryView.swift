@@ -9,10 +9,15 @@ import SwiftUI
 import CoreData
 import MapKit
 
+class HistoryContentViewModel: ObservableObject {
+    //@Published var showEmpty: Bool = false
+    @Published var showSettings: Bool = false
+}
+
 struct HistoryView: View {
     
     @State private var selectedGPSData = [GPSData]()
-    @State private var showSettings = false
+    @StateObject private var model = HistoryContentViewModel()
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \GPSData.saved, ascending: false)],
@@ -21,32 +26,19 @@ struct HistoryView: View {
     private var saves: FetchedResults<GPSData>
     @State private var captureCount = UserDefaults.standard.integer(forKey: "Captured")
     @State private var selectedCount = 0
+    @State private var imageCount = 0
+    @State var photoTaken = false
     
     var body: some View {
         NavigationView {
-            List{
-                ForEach(saves, id: \.identifier) { item in
-                    NavigationLink(destination: HistoryDetailView(item: item)) {
-                        HistoryViewRow(gpsData: item, isSelected: selectedGPSData.contains(item)) { }
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            if self.selectedGPSData.contains(item) {
-                                self.selectedGPSData.removeAll(where: { $0 == item })
-                                self.selectedCount -= 1
-                            } else {
-                                self.selectedGPSData.append(item)
-                                self.selectedCount += 1
-                            }
-                        }
-                    }
-                }.onDelete(perform: self.deleteRows)
-            }.navigationTitle("PhotoGPS")
+            listView
+                .navigationTitle("PhotoGPS")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {},
                                label: {
-                            NavigationLink(destination: CameraView()) {
+                            NavigationLink(destination: CameraView(imageCount: $imageCount)) {
                                 Image(systemName: "camera.viewfinder")
                                     .foregroundColor(.orange)
                             }
@@ -55,32 +47,32 @@ struct HistoryView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            showSettings = true
+                            model.showSettings = true
                         }, label: {
-                                Image(systemName: "gearshape.circle")
-                                    .foregroundColor(.orange)
+                            Image(systemName: "gearshape.circle")
+                                .foregroundColor(.orange)
                         }
                         )
                     }
                     ToolbarItem(placement: .primaryAction) {
                         Menu(content: {
-//                            Button(action: {
-//                                buildFile(forFileType: .waypoints)
-//                            }, label: {
-//                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
-//                            })
+                            //                            Button(action: {
+                            //                                buildFile(forFileType: .waypoints)
+                            //                            }, label: {
+                            //                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
+                            //                            })
 
-//                            Button(action: {
-//                                buildFile(forFileType: .route)
-//                            }, label: {
-//                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
-//                            })
+                            //                            Button(action: {
+                            //                                buildFile(forFileType: .route)
+                            //                            }, label: {
+                            //                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
+                            //                            })
 
-//                            Button(action: {
-//                                buildFile(forFileType: .track)
-//                            }, label: {
-//                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
-//                            })
+                            //                            Button(action: {
+                            //                                buildFile(forFileType: .track)
+                            //                            }, label: {
+                            //                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
+                            //                            })
 
                             Button(action: {
                                 buildFile(forFileType: .text)
@@ -94,11 +86,11 @@ struct HistoryView: View {
                                 Label("Share as a CSV", systemImage: "doc.text")
                             })
 
-//                            Button(action: {
-//                                buildFile(forFileType: .document)
-//                            }, label: {
-//                                Label("Share as a document", systemImage: "doc.richtext")
-//                            })
+                            //                            Button(action: {
+                            //                                buildFile(forFileType: .document)
+                            //                            }, label: {
+                            //                                Label("Share as a document", systemImage: "doc.richtext")
+                            //                            })
 
                             Button(action: {
                                 openInMaps()
@@ -116,12 +108,54 @@ struct HistoryView: View {
         .onAppear() {
             // Reset the badge count
             captureCount = 0
+            imageCount = saves.count
+            //            if saves.count < 1 {
+            //                model.showEmpty = true
+            //            }
         }
-        .sheet(isPresented: $showSettings, content: {
+        //        .sheet(isPresented: $model.showEmpty, content: {
+        //            EmptyHistoryView()
+        //        })
+        .sheet(isPresented: $model.showSettings, content: {
             SettingsView()
         })
     }
-    
+
+    @ViewBuilder
+    var listView: some View {
+        if imageCount > 0 {
+            objectsListView
+        } else {
+            EmptyHistoryView()
+        }
+    }
+
+    var objectsListView: some View {
+        List {
+            ForEach(saves, id: \.identifier) { item in
+                NavigationLink(destination: HistoryDetailView(item: item)) {
+                    HistoryViewRow(gpsData: item, isSelected: selectedGPSData.contains(item)) { }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        if self.selectedGPSData.contains(item) {
+                            self.selectedGPSData.removeAll(where: { $0 == item })
+                            self.selectedCount -= 1
+                        } else {
+                            self.selectedGPSData.append(item)
+                            self.selectedCount += 1
+                        }
+                    }
+                }
+            }.onDelete(perform: self.deleteRows)
+        }
+    }
+
+//    var emptyListView: some View {
+//        List {
+//            Text("No photos")
+//        }
+//    }
+
     private func deleteRows(at indexSet: IndexSet) {
         for index in indexSet {
             let item = saves[index]
@@ -129,6 +163,7 @@ struct HistoryView: View {
         }
         do {
             try viewContext.save()
+            imageCount -= 1
         } catch {
             print("Error saving context: \(error.localizedDescription)")
         }
