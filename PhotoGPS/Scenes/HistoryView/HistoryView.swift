@@ -105,6 +105,7 @@ struct HistoryView: View {
                     }
                 }.accentColor(.orange)
         }
+        .navigationViewStyle(.stack)
         .onAppear() {
             // Reset the badge count
             captureCount = 0
