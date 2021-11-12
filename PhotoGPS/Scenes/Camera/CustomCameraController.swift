@@ -18,6 +18,7 @@ final class CustomCameraController: UIViewController {
     private var currentCamera: AVCaptureDevice?
     private var photoOutput: AVCapturePhotoOutput?
     private var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
+    //private var orientation: AVCaptureVideoOrientation = AVCaptureVideoOrientation.portrait
     
     weak var captureDelegate: AVCapturePhotoCaptureDelegate?
     
@@ -26,10 +27,29 @@ final class CustomCameraController: UIViewController {
         setup()
     }
     
-    func configurePreviewLayer(with frame: CGRect) {
+    func configurePreviewLayer(with frame: CGRect, orientation: UIDeviceOrientation) {
         let cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         cameraPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        cameraPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+        var avOrientation: AVCaptureVideoOrientation
+        switch orientation {
+        case .unknown:
+            avOrientation = .portrait
+        case .portrait:
+            avOrientation = .portrait
+        case .portraitUpsideDown:
+            avOrientation = .portraitUpsideDown
+        case .landscapeLeft:
+            avOrientation = .landscapeLeft
+        case .landscapeRight:
+            avOrientation = .landscapeRight
+        case .faceUp:
+            avOrientation = .portrait
+        case .faceDown:
+            avOrientation = .portrait
+        @unknown default:
+            avOrientation = .portrait
+        }
+        cameraPreviewLayer.connection?.videoOrientation = avOrientation
         cameraPreviewLayer.frame = frame
         view.layer.insertSublayer(cameraPreviewLayer, at: 0)
     }
@@ -105,6 +125,24 @@ final class CustomCameraController: UIViewController {
         }
     }
 }
+/*
+ switch rotation {
+ case .faceUp:
+     Text("Face Up")
+ case .faceDown:
+     Text("Face Down")
+ case .landscapeLeft:
+     Text("Landscape Left")
+ case .landscapeRight:
+     Text("Landscape Right")
+ case .portrait:
+     Text("Portrait")
+ case .portraitUpsideDown:
+     Text("Portrait Upside Down")
+ default:
+     Text("Unknown")
+ }
+ */
 
 final class CustomCameraRepresentable: UIViewControllerRepresentable {
     
@@ -114,14 +152,15 @@ final class CustomCameraRepresentable: UIViewControllerRepresentable {
     }
     
     var cameraFrame: CGRect
-    var imageCompletion: ((Bool) -> Void)
+    var orientation: UIDeviceOrientation = .portrait
+    var imageCompletion: ((Bool) -> Void)?
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
     func makeUIViewController(context: Context) -> CustomCameraController {
-        CustomCameraController.shared.configurePreviewLayer(with: cameraFrame)
+        CustomCameraController.shared.configurePreviewLayer(with: cameraFrame, orientation: orientation)
         CustomCameraController.shared.captureDelegate = context.coordinator
         return CustomCameraController.shared
     }
@@ -174,7 +213,7 @@ extension CustomCameraRepresentable {
                     print("Unresolved error \(nsError), \(nsError.userInfo)")
                 }
                 
-                parent.imageCompletion(true)
+                parent.imageCompletion!(true)
             }
 //            parent.presentationMode.wrappedValue.dismiss()
         }

@@ -37,6 +37,7 @@
 		2FE9F010265F88C900F7DBC1 /* CaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */; };
 		2FE9F012265F88E900F7DBC1 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */; };
 		2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FE9F015265FAEA200F7DBC1 /* .gitignore */; };
+		2FFAC769273E69D200F85164 /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC768273E69D200F85164 /* DeviceRotationViewModifier.swift */; };
 		2FFFD2342739834600F9AC14 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2332739834600F9AC14 /* HistoryDetailView.swift */; };
 		2FFFD2382739835100F9AC14 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2362739835100F9AC14 /* HistoryView.swift */; };
 		2FFFD2392739835100F9AC14 /* HistoryViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2372739835100F9AC14 /* HistoryViewRow.swift */; };
@@ -100,6 +101,7 @@
 		2FE9F00F265F88C900F7DBC1 /* CaptureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButtonView.swift; sourceTree = "<group>"; };
 		2FE9F011265F88E900F7DBC1 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		2FE9F015265FAEA200F7DBC1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2FFAC768273E69D200F85164 /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
 		2FFFD2332739834600F9AC14 /* HistoryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		2FFFD2362739835100F9AC14 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		2FFFD2372739835100F9AC14 /* HistoryViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewRow.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				2FFFD23D273983FF00F9AC14 /* GpxParse.swift */,
 				2FFFD23E273983FF00F9AC14 /* UTI.swift */,
 				2FE819DE273C1BB700408C7A /* PrivacyPermissions.swift */,
+				2FFAC768273E69D200F85164 /* DeviceRotationViewModifier.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				2FFFD240273983FF00F9AC14 /* FileBuilder.swift in Sources */,
 				2FD963FF273A753B00DD2A87 /* String+.swift in Sources */,
 				2FFFD2392739835100F9AC14 /* HistoryViewRow.swift in Sources */,
+				2FFAC769273E69D200F85164 /* DeviceRotationViewModifier.swift in Sources */,
 				2F7D5FEA273D558700D10A46 /* EmptyHistoryView.swift in Sources */,
 				2FD96401273A756A00DD2A87 /* Date+.swift in Sources */,
 				2FFFD243273983FF00F9AC14 /* UTI.swift in Sources */,
@@ -559,6 +563,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "Portrait (bottom home button)";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -566,6 +572,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -614,12 +621,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "Portrait (bottom home button)";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -634,6 +644,8 @@
 				DEVELOPMENT_TEAM = 3G54NEN3F6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PhotoGPS/Info.plist;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,6 +668,8 @@
 				DEVELOPMENT_TEAM = 3G54NEN3F6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PhotoGPS/Info.plist;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
