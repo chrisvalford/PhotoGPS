@@ -105,5 +105,6 @@ struct Welcome_Previews: PreviewProvider {
     static var previews: some View {
         Welcome(showOnboarding: .constant(true))
             .preferredColorScheme(.dark)
+            .environment(\.locale, .init(identifier: "es"))
     }
 }

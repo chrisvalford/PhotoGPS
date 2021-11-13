@@ -26,9 +26,9 @@ struct ErrorImage: View {
 struct CustomAlertView: View {
 
     var mode: Mode
-    var text: String
-    var okText: String = "Ok"
-    var dismissText: String = "Close"
+    var message: [LocalizedStringKey]
+    var okText: LocalizedStringKey = "Ok"
+    var dismissText: LocalizedStringKey = "Close"
     var action: (String) -> Void
 
     enum Mode {
@@ -43,12 +43,16 @@ struct CustomAlertView: View {
                 OkImage()
                     .padding(.top)
                 Spacer()
-                Text(text).foregroundColor(Color.white).multilineTextAlignment(.center)
+                ForEach(message, id: \.self) { text in
+                    Text(text).foregroundColor(Color.white).multilineTextAlignment(.center)
+                }
             case .failure:
                 ErrorImage()
                     .padding(.top)
                 Spacer()
-                Text(text).foregroundColor(Color.white).multilineTextAlignment(.center)
+                ForEach(message, id: \.self) { text in
+                    Text(text).foregroundColor(Color.white).multilineTextAlignment(.center)
+                }
             }
             Spacer()
             Divider()
@@ -72,10 +76,12 @@ struct CustomAlertView: View {
     }
 }
 
-struct CustomAlertView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomAlertView(mode: .success, text: "Sample alert", action: { _ in
-
-        })
-    }
-}
+//struct CustomAlertView_Previews: PreviewProvider {
+//    static let text: LocalizedStringKey = "Short text sample"
+//    static var previews: some View {
+//        CustomAlertView(mode: .success, text: text, action: { _ in
+//
+//        })
+//            .environment(\.locale, .init(identifier: "es"))
+//    }
+//}

@@ -16,7 +16,10 @@ struct CameraView: View {
     @State private var locationPrivacy = PrivacyPermissions.shared.locationPrivacy
     @State private var orientation = UIDeviceOrientation.unknown
     @State private var permissionsAlertIsVisible = false
-    @State private var permissionsString: String = "You have not granted:"
+    @State private var message: [LocalizedStringKey] = []
+    private let permissionsString: LocalizedStringKey = "You have not granted:"
+    private let cameraString: LocalizedStringKey = "\nCamera access"
+    private let locationString: LocalizedStringKey = "\nLocation updates"
 
     
     var customCameraRepresentable = CustomCameraRepresentable(
@@ -50,7 +53,7 @@ struct CameraView: View {
                     .allowsHitTesting(false) // Pass the tap to the lower view
             }
             if permissionsAlertIsVisible {
-                CustomAlertView(mode: .failure, text: permissionsString, okText: "Settings") { action in
+                CustomAlertView(mode: .failure, message: message, okText: "Settings") { action in
                     print(action)
                     switch action {
                     case "ok":
@@ -70,7 +73,8 @@ struct CameraView: View {
             // Camera
             switch cameraPrivacy {
             case .unauthorized:
-                permissionsString += "\nCamera access"
+                message.append(permissionsString)
+                message.append(cameraString)
                 permissionsAlertIsVisible = true
             case .notDetermined:
                 PrivacyPermissions.shared.askCameraPermission()
@@ -80,7 +84,10 @@ struct CameraView: View {
             // Location services
             switch locationPrivacy {
             case .unauthorized:
-                permissionsString += "\nLocation updates"
+                if !message.contains(permissionsString) {
+                    message.append(permissionsString)
+                }
+                message.append(locationString)
                 permissionsAlertIsVisible = true
             case .notDetermined:
                 PrivacyPermissions.shared.askLocationPermission()

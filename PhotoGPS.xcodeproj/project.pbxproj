@@ -40,6 +40,7 @@
 		2FFAC769273E69D200F85164 /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC768273E69D200F85164 /* DeviceRotationViewModifier.swift */; };
 		2FFAC76D273E840A00F85164 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC76C273E840A00F85164 /* ActivityViewController.swift */; };
 		2FFAC76F273FD86B00F85164 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC76E273FD86B00F85164 /* ShareSheet.swift */; };
+		2FFAC77227400FFD00F85164 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FFAC77427400FFD00F85164 /* Localizable.strings */; };
 		2FFFD2342739834600F9AC14 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2332739834600F9AC14 /* HistoryDetailView.swift */; };
 		2FFFD2382739835100F9AC14 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2362739835100F9AC14 /* HistoryView.swift */; };
 		2FFFD2392739835100F9AC14 /* HistoryViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFD2372739835100F9AC14 /* HistoryViewRow.swift */; };
@@ -106,6 +107,8 @@
 		2FFAC768273E69D200F85164 /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
 		2FFAC76C273E840A00F85164 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		2FFAC76E273FD86B00F85164 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		2FFAC77327400FFD00F85164 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FFAC7752740100000F85164 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2FFFD2332739834600F9AC14 /* HistoryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		2FFFD2362739835100F9AC14 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		2FFFD2372739835100F9AC14 /* HistoryViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewRow.swift; sourceTree = "<group>"; };
@@ -171,6 +174,7 @@
 				2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */,
 				2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */,
 				2F6F05B4265E5EED00BEAB00 /* Info.plist */,
+				2FFAC77427400FFD00F85164 /* Localizable.strings */,
 				2F6F05B1265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld */,
 				2F6F05AC265E5EED00BEAB00 /* Preview Content */,
 			);
@@ -405,6 +409,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 2F6F059A265E5EED00BEAB00;
 			productRefGroup = 2F6F05A4265E5EED00BEAB00 /* Products */;
@@ -424,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */,
+				2FFAC77227400FFD00F85164 /* Localizable.strings in Resources */,
 				2FE9F016265FAEA200F7DBC1 /* .gitignore in Resources */,
 				2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */,
 			);
@@ -518,6 +524,18 @@
 			targetProxy = 2F6F05C5265E5EED00BEAB00 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2FFAC77427400FFD00F85164 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FFAC77327400FFD00F85164 /* en */,
+				2FFAC7752740100000F85164 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2F6F05CB265E5EED00BEAB00 /* Debug */ = {

@@ -38,5 +38,6 @@ struct LatLongView: View {
 struct LatLongView_Previews: PreviewProvider {
     static var previews: some View {
         LatLongView()
+            .environment(\.locale, .init(identifier: "es"))
     }
 }

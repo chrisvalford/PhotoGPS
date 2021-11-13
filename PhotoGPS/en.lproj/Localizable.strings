@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"Ok" = "Ok";
+"Close" = "Close";
+"Done" = "Done";
+"Allow camera" = "Allow camera";
+"Allow location" = "Allow location";
+"Latitude" = "Latitude";
+"Longitude" = "Longitude";
+"Heading" = "Heading";
+"North" = "North";
+"South" = "South";
+"East" = "East";
+"West" = "West";
+"Settings" = "Settings";
+
+// Settings
+"You have not granted:" = "You have not granted:";
+"\nCamera access" = "\nCamera access";
+"\nLocation updates" = "\nLocation updates";
+"You can change your privacy settings at any time" = "You can change your privacy settings at any time";
+
+// Welcome
+"Record your journey with photographs, and then export their location data to you favorite GPS system." = "Record your journey with photographs, and then export their location data to you favorite GPS system.";
+
+"Your heading is included so you can photograph a landmark and then plot it on a marine chart or map." = "Your heading is included so you can photograph a landmark and then plot it on a marine chart or map.";
+
+"Ideal as an aid to marine navigation, especially as you take the photo to record your location when you want, and not continuously, so saving your phones battery life." = "Ideal as an aid to marine navigation, especially as you take the photo to record your location when you want, and not continuously, so saving your phones battery life.";
+
+// UITesting
+"Short text sample" = "Short text sample";
