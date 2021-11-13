@@ -25,6 +25,5 @@ struct MapView: View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))), interactionModes: [.zoom, .pan], annotationItems: pins) { pin in
             MapMarker(coordinate: pin.coordinate, tint: .orange)
         }
-            .frame(width: 400, height: 300)
     }
 }

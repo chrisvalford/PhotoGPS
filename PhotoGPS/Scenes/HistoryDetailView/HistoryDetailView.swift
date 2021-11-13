@@ -8,47 +8,50 @@
 import SwiftUI
 
 struct HistoryDetailView: View {
-
+    
     @State var item: GPSData
     
     var body: some View {
-        Form {
-            Section {
-                HStack {
-                    Text("Latitude")
-                        .fontWeight(.semibold)
-                    Spacer()
-                    Text("\(item.latitude.formatLatitude())")
+        GeometryReader { geometry in
+            Form {
+                Section {
+                    HStack {
+                        Text("Latitude")
+                            .fontWeight(.semibold)
+                        Spacer()
+                        Text("\(item.latitude.formatLatitude())")
+                    }
+                    HStack {
+                        Text("Longitude")
+                            .fontWeight(.semibold)
+                        Spacer()
+                        Text("\(item.longitude.formatLongitude())")
+                    }
                 }
-                HStack {
-                    Text("Longitude")
-                        .fontWeight(.semibold)
-                    Spacer()
-                    Text("\(item.longitude.formatLongitude())")
+                Section {
+                    HStack {
+                        Text("Heading")
+                            .fontWeight(.semibold)
+                        Spacer()
+                        Text("\(item.trueHeading.formatHeading()) º (T)")
+                        Text("\(item.magneticHeading.formatHeading()) º (M)")
+                    }
+                    HStack {
+                        Text("Elevation")
+                            .fontWeight(.semibold)
+                        Spacer()
+                        Text("\(item.elevation) m")
+                    }
+                    HStack {
+                        Text("Accuracy")
+                            .fontWeight(.semibold)
+                        Spacer()
+                        Text("\(item.accuracy)")
+                    }
                 }
+                MapView(item: $item)
+                    .frame(height: geometry.size.width * 0.8)
             }
-            Section {
-                HStack {
-                    Text("Heading")
-                        .fontWeight(.semibold)
-                    Spacer()
-                    Text("\(item.trueHeading.formatHeading()) º (T)")
-                    Text("\(item.magneticHeading.formatHeading()) º (M)")
-                }
-                HStack {
-                    Text("Elevation")
-                        .fontWeight(.semibold)
-                    Spacer()
-                    Text("\(item.elevation) m")
-                }
-                HStack {
-                    Text("Accuracy")
-                        .fontWeight(.semibold)
-                    Spacer()
-                    Text("\(item.accuracy)")
-                }
-            }
-            MapView(item: $item)
         }
         .navigationTitle("\(item.saved?.titleDate() ?? "")")
         .navigationBarBackButtonHidden(true)

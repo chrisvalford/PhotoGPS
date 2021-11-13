@@ -12,10 +12,12 @@ struct CameraView: View {
     
     @ObservedObject private var headingService = HeadingService.shared
     @State private var cameraPrivacy = PrivacyPermissions.shared.cameraPrivacy
-    @State private var locationPrivacy = PrivacyPermissions.shared.locationPrivacy
     @Binding var imageCount: Int
+    @State private var locationPrivacy = PrivacyPermissions.shared.locationPrivacy
+    @State private var orientation = UIDeviceOrientation.unknown
     @State private var permissionsAlertIsVisible = false
     @State private var permissionsString: String = "You have not granted:"
+
     
     var customCameraRepresentable = CustomCameraRepresentable(
         cameraFrame: .zero,
@@ -85,6 +87,9 @@ struct CameraView: View {
             default:
                 permissionsAlertIsVisible = false
             }
+        }
+        .onRotate { newOrientation in
+            orientation = newOrientation
         }
     }
 }

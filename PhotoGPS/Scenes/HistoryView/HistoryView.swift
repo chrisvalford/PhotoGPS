@@ -10,12 +10,11 @@ import CoreData
 import MapKit
 
 class HistoryContentViewModel: ObservableObject {
-    //@Published var showEmpty: Bool = false
     @Published var showSettings: Bool = false
+    @Published var isSharePresented: Bool = false
 }
 
 struct HistoryView: View {
-    
     @State private var selectedGPSData = [GPSData]()
     @StateObject private var model = HistoryContentViewModel()
     @Environment(\.managedObjectContext) private var viewContext
@@ -25,6 +24,7 @@ struct HistoryView: View {
     
     private var saves: FetchedResults<GPSData>
     @State private var captureCount = UserDefaults.standard.integer(forKey: "Captured")
+    @State private var documentURL: URL?
     @State private var selectedCount = 0
     @State private var imageCount = 0
     @State var photoTaken = false
@@ -75,22 +75,16 @@ struct HistoryView: View {
                             //                            })
 
                             Button(action: {
-                                buildFile(forFileType: .text)
+                                model.isSharePresented = true
                             }, label: {
                                 Label("Share as text", systemImage: "doc.plaintext")
                             })
 
                             Button(action: {
-                                buildFile(forFileType: .csv)
+                                model.isSharePresented = true
                             }, label: {
                                 Label("Share as a CSV", systemImage: "doc.text")
                             })
-
-                            //                            Button(action: {
-                            //                                buildFile(forFileType: .document)
-                            //                            }, label: {
-                            //                                Label("Share as a document", systemImage: "doc.richtext")
-                            //                            })
 
                             Button(action: {
                                 openInMaps()
@@ -105,20 +99,35 @@ struct HistoryView: View {
                     }
                 }.accentColor(.orange)
         }
+        .navigationViewStyle(.stack)
         .onAppear() {
             // Reset the badge count
             captureCount = 0
             imageCount = saves.count
-            //            if saves.count < 1 {
-            //                model.showEmpty = true
-            //            }
         }
-        //        .sheet(isPresented: $model.showEmpty, content: {
-        //            EmptyHistoryView()
-        //        })
         .sheet(isPresented: $model.showSettings, content: {
             SettingsView()
         })
+        .sheet(isPresented: $model.isSharePresented, content: {
+            ShareSheet(selectedGPSData: self.selectedGPSData)
+        })
+    }
+
+    func openInMaps() {
+        //TODO:
+        let item = selectedGPSData.first
+
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(item!.latitude, item!.longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = item!.saved.debugDescription
+        mapItem.openInMaps(launchOptions: options)
     }
 
     @ViewBuilder
@@ -150,12 +159,6 @@ struct HistoryView: View {
         }
     }
 
-//    var emptyListView: some View {
-//        List {
-//            Text("No photos")
-//        }
-//    }
-
     private func deleteRows(at indexSet: IndexSet) {
         for index in indexSet {
             let item = saves[index]
@@ -167,63 +170,6 @@ struct HistoryView: View {
         } catch {
             print("Error saving context: \(error.localizedDescription)")
         }
-    }
-
-    func buildFile(forFileType: FileType) {
-        switch forFileType {
-        case .waypoints:
-            print("Building waypoint GPX file")
-            if let documentURL = FileBuilder.output(forType: .waypoints, selectedGPSData: selectedGPSData) {
-                actionSheet(sharing: documentURL)
-            }
-        case .route:
-            print("Building route GPX file")
-            if let documentURL = FileBuilder.output(forType: .route, selectedGPSData: selectedGPSData) {
-                actionSheet(sharing: documentURL)
-            }
-        case .track:
-            print("Building track GPX file")
-            if let documentURL = FileBuilder.output(forType: .track, selectedGPSData: selectedGPSData) {
-                actionSheet(sharing: documentURL)
-            }
-        case .text:
-            print("Building plain text file")
-            if let documentURL = FileBuilder.output(forType: .text, selectedGPSData: selectedGPSData) {
-                actionSheet(sharing: documentURL)
-            }
-        case .csv:
-            print("Building CSV file")
-            if let documentURL = FileBuilder.output(forType: .csv, selectedGPSData: selectedGPSData) {
-                actionSheet(sharing: documentURL)
-            }
-        case .document:
-            print("Building Rich Text file")
-            if let documentURL = FileBuilder.output(forType: .document, selectedGPSData: selectedGPSData) {
-                actionSheet(sharing: documentURL)
-            }
-        }
-    }
-
-    func openInMaps() {
-        //TODO:
-        let item = selectedGPSData.first
-
-        let regionDistance:CLLocationDistance = 10000
-        let coordinates = CLLocationCoordinate2DMake(item!.latitude, item!.longitude)
-        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = item!.saved.debugDescription
-        mapItem.openInMaps(launchOptions: options)
-    }
-    
-    func actionSheet(sharing url: URL) {
-        let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
     }
 }
 
