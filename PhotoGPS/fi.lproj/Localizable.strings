@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"general.ok" = "Ok";
+"general.close" = "kiinni";
+"general.done" = "Tehty";
+"general.settings" = "asetukset";
+"general.camera" = "Kamera";
+"general.onboarding" = "Perehdytys";
+"general.show.again" = "Näytä uudelleen";
+
+// Location
+"location.latitude" = "Leveysaste";
+"location.longitude" = "Pituusaste";
+"location.heading" = "Otsikko";
+"location.elevation" = "Korkeus";
+"location.accuracy" = "Tarkkuus";
+"location.north" = "Pohjoinen";
+"location.south" = "Etelä";
+"location.east" = "Itään";
+"location.west" = "länteen";
+
+// Menu
+"menu.share.text" = "Jaa tekstinä";
+"menu.share.csv" = "Jaa CSV-tiedostona";
+"menu.show.in.maps" = "Näytä Mapsissa";
+
+// Settings
+"privacy.allow.camera" = "Salli kamera";
+"privacy.allow.location" = "Salli sijainti";
+"privacy.missing.camera" = "Et ole myöntänyt:\nKameran käyttöoikeutta";
+"privacy.missing.location" = "Et ole myöntänyt:\nSijaintipäivitykset";
+"privacy.missing.camera.location" = "Et ole myöntänyt:\nKameran käyttöoikeutta\nSijaintipäivitykset";
+"privacy.settings.change" = "Voit muuttaa tietosuoja-asetuksiasi milloin tahansa";
+
+// Welcome
+"welcome.text1" = "Tallenna matkasi valokuvilla ja vie niiden sijaintitiedot suosikki GPS-järjestelmääsi.";
+"welcome.text2" = "Otsikkosi on mukana, jotta voit valokuvata maamerkin ja piirtää sen sitten merikartalle tai kartalle.";
+"welcome.text3" = "Ihanteellinen apuväline merenkulkuun, varsinkin kun otat kuvan tallentaaksesi sijaintisi milloin haluat, etkä jatkuvasti, mikä säästää puhelimesi akun käyttöikää.";
+
+// No photos
+"nophotos" = "Ei valokuvia";
+"nophoto.tap1" = "Napauta kamerapainiketta ja ota valokuva. Valokuva näkyy tässä listassa.";
+"nophoto.tap2" = "Valitse vietävät valokuvatiedot napauttamalla ympyrää.";
+"nophoto.tap3" = "Vie napauttamalla jakamispainiketta.";
+"nophoto.tap4" = "Napauta asetuspainiketta muuttaaksesi asetuksiasi";
+
+// UITesting
+"sample.short" = "Lyhyt tekstinäyte.";
+"sample.medium" = "Keskipitkä tekstinäyte, ehkä pari riviä.";
+"sample.long" = "Pidempi tekstinäyte, jonka tulisi olla enemmän kuin pari riviä. Tasauksen, ellipsin ja sananvaihtojen tarkistaminen kielissä, kuten saksassa.";
+

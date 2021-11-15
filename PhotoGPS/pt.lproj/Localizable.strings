@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"general.ok" = "Ok";
+"general.close" = "Fechar";
+"general.done" = "Feito";
+"general.settings" = "Definições";
+"general.camera" = "Câmera";
+"general.onboarding" = "On-boarding";
+"general.show.again" = "Mostrar novamente";
+
+// Location
+"location.latitude" = "Latitude";
+"location.longitude" = "Longitude";
+"location.heading" = "Cabeçalho";
+"location.elevation" = "Elevação";
+"location.accuracy" = "Precisão";
+"location.north" = "Norte";
+"location.south" = "Sul";
+"location.east" = "Leste";
+"location.west" = "Oeste";
+
+// Menu
+"menu.share.text" = "Compartilhar como texto";
+"menu.share.csv" = "Compartilhe como um CSV";
+"menu.show.in.maps" = "Mostrar no Maps";
+
+// Settings
+"privacy.allow.camera" = "Permitir câmera";
+"privacy.allow.location" = "Permitir localização";
+"privacy.missing.camera" = "Você não concedeu: \ nacesso à câmera";
+"privacy.missing.location" = "Você não concedeu: \ nAtualizações de localização";
+"privacy.missing.camera.location" = "Você não concedeu: \ nAcesso à câmera \ nAtualizações de localização";
+"privacy.settings.change" = "Você pode alterar suas configurações de privacidade a qualquer momento";
+
+// Welcome
+"welcome.text1" = "Grave sua viagem com fotografias e, em seguida, exporte seus dados de localização para seu sistema GPS favorito.";
+"welcome.text2" = "Seu título está incluído para que você possa fotografar um ponto de referência e, em seguida, traçá-lo em uma carta ou mapa marinho.";
+"welcome.text3" = "Ideal como um auxílio à navegação marítima, especialmente quando você tira a foto para registrar sua localização quando quiser, e não continuamente, economizando bateria de seu telefone.";
+
+// No photos
+"nophotos" = "Não há fotos";
+"nophoto.tap1" = "Toque no botão da câmera e tire uma foto. A foto aparecerá na lista aqui.";
+"nophoto.tap2" = "Toque no círculo para selecionar os dados da foto a serem exportados.";
+"nophoto.tap3" = "Toque no botão de compartilhamento para exportar.";
+"nophoto.tap4" = "Toque no botão de configurações para alterar suas preferências";
+
+// UITesting
+"sample.short" = "Amostra de texto curto.";
+"sample.medium" = "Uma amostra de texto de comprimento médio, talvez ocupando algumas linhas.";
+"sample.long" = "Uma amostra de texto mais longa, que deve ter mais do que algumas linhas. Para verificar o alinhamento, as reticências e as quebras de palavras em idiomas como o alemão.";
+
