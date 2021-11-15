@@ -46,6 +46,6 @@ struct EmptyHistoryView: View {
 struct EmptyHistoryView_Previews: PreviewProvider {
     static var previews: some View {
         EmptyHistoryView()
-            .environment(\.locale, .init(identifier: "es"))
+            .environment(\.locale, .init(identifier: "it"))
     }
 }
