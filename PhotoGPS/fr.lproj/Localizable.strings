@@ -8,50 +8,51 @@
 
 // General
 "general.ok" = "Ok";
-"general.close" = "Close";
-"general.done" = "Done";
-"general.settings" = "Settings";
-"general.camera" = "Camera";
-"general.onboarding" = "Onboarding";
-"general.show.again" = "Show again";
+"general.close" = "Proche";
+"general.done" = "Terminé";
+"general.settings" = "Paramètres";
+"general.camera" = "Caméra";
+"general.onboarding" = "Intégration";
+"general.show.again" = "Montre encore une fois";
 
 // Location
 "location.latitude" = "Latitude";
 "location.longitude" = "Longitude";
-"location.heading" = "Heading";
-"location.accuracy" = "location.accuracy";
-"location.elevation" = "Elevation";
-"location.north" = "North";
-"location.south" = "South";
-"location.east" = "East";
-"location.west" = "West";
+"location.heading" = "Titre";
+"location.elevation" = "Élévation";
+"location.accuracy" = "Précision";
+"location.north" = "Nord";
+"location.south" = "Sud";
+"location.east" = "Est";
+"location.west" = "Ouest";
 
 // Menu
-"menu.share.text" = "Share as text";
-"menu.share.csv" = "Share as a CSV";
-"menu.show.in.maps" = "Show in Maps";
+"menu.share.text" = "Partager sous forme de texte";
+"menu.share.csv" = "Partager en tant que CSV";
+"menu.show.in.maps" = "Afficher dans les cartes";
 
 // Settings
-"privacy.allow.camera" = "Allow camera";
-"privacy.allow.location" = "Allow location";
-"privacy.missing.camera" = "You have not granted:\nCamera access";
-"privacy.missing.location" = "You have not granted:\nLocation updates";
-"privacy.missing.camera.location" = "You have not granted:\nCamera access\nLocation updates";
-"privacy.settings.change" = "privacy.settings.change";
+"privacy.allow.camera" = "Autoriser la caméra";
+"privacy.allow.location" = "Autoriser la localisation";
+"privacy.missing.camera" = "Vous n'avez pas accordé :\nL'accès à la caméra";
+"privacy.missing.location" = "Vous n'avez pas accordé :\nMises à jour de localisation";
+"privacy.missing.camera.location" = "Vous n'avez pas accordé :\nAccès à la caméra\nMises à jour de localisation";
+"privacy.settings.change" = "Vous pouvez modifier vos paramètres de confidentialité à tout moment";
 
 // Welcome
-"welcome.text1" = "Record your journey with photographs, and then export their location data to you favorite GPS system.";
-"welcome.text2" = "Your heading is included so you can photograph a landmark and then plot it on a marine chart or map.";
-"welcome.text3" = "Ideal as an aid to marine navigation, especially as you take the photo to record your location when you want, and not continuously, so saving your phones battery life.";
+"welcome.text1" = "Enregistrez votre voyage avec des photos, puis exportez leurs données de localisation vers votre système GPS préféré.";
+"welcome.text2" = "Votre cap est inclus afin que vous puissiez photographier un point de repère, puis le tracer sur une carte marine ou une carte.";
+"welcome.text3" = "Idéal comme aide à la navigation maritime, d'autant plus que vous prenez la photo pour enregistrer votre position quand vous le souhaitez, et non en continu, économisant ainsi la durée de vie de la batterie de votre téléphone.";
 
 // No photos
-"nophotos" = "No Photos";
-"nophoto.tap1" = "Tap the camera button and take a photo. The photo will appear in the list here.";
-"nophoto.tap2" = "Tap the circle to select the photo data to export.";
-"nophoto.tap3" = "Tap the share button to export.";
-"nophoto.tap4" = "Tap the settings button to change your preferences";
+"nophotos" = "Pas de photos";
+"nophoto.tap1" = "Appuyez sur le bouton de l'appareil photo et prenez une photo. La photo apparaîtra dans la liste ici.";
+"nophoto.tap2" = "Appuyez sur le cercle pour sélectionner les données photo à exporter.";
+"nophoto.tap3" = "Appuyez sur le bouton de partage pour exporter.";
+"nophoto.tap4" = "Appuyez sur le bouton Paramètres pour modifier vos préférences";
 
 // UITesting
-"sample.short" = "Short text sample.";
-"sample.medium" = "A medium length text sample, maybe running into a couple of rows.";
-"sample.long" = "A longer length text sample, which should be more than a couple of rows. To check alignment and ellipsis, and word breaks for languages such as German.";
+"sample.short" = "Exemple de texte court.";
+"sample.medium" = "Un exemple de texte de longueur moyenne, pouvant s'étendre sur quelques lignes.";
+"sample.long" = "Un exemple de texte plus long, qui devrait comporter plus de quelques lignes. Pour vérifier l'alignement et les points de suspension, et les sauts de mots pour les langues telles que l'allemand.";
+

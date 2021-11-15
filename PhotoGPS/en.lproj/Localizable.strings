@@ -19,8 +19,8 @@
 "location.latitude" = "Latitude";
 "location.longitude" = "Longitude";
 "location.heading" = "Heading";
-"location.accuracy" = "location.accuracy";
 "location.elevation" = "Elevation";
+"location.accuracy" = "Accuracy";
 "location.north" = "North";
 "location.south" = "South";
 "location.east" = "East";

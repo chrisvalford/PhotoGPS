@@ -8,50 +8,51 @@
 
 // General
 "general.ok" = "Ok";
-"general.close" = "Close";
-"general.done" = "Done";
-"general.settings" = "Settings";
+"general.close" = "Dichtbij";
+"general.done" = "Gedaan";
+"general.settings" = "Instellingen";
 "general.camera" = "Camera";
 "general.onboarding" = "Onboarding";
-"general.show.again" = "Show again";
+"general.show.again" = "Laat nog eens zien";
 
 // Location
-"location.latitude" = "Latitude";
-"location.longitude" = "Longitude";
-"location.heading" = "Heading";
-"location.accuracy" = "location.accuracy";
-"location.elevation" = "Elevation";
-"location.north" = "North";
-"location.south" = "South";
-"location.east" = "East";
-"location.west" = "West";
+"location.latitude" = "Breedtegraad";
+"location.longitude" = "Lengtegraad";
+"location.heading" = "rubriek";
+"location.elevation" = "Verhoging";
+"location.accuracy" = "Nauwkeurigheid";
+"location.north" = "Noorden";
+"location.south" = "Zuiden";
+"location.east" = "Oosten";
+"location.west" = "Westen";
 
 // Menu
-"menu.share.text" = "Share as text";
-"menu.share.csv" = "Share as a CSV";
-"menu.show.in.maps" = "Show in Maps";
+"menu.share.text" = "Delen als tekst";
+"menu.share.csv" = "Delen als CSV";
+"menu.show.in.maps" = "Weergeven in Kaarten";
 
 // Settings
-"privacy.allow.camera" = "Allow camera";
-"privacy.allow.location" = "Allow location";
-"privacy.missing.camera" = "You have not granted:\nCamera access";
-"privacy.missing.location" = "You have not granted:\nLocation updates";
-"privacy.missing.camera.location" = "You have not granted:\nCamera access\nLocation updates";
-"privacy.settings.change" = "privacy.settings.change";
+"privacy.allow.camera" = "Camera toestaan";
+"privacy.allow.location" = "Locatie toestaan";
+"privacy.missing.camera" = "Je hebt het volgende niet verleend:\nCameratoegang";
+"privacy.missing.location" = "U heeft het volgende niet verleend:\nLocatie-updates";
+"privacy.missing.camera.location" = "U heeft het volgende niet verleend:\nCameratoegang\nLocatie-updates";
+"privacy.settings.change" = "U kunt uw privacy-instellingen op elk moment wijzigen";
 
 // Welcome
-"welcome.text1" = "Record your journey with photographs, and then export their location data to you favorite GPS system.";
-"welcome.text2" = "Your heading is included so you can photograph a landmark and then plot it on a marine chart or map.";
-"welcome.text3" = "Ideal as an aid to marine navigation, especially as you take the photo to record your location when you want, and not continuously, so saving your phones battery life.";
+"welcome.text1" = "Leg uw reis vast met foto's en exporteer hun locatiegegevens naar uw favoriete GPS-systeem.";
+"welcome.text2" = "Uw koers is opgenomen, zodat u een oriëntatiepunt kunt fotograferen en deze vervolgens op een zeekaart of kaart kunt plotten.";
+"welcome.text3" = "Ideaal als hulpmiddel bij navigatie op zee, vooral als u de foto maakt om uw locatie vast te leggen wanneer u maar wilt, en niet continu, waardoor de batterijduur van uw telefoon wordt bespaard.";
 
 // No photos
-"nophotos" = "No Photos";
-"nophoto.tap1" = "Tap the camera button and take a photo. The photo will appear in the list here.";
-"nophoto.tap2" = "Tap the circle to select the photo data to export.";
-"nophoto.tap3" = "Tap the share button to export.";
-"nophoto.tap4" = "Tap the settings button to change your preferences";
+"nophotos" = "Geen foto's";
+"nophoto.tap1" = "Tik op de cameraknop en maak een foto. De foto zal hier in de lijst verschijnen.";
+"nophoto.tap2" = "Tik op de cirkel om de fotogegevens te selecteren die u wilt exporteren.";
+"nophoto.tap3" = "Tik op de deelknop om te exporteren.";
+"nophoto.tap4" = "Tik op de instellingenknop om uw voorkeuren te wijzigen";
 
 // UITesting
-"sample.short" = "Short text sample.";
-"sample.medium" = "A medium length text sample, maybe running into a couple of rows.";
-"sample.long" = "A longer length text sample, which should be more than a couple of rows. To check alignment and ellipsis, and word breaks for languages such as German.";
+"sample.short" = "Kort tekstvoorbeeld.";
+"sample.medium" = "Een tekstvoorbeeld van gemiddelde lengte, dat misschien in een paar rijen loopt.";
+"sample.long" = "Een tekstvoorbeeld van langere lengte, dat meer dan een paar rijen zou moeten zijn. Uitlijning en weglatingsteken en woordafbrekingen voor talen zoals Duits controleren.";
+
