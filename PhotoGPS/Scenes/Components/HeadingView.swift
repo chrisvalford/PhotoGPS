@@ -14,7 +14,7 @@ struct HeadingView: View {
     var body: some View {
         HStack {
             VStack {
-                Text("Heading")
+                Text("location.heading")
                     .font(.body)
                     .fontWeight(.bold)
                     .frame(maxWidth: 200, alignment: .leading)

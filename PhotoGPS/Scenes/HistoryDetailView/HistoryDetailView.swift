@@ -16,13 +16,13 @@ struct HistoryDetailView: View {
             Form {
                 Section {
                     HStack {
-                        Text("Latitude")
+                        Text("location.latitude")
                             .fontWeight(.semibold)
                         Spacer()
                         Text("\(item.latitude.formatLatitude())")
                     }
                     HStack {
-                        Text("Longitude")
+                        Text("location.longitude")
                             .fontWeight(.semibold)
                         Spacer()
                         Text("\(item.longitude.formatLongitude())")
@@ -30,20 +30,20 @@ struct HistoryDetailView: View {
                 }
                 Section {
                     HStack {
-                        Text("Heading")
+                        Text("location.heading")
                             .fontWeight(.semibold)
                         Spacer()
                         Text("\(item.trueHeading.formatHeading()) º (T)")
                         Text("\(item.magneticHeading.formatHeading()) º (M)")
                     }
                     HStack {
-                        Text("Elevation")
+                        Text("location.elevation")
                             .fontWeight(.semibold)
                         Spacer()
                         Text("\(item.elevation) m")
                     }
                     HStack {
-                        Text("Accuracy")
+                        Text("location.accuracy")
                             .fontWeight(.semibold)
                         Spacer()
                         Text("\(item.accuracy)")

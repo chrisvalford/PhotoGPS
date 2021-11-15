@@ -16,12 +16,10 @@ struct CameraView: View {
     @State private var locationPrivacy = PrivacyPermissions.shared.locationPrivacy
     @State private var orientation = UIDeviceOrientation.unknown
     @State private var permissionsAlertIsVisible = false
-    @State private var message: [LocalizedStringKey] = []
-    private let permissionsString: LocalizedStringKey = "You have not granted:"
-    private let cameraString: LocalizedStringKey = "\nCamera access"
-    private let locationString: LocalizedStringKey = "\nLocation updates"
 
-    
+    @State private var message: LocalizedStringKey = ""
+    @State private var missingCameraPermission = false
+    @State private var missingLocationPermission = false
     var customCameraRepresentable = CustomCameraRepresentable(
         cameraFrame: .zero,
         imageCompletion: { _ in }
@@ -53,10 +51,10 @@ struct CameraView: View {
                     .allowsHitTesting(false) // Pass the tap to the lower view
             }
             if permissionsAlertIsVisible {
-                CustomAlertView(mode: .failure, message: message, okText: "Settings") { action in
+                CustomAlertView(mode: .failure, message: message, okText: "general.settings") { action in
                     print(action)
                     switch action {
-                    case "ok":
+                    case "general.ok":
                         //Open settings
                         UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
                     default: // "dismiss"
@@ -66,16 +64,14 @@ struct CameraView: View {
             }
         }
         .accentColor(.orange)
-        .navigationTitle("Camera")
+        .navigationTitle("general.camera")
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton())
         .onAppear {
             // Camera
             switch cameraPrivacy {
             case .unauthorized:
-                message.append(permissionsString)
-                message.append(cameraString)
-                permissionsAlertIsVisible = true
+                missingCameraPermission = true
             case .notDetermined:
                 PrivacyPermissions.shared.askCameraPermission()
             default:
@@ -84,16 +80,24 @@ struct CameraView: View {
             // Location services
             switch locationPrivacy {
             case .unauthorized:
-                if !message.contains(permissionsString) {
-                    message.append(permissionsString)
-                }
-                message.append(locationString)
-                permissionsAlertIsVisible = true
+                missingLocationPermission = true
             case .notDetermined:
                 PrivacyPermissions.shared.askLocationPermission()
             default:
                 permissionsAlertIsVisible = false
             }
+
+            if missingCameraPermission && missingLocationPermission {
+                message = "privacy.missing.camera.location"
+                permissionsAlertIsVisible = true
+            } else if missingCameraPermission {
+                message = "privacy.missing.camera"
+                permissionsAlertIsVisible = true
+            } else if missingLocationPermission {
+                message = "privacy.missing.location"
+                permissionsAlertIsVisible = true
+            }
+
         }
         .onRotate { newOrientation in
             orientation = newOrientation

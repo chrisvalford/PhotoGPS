@@ -7,34 +7,52 @@
 */
 
 // General
-"Ok" = "Ok";
-"Close" = "Cerrar";
-"Done" = "Hecho";
-"Allow camera" = "Permitir cámara";
-"Allow location" = "Permitir ubicación";
-"Latitude" = "Latitud";
-"Longitude" = "Longitud";
-"Heading" = "Heading";
-"North" = "Norte";
-"South" = "Sur";
-"East" = "Este";
-"West" = "Oeste";
-"Settings" = "Ajustes";
+"general.ok" = "Ok";
+"general.close" = "Cerrar";
+"general.done" = "Hecho";
+"general.settings" = "Ajustes";
+"general.camera" = "Cámara";
+"general.onboarding" = "Inducción";
+"general.show.again" = "Enseña otra vez";
+
+// Location
+"location.latitude" = "Latitud";
+"location.longitude" = "Longitud";
+"location.heading" = "Rumbo";
+"location.elevation" = "Elevación";
+"location.accuracy" = "Precisión";
+"location.north" = "Norte";
+"location.south" = "Sur";
+"location.east" = "Este";
+"location.west" = "Oeste";
+
+// Menu
+"menu.share.text" = "Compartir como texto";
+"menu.share.csv" = "Compartir como CSV";
+"menu.show.in.maps" = "Mostrar en mapas";
 
 // Settings
-"You have not granted:" = "You have not granted:";
-"\nCamera access" = "\nAcceso a la cámara";
-"\nLocation updates" = "\nActualizaciones de ubicación";
+"privacy.allow.camera" = "Permitir cámara";
+"privacy.allow.location" = "Permitir ubicación";
+"privacy.missing.camera" = "No has concedido:\nAcceso a la cámara";
+"privacy.missing.location" = "No has concedido:\nActualizaciones de ubicación";
+"privacy.missing.camera.location" = "No has concedido:\nAcceso a la cámara\nActualizaciones de ubicación";
 
-
-"You can change your privacy settings at any time" = "Puede cambiar su configuración de privacidad en cualquier momento";
+"privacy.settings.change" = "Puede cambiar su configuración de privacidad en cualquier momento";
 
 // Welcome
-"Record your journey with photographs, and then export their location data to you favorite GPS system." = "Registre su viaje con fotografías y luego exporte sus datos de ubicación a su sistema GPS favorito.";
+"welcome.text1" = "Registre su viaje con fotografías y luego exporte sus datos de ubicación a su sistema GPS favorito.";
+"welcome.text2" = "Su rumbo está incluido para que pueda fotografiar un punto de referencia y luego trazarlo en una carta o mapa marino.";
+"welcome.text3" = "Ideal como ayuda para la navegación marítima, especialmente cuando toma la foto para registrar su ubicación cuando lo desea, y no de forma continua, lo que ahorra la vida útil de la batería de su teléfono.";
 
-"Your heading is included so you can photograph a landmark and then plot it on a marine chart or map." = "Su rumbo está incluido para que pueda fotografiar un punto de referencia y luego trazarlo en una carta o mapa marino.";
-
-"Ideal as an aid to marine navigation, especially as you take the photo to record your location when you want, and not continuously, so saving your phones battery life." = "Ideal como ayuda para la navegación marítima, especialmente cuando toma la foto para registrar su ubicación cuando lo desea, y no de forma continua, lo que ahorra la vida útil de la batería de su teléfono.";
+// No photos
+"nophotos" = "Sin fotos";
+"nophoto.tap1" = "Toque el botón de la cámara y tome una foto. La foto aparecerá en la lista aquí.";
+"nophoto.tap2" = "Toque el círculo para seleccionar los datos de la foto que desee exportar.";
+"nophoto.tap3" = "Toque el botón de compartir para exportar.";
+"nophoto.tap4" = "Toque el botón de configuración para cambiar sus preferencias.";
 
 // UITesting
-"Short text sample" = "Muestra de texto breve";
+"sample.short" = "Muestra de texto breve.";
+"sample.medium" = "Una muestra de texto de longitud media, tal vez con un par de filas.";
+"sample.long" = "Una muestra de texto de mayor longitud, que debería tener más de un par de filas. Para comprobar la alineación, los puntos suspensivos y los saltos de palabras en idiomas como el alemán.";

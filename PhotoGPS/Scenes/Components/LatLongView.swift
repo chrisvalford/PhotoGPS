@@ -14,11 +14,11 @@ struct LatLongView: View {
     var body: some View {
         HStack {
             VStack {
-                Text("Latitude")
+                Text("location.latitude")
                     .font(.body)
                     .fontWeight(.bold)
                     .frame(maxWidth: 100, alignment: .trailing)
-                Text("Longitude")
+                Text("location.longitude")
                     .font(.body)
                     .fontWeight(.bold)
                     .frame(maxWidth: 100, alignment: .trailing)

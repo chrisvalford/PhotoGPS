@@ -26,10 +26,11 @@ struct ErrorImage: View {
 struct CustomAlertView: View {
 
     var mode: Mode
-    var message: [LocalizedStringKey]
-    var okText: LocalizedStringKey = "Ok"
-    var dismissText: LocalizedStringKey = "Close"
+    @State var message: LocalizedStringKey
+    var okText: LocalizedStringKey = "general.ok"
+    var dismissText: LocalizedStringKey = "general.close"
     var action: (String) -> Void
+    var text: String = ""
 
     enum Mode {
         case success
@@ -43,16 +44,14 @@ struct CustomAlertView: View {
                 OkImage()
                     .padding(.top)
                 Spacer()
-                ForEach(message, id: \.self) { text in
-                    Text(text).foregroundColor(Color.white).multilineTextAlignment(.center)
-                }
+                    Text(message)
+                    .foregroundColor(Color.white).multilineTextAlignment(.center)
             case .failure:
                 ErrorImage()
                     .padding(.top)
                 Spacer()
-                ForEach(message, id: \.self) { text in
-                    Text(text).foregroundColor(Color.white).multilineTextAlignment(.center)
-                }
+                Text(message).foregroundColor(Color.white).multilineTextAlignment(.center)
+
             }
             Spacer()
             Divider()
@@ -63,7 +62,7 @@ struct CustomAlertView: View {
                 .foregroundColor(.white)
                 .frame(width: UIScreen.main.bounds.width/2-30, height: 40)
                 Button(okText) {
-                    action("ok")
+                    action("general.ok")
                 }
                 .foregroundColor(.white)
                 .frame(width: UIScreen.main.bounds.width/2-30, height: 40)
