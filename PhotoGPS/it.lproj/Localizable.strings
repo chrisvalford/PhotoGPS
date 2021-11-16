@@ -1,0 +1,57 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"general.ok" = "Ok";
+"general.close" = "Chiudere";
+"general.done" = "Fatto";
+"general.settings" = "Impostazioni";
+"general.camera" = "Telecamera";
+"general.onboarding" = "Imbarco";
+"general.show.again" = "Mostra di nuovo";
+
+// Location
+"location.latitude" = "Latitudine";
+"location.longitude" = "Longitudine";
+"location.heading" = "Intestazione";
+"location.elevation" = "Elevazione";
+"location.accuracy" = "Precisione";
+"location.north" = "Nord";
+"location.south" = "Sud";
+"location.east" = "Est";
+"location.west" = "Ovest";
+
+// Menu
+"menu.share.text" = "Condividi come testo";
+"menu.share.csv" = "Condividi come CSV";
+"menu.show.in.maps" = "Mostra in Mappe";
+
+// Settings
+"privacy.allow.camera" = "Consenti fotocamera";
+"privacy.allow.location" = "Consenti posizione";
+"privacy.missing.camera" = "Non hai concesso:\nAccesso alla fotocamera";
+"privacy.missing.location" = "Non hai concesso:\nAggiornamenti sulla posizione";
+"privacy.missing.camera.location" = "Non hai concesso:\nAccesso alla fotocamera\nAggiornamenti della posizione";
+"privacy.settings.change" = "Puoi modificare le tue impostazioni sulla privacy in qualsiasi momento";
+
+// Welcome
+"welcome.text1" = "Registra il tuo viaggio con fotografie, quindi esporta i dati sulla posizione sul tuo sistema GPS preferito.";
+"welcome.text2" = "La tua rotta è inclusa in modo da poter fotografare un punto di riferimento e quindi tracciarlo su una carta nautica o una mappa.";
+"welcome.text3" = "Ideale come ausilio alla navigazione marittima, soprattutto quando scatti la foto per registrare la tua posizione quando vuoi, e non continuamente, risparmiando così la durata della batteria del tuo telefono.";
+
+// No photos
+"nophotos" = "Niente foto";
+"nophoto.tap1" = "Tocca il pulsante della fotocamera e scatta una foto. La foto apparirà nell'elenco qui.";
+"nophoto.tap2" = "Tocca il cerchio per selezionare i dati della foto da esportare.";
+"nophoto.tap3" = "Tocca il pulsante Condividi per esportare.";
+"nophoto.tap4" = "Tocca il pulsante delle impostazioni per modificare le tue preferenze.";
+
+// UITesting
+"sample.short" = "Breve esempio di testo.";
+"sample.medium" = "Un campione di testo di media lunghezza, magari in un paio di righe.";
+"sample.long" = "Un campione di testo di lunghezza maggiore, che dovrebbe essere più di un paio di righe. Per controllare l'allineamento, i puntini di sospensione e le interruzioni di parola per lingue come il tedesco.";

@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"general.ok" = "Ok";
+"general.close" = "Tæt";
+"general.done" = "Færdig";
+"general.settings" = "Indstillinger";
+"general.camera" = "Kamera";
+"general.onboarding" = "On-boarding";
+"general.show.again" = "Vis igen";
+
+// Location
+"location.latitude" = "Breddegrad";
+"location.longitude" = "Længde";
+"location.heading" = "Overskrift";
+"location.elevation" = "Højde";
+"location.accuracy" = "Nøjagtighed";
+"location.north" = "Nord";
+"location.south" = "Syd";
+"location.east" = "Øst";
+"location.west" = "Vest";
+
+// Menu
+"menu.share.text" = "Del som tekst";
+"menu.share.csv" = "Del som en CSV";
+"menu.show.in.maps" = "Vis i Maps";
+
+// Settings
+"privacy.allow.camera" = "Tillad kamera";
+"privacy.allow.location" = "Tillad placering";
+"privacy.missing.camera" = "Du har ikke givet:\nKameraadgang";
+"privacy.missing.location" = "Du har ikke givet:\nPlaceringsopdateringer";
+"privacy.missing.camera.location" = "Du har ikke givet:\nKameraadgang\nPlaceringsopdateringer";
+"privacy.settings.change" = "Du kan til enhver tid ændre dine privatlivsindstillinger";
+
+// Welcome
+"welcome.text1" = "Optag din rejse med billeder, og eksporter derefter deres placeringsdata til dit foretrukne GPS-system.";
+"welcome.text2" = "Din overskrift er inkluderet, så du kan fotografere et vartegn og derefter plotte det på et havkort eller kort.";
+"welcome.text3" = "Ideel som en hjælp til marinenavigation, især når du tager billedet for at registrere din placering, når du vil, og ikke kontinuerligt, så du sparer din telefons batterilevetid.";
+
+// No photos
+"nophotos" = "Ingen billeder";
+"nophoto.tap1" = "Tryk på kameraknappen og tag et billede. Billedet vises på listen her.";
+"nophoto.tap2" = "Tryk på cirklen for at vælge de fotodata, der skal eksporteres.";
+"nophoto.tap3" = "Tryk på deleknappen for at eksportere.";
+"nophoto.tap4" = "Tryk på indstillingsknappen for at ændre dine præferencer";
+
+// UITesting
+"sample.short" = "Kort teksteksempel.";
+"sample.medium" = "En mellemlang teksteksempel, der måske løber ind i et par rækker.";
+"sample.long" = "Et længere teksteksempel, som skal være mere end et par rækker. For at kontrollere justering og ellipse, og ordskift for sprog som tysk.";
+

@@ -11,32 +11,33 @@ struct EmptyHistoryView: View {
     
     var body: some View {
         List {
-            Text("No photos")
+            Text("nophotos")
                 .font(.title)
             HStack {
                 Image(systemName: "camera.viewfinder")
                     .font(.system(size: 50, weight: .medium))
                     .foregroundColor(.orange)
 
-                Text("Tap the camera button and take a photo. The photo will appear in the list here.")
+                Text("nophoto.tap1")
             }
             HStack {
                 Image(systemName: "checkmark.circle")
                     .font(.system(size: 50, weight: .medium))
                     .foregroundColor(.orange)
-                Text("Tap the circle to select the photo data to export.")
+                Text("nophoto.tap2")
             }
             HStack {
                 Image(systemName: "square.and.arrow.up.circle")
                     .font(.system(size: 50, weight: .medium))
                     .foregroundColor(.orange)
-                Text("Tap the share button to export.")
+                Text("nophoto.tap3")
             }
             HStack {
                 Image(systemName: "gearshape.circle")
                     .font(.system(size: 50, weight: .medium))
                     .foregroundColor(.orange)
-                Text("Tap the settings button to change your preferences")
+                Text("nophoto.tap4")
+                    
             }
         }
     }
@@ -45,5 +46,6 @@ struct EmptyHistoryView: View {
 struct EmptyHistoryView_Previews: PreviewProvider {
     static var previews: some View {
         EmptyHistoryView()
+            .environment(\.locale, .init(identifier: "it"))
     }
 }

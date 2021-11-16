@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"general.ok" = "Ok";
+"general.close" = "Dichtbij";
+"general.done" = "Gedaan";
+"general.settings" = "Instellingen";
+"general.camera" = "Camera";
+"general.onboarding" = "Aan boord";
+"general.show.again" = "Laat nog eens zien";
+
+// Location
+"location.latitude" = "Breedtegraad";
+"location.longitude" = "Lengtegraad";
+"location.heading" = "rubriek";
+"location.elevation" = "Verhoging";
+"location.accuracy" = "Nauwkeurigheid";
+"location.north" = "Noorden";
+"location.south" = "Zuiden";
+"location.east" = "Oosten";
+"location.west" = "Westen";
+
+// Menu
+"menu.share.text" = "Delen als tekst";
+"menu.share.csv" = "Delen als CSV";
+"menu.show.in.maps" = "Weergeven in Kaarten";
+
+// Settings
+"privacy.allow.camera" = "Camera toestaan";
+"privacy.allow.location" = "Locatie toestaan";
+"privacy.missing.camera" = "Je hebt het volgende niet verleend:\nCameratoegang";
+"privacy.missing.location" = "U heeft het volgende niet verleend:\nLocatie-updates";
+"privacy.missing.camera.location" = "U heeft het volgende niet verleend:\nCameratoegang\nLocatie-updates";
+"privacy.settings.change" = "U kunt uw privacy-instellingen op elk moment wijzigen";
+
+// Welcome
+"welcome.text1" = "Leg uw reis vast met foto's en exporteer hun locatiegegevens naar uw favoriete GPS-systeem.";
+"welcome.text2" = "Uw koers is opgenomen, zodat u een oriëntatiepunt kunt fotograferen en deze vervolgens op een zeekaart of kaart kunt plotten.";
+"welcome.text3" = "Ideaal als hulpmiddel bij navigatie op zee, vooral als u de foto maakt om uw locatie vast te leggen wanneer u maar wilt, en niet continu, waardoor de batterijduur van uw telefoon wordt bespaard.";
+
+// No photos
+"nophotos" = "Geen foto's";
+"nophoto.tap1" = "Tik op de cameraknop en maak een foto. De foto zal hier in de lijst verschijnen.";
+"nophoto.tap2" = "Tik op de cirkel om de fotogegevens te selecteren die u wilt exporteren.";
+"nophoto.tap3" = "Tik op de deelknop om te exporteren.";
+"nophoto.tap4" = "Tik op de instellingenknop om uw voorkeuren te wijzigen";
+
+// UITesting
+"sample.short" = "Kort tekstvoorbeeld.";
+"sample.medium" = "Een tekstvoorbeeld van gemiddelde lengte, dat misschien in een paar rijen loopt.";
+"sample.long" = "Een tekstvoorbeeld van langere lengte, dat meer dan een paar rijen zou moeten zijn. Uitlijning en weglatingsteken en woordafbrekingen voor talen zoals Duits controleren.";
+

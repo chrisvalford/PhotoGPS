@@ -77,19 +77,19 @@ struct HistoryView: View {
                             Button(action: {
                                 model.isSharePresented = true
                             }, label: {
-                                Label("Share as text", systemImage: "doc.plaintext")
+                                Label("menu.share.text", systemImage: "doc.plaintext")
                             })
 
                             Button(action: {
                                 model.isSharePresented = true
                             }, label: {
-                                Label("Share as a CSV", systemImage: "doc.text")
+                                Label("menu.share.csv", systemImage: "doc.text")
                             })
 
                             Button(action: {
                                 openInMaps()
                             }, label: {
-                                Label("Show in Maps", systemImage: "map")
+                                Label("menu.show.in.maps", systemImage: "map")
                             })
 
                         }) {
@@ -176,5 +176,6 @@ struct HistoryView: View {
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryView()
+            .environment(\.locale, .init(identifier: "es"))
     }
 }

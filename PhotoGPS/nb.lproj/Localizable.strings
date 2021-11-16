@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"general.ok" = "Ok";
+"general.close" = "Lukk";
+"general.done" = "Ferdig";
+"general.settings" = "Innstillinger";
+"general.camera" = "Kamera";
+"general.onboarding" = "Ombordstigning";
+"general.show.again" = "Vis igjen";
+
+// Location
+"location.latitude" = "Breddegrad";
+"location.longitude" = "Lengdegrad";
+"location.heading" = "Overskrift";
+"location.elevation" = "Høyde";
+"location.accuracy" = "Nøyaktighet";
+"location.north" = "Nord";
+"location.south" = "Sør";
+"location.east" = "Øst";
+"location.west" = "Vest";
+
+// Menu
+"menu.share.text" = "Del som tekst";
+"menu.share.csv" = "Del som en CSV";
+"menu.show.in.maps" = "Vis i Maps";
+
+// Settings
+"privacy.allow.camera" = "Tillat kamera";
+"privacy.allow.location" = "Tillat plassering";
+"privacy.missing.camera" = "Du har ikke gitt:\nKameratilgang";
+"privacy.missing.location" = "Du har ikke gitt:\nPlasseringsoppdateringer";
+"privacy.missing.camera.location" = "Du har ikke gitt:\nKameratilgang\nPlasseringsoppdateringer";
+"privacy.settings.change" = "Du kan endre personverninnstillingene dine når som helst";
+
+// Welcome
+"welcome.text1" = "Ta opp reisen din med bilder, og eksporter deretter posisjonsdataene til ditt favoritt GPS-system.";
+"welcome.text2" = "Overskriften din er inkludert slik at du kan fotografere et landemerke og deretter plotte det på et sjøkart eller kart.";
+"welcome.text3" = "Ideell som et hjelpemiddel til marin navigasjon, spesielt når du tar bildet for å registrere posisjonen din når du vil, og ikke kontinuerlig, slik at du sparer telefonens batterilevetid.";
+
+// No photos
+"nophotos" = "Ingen bilder";
+"nophoto.tap1" = "Trykk på kameraknappen og ta et bilde. Bildet vil vises i listen her.";
+"nophoto.tap2" = "Trykk på sirkelen for å velge bildedataene som skal eksporteres.";
+"nophoto.tap3" = "Trykk på deleknappen for å eksportere.";
+"nophoto.tap4" = "Trykk på innstillingsknappen for å endre preferansene dine";
+
+// UITesting
+"sample.short" = "Kort teksteksempel.";
+"sample.medium" = "En middels lang teksteksempel, som kanskje går inn i et par rader.";
+"sample.long" = "Et teksteksempel med lengre lengde, som bør være mer enn et par rader. For å sjekke justering og ellipse, og ordskift for språk som tysk.";
+
