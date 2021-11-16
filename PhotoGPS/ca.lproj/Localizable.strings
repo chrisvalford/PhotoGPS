@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"general.ok" = "Ok";
+"general.close" = "Tanca";
+"general.done" = "Fet";
+"general.settings" = "Configuració";
+"general.camera" = "Càmera";
+"general.onboarding" = "En l'embarcament";
+"general.show.again" = "Mostra de nou";
+
+// Location
+"location.latitude" = "Latitud";
+"location.longitude" = "Longitud";
+"location.heading" = "Encapçalament";
+"location.elevation" = "Elevació";
+"location.accuracy" = "Precisió";
+"location.north" = "Nord";
+"location.south" = "Sud";
+"location.east" = "Est";
+"location.west" = "Oest";
+
+// Menu
+"menu.share.text" = "Comparteix com a text";
+"menu.share.csv" = "Comparteix com a CSV";
+"menu.show.in.maps" = "Mostra a Maps";
+
+// Settings
+"privacy.allow.camera" = "Permet la càmera";
+"privacy.allow.location" = "Permet la ubicació";
+"privacy.missing.camera" = "No heu concedit:\naccés a la càmera";
+"privacy.missing.location" = "No heu concedit:\nActualitzacions d'ubicació";
+"privacy.missing.camera.location" = "No heu concedit:\nAccés a la càmera\nActualitzacions d'ubicació";
+"privacy.settings.change" = "Podeu canviar la vostra configuració de privadesa en qualsevol moment";
+
+// Welcome
+"welcome.text1" = "Enregistreu el vostre viatge amb fotografies i després exporteu les dades d'ubicació al vostre sistema GPS preferit.";
+"welcome.text2" = "El vostre encapçalament s'inclou perquè pugueu fotografiar una fita i després dibuixar-la en una carta o mapa marí.";
+"welcome.text3" = "Ideal com a ajuda per a la navegació marítima, sobretot quan fas la foto per gravar la teva ubicació quan vulguis, i no de manera continuada, estalviant així la bateria del teu telèfon.";
+
+// No photos
+"nophotos" = "Sense fotos";
+"nophoto.tap1" = "Toqueu el botó de la càmera i feu una foto. La foto apareixerà a la llista aquí.";
+"nophoto.tap2" = "Toca el cercle per seleccionar les dades de la foto per exportar.";
+"nophoto.tap3" = "Toqueu el botó de compartir per exportar.";
+"nophoto.tap4" = "Toqueu el botó de configuració per canviar les vostres preferències";
+
+// UITesting
+"sample.short" = "Exemple de text breu.";
+"sample.medium" = "Una mostra de text de llargada mitjana, potser amb un parell de files.";
+"sample.long" = "Una mostra de text més llarga, que hauria de tenir més d'un parell de files. Per comprovar l'alineació i els punts suspensius, i els salts de paraula per a idiomes com l'alemany.";
+

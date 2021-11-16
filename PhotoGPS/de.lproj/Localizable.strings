@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 13/11/21.
+  
+*/
+
+// General
+"general.ok" = "Ok";
+"general.close" = "Nah dran";
+"general.done" = "Fertig";
+"general.settings" = "Einstellungen";
+"general.camera" = "Kamera";
+"general.onboarding" = "Einsteigen";
+"general.show.again" = "Erneut anzeigen";
+
+// Location
+"location.latitude" = "Breite";
+"location.longitude" = "Längengrad";
+"location.heading" = "Üerschrift";
+"location.elevation" = "Elevation";
+"location.accuracy" = "Genauigkeit";
+"location.north" = "Norden";
+"location.south" = "Süd";
+"location.east" = "Ost";
+"location.west" = "Westen";
+
+// Menu
+"menu.share.text" = "Als Text teilen";
+"menu.share.csv" = "Als CSV-Datei teilen";
+"menu.show.in.maps" = "In Karten anzeigen";
+
+// Settings
+"privacy.allow.camera" = "Kamera zulassen";
+"privacy.allow.location" = "Standort zulassen";
+"privacy.missing.camera" = "Sie haben Folgendes nicht gewährt:\nKamerazugriff";
+"privacy.missing.location" = "Sie haben Folgendes nicht gewährt:\nStandortaktualisierungen";
+"privacy.missing.camera.location" = "Sie haben Folgendes nicht gewährt:\nKamerazugriff\nStandortaktualisierungen";
+"privacy.settings.change" = "Sie können Ihre Datenschutzeinstellungen jederzeit ändern";
+
+// Welcome
+"welcome.text1" = "Zeichnen Sie Ihre Reise mit Fotos auf und exportieren Sie dann die Standortdaten in Ihr bevorzugtes GPS-System.";
+"welcome.text2" = "Ihr Kurs ist enthalten, damit Sie einen Orientierungspunkt fotografieren und dann auf einer Seekarte oder Karte einzeichnen können.";
+"welcome.text3" = "Ideal als Hilfe bei der Navigation auf See, insbesondere wenn Sie das Foto aufnehmen, um Ihren Standort zu speichern, wenn Sie möchten, und nicht ständig, um die Akkulaufzeit Ihres Telefons zu sparen.";
+
+// No photos
+"nophotos" = "Keine Fotos";
+"nophoto.tap1" = "Tippen Sie auf die Kamerataste und machen Sie ein Foto. Das Foto wird hier in der Liste angezeigt.";
+"nophoto.tap2" = "Tippen Sie auf den Kreis, um die zu exportierenden Fotodaten auszuwählen.";
+"nophoto.tap3" = "Tippen Sie zum Exportieren auf die Schaltfläche zum Teilen.";
+"nophoto.tap4" = "Tippen Sie auf die Schaltfläche Einstellungen, um Ihre Einstellungen zu ändern";
+
+// UITesting
+"sample.short" = "Kurzes Textbeispiel.";
+"sample.medium" = "Ein Textbeispiel mittlerer Länge, das vielleicht in ein paar Zeilen läuft.";
+"sample.long" = "Eine längere Textprobe, die mehr als ein paar Zeilen umfassen sollte. Zur Überprüfung von Ausrichtung und Auslassungspunkten sowie Wortumbrüchen für Sprachen wie Deutsch.";
+

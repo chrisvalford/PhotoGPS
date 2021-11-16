@@ -23,7 +23,7 @@ struct Welcome: View {
                             .frame(width: 100)
                             .cornerRadius(20)
                         VStack {
-                            Text("Record your journey with photographs, and then export their location data to you favorite GPS system.")
+                            Text("welcome.text1")
                                 .multilineTextAlignment(.leading)
                                 .font(.body)
                                 .padding(.vertical)
@@ -31,7 +31,7 @@ struct Welcome: View {
                                 Button(action: {
                                     PrivacyPermissions.shared.askCameraPermission()
                                 }, label: {
-                                    Label("Allow camera", systemImage: "camera")
+                                    Label("privacy.allow.camera", systemImage: "general.camera")
 
                                 })
                                     .foregroundColor(.white)
@@ -44,7 +44,7 @@ struct Welcome: View {
                     Divider()
                     HStack {
                         VStack {
-                            Text("Your heading is included so you can photograph a landmark and then plot it on a marine chart or map.")
+                            Text("welcome.text2")
                                 .multilineTextAlignment(.trailing)
                                 .font(.body)
                                 .padding(.vertical)
@@ -52,7 +52,7 @@ struct Welcome: View {
                                 Button(action: {
                                     PrivacyPermissions.shared.askLocationPermission()
                                 }, label: {
-                                    Label("Allow location", systemImage: "mappin.circle")
+                                    Label("privacy.allow.location", systemImage: "mappin.circle")
 
                                 })
                                     .foregroundColor(.white)
@@ -69,7 +69,7 @@ struct Welcome: View {
                             .cornerRadius(20)
                     }
                     Divider()
-                    Text("Ideal as an aid to marine navigation, especially as you take the photo to record your location when you want, and not continuously, so saving your phones battery life.")
+                    Text("welcome.text3")
                         .font(.body)
                         .multilineTextAlignment(.center)
                         .padding(.vertical)
@@ -77,13 +77,13 @@ struct Welcome: View {
                         @AppStorage("ShowOnboarding") var showOnboarding: Bool = false
                         showOnboarding = false
                     }, label: {
-                        Text("Done")
+                        Text("general.done")
                     })
                         .padding()
                         .background(Color.orange)
                         .foregroundColor(Color.white)
                         .cornerRadius(.infinity)
-                    Text("You can change your privacy settings at any time")
+                    Text("privacy.settings.change")
                         .font(.caption2)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.center)
@@ -105,5 +105,6 @@ struct Welcome_Previews: PreviewProvider {
     static var previews: some View {
         Welcome(showOnboarding: .constant(true))
             .preferredColorScheme(.dark)
+            .environment(\.locale, .init(identifier: "es"))
     }
 }

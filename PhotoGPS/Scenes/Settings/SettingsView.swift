@@ -17,13 +17,13 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Onboarding")) {
+                Section(header: Text("general.onboarding")) {
                     Toggle(isOn: $showOnboarding) {
-                        Text("Show again")
+                        Text("general.show.again")
                     }
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle("general.settings")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing:
                                     Button(action: {
@@ -41,5 +41,6 @@ struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
             .preferredColorScheme(.dark)
+            .environment(\.locale, .init(identifier: "es"))
     }
 }
