@@ -8,3 +8,4 @@
 
 NSCameraUsageDescription = "Visualisoidaksesi sijaintisi"
 NSLocationWhenInUseUsageDescription = "Lisää sijaintisi kuvaan"
+NSMicrophoneUsageDescription = "Äänimuistioiden tallentamiseen"

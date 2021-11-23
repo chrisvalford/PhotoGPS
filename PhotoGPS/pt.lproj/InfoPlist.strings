@@ -8,3 +8,4 @@
 
 NSCameraUsageDescription = "Para visualizar sua posição"
 NSLocationWhenInUseUsageDescription = "Para adicionar sua posição à foto"
+NSMicrophoneUsageDescription = "Para gravar memos de voz"
