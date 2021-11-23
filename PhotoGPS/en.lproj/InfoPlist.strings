@@ -1,11 +1,3 @@
-/* 
-  InfoPlist.strings
-  PhotoGPS
-
-  Created by Christopher Alford on 23/11/21.
-  
-*/
-
-NSCameraUsageDescription = "To visualize your position"
-NSLocationWhenInUseUsageDescription = "To add your position to the photo"
-NSMicrophoneUsageDescription = "To record voice memos"
+NSCameraUsageDescription = "To visualize your position";
+NSLocationWhenInUseUsageDescription = "To add your position to the photo";
+NSMicrophoneUsageDescription = "To record voice memos";

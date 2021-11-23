@@ -1,11 +1,3 @@
-/* 
-  InfoPlist.strings
-  PhotoGPS
-
-  Created by Christopher Alford on 23/11/21.
-  
-*/
-
-NSCameraUsageDescription = "Visualisoidaksesi sijaintisi"
-NSLocationWhenInUseUsageDescription = "Lisää sijaintisi kuvaan"
-NSMicrophoneUsageDescription = "Äänimuistioiden tallentamiseen"
+NSCameraUsageDescription = "Visualisoidaksesi sijaintisi";
+NSLocationWhenInUseUsageDescription = "Lisää sijaintisi kuvaan";
+NSMicrophoneUsageDescription = "Äänimuistioiden tallentamiseen";
