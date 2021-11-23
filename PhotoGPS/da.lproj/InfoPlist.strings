@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  PhotoGPS
+
+  Created by Christopher Alford on 23/11/21.
+  
+*/
+
+NSCameraUsageDescription = "For at visualisere din position"
+NSLocationWhenInUseUsageDescription = "For at tilføje din position til fotoet"
