@@ -67,9 +67,9 @@ struct ShareSheet: View {
 //                isSharePresented = true
 //            }
         default:
-            return URL(string: "microsoft.com")!
+            return URL(string: "apple.com")!
         }
-        return URL(string: "microsoft.com")!
+        return URL(string: "apple.com")!
     }
 
 
