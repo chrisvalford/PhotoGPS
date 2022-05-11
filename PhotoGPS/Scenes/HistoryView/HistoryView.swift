@@ -115,10 +115,13 @@ struct HistoryView: View {
 
     func openInMaps() {
         //TODO:
-        let item = selectedGPSData.first
+        guard let item = selectedGPSData.first else {
+            print("Cannot openInMaps - item missing")
+            return
+        }
 
         let regionDistance:CLLocationDistance = 10000
-        let coordinates = CLLocationCoordinate2DMake(item!.latitude, item!.longitude)
+        let coordinates = CLLocationCoordinate2DMake(item.latitude, item.longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         let options = [
             MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
@@ -126,7 +129,7 @@ struct HistoryView: View {
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = item!.saved.debugDescription
+        mapItem.name = "Last photo" //item.saved.debugDescription
         mapItem.openInMaps(launchOptions: options)
     }
 
