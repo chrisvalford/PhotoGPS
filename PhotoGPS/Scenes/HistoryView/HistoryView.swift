@@ -114,23 +114,31 @@ struct HistoryView: View {
     }
 
     func openInMaps() {
-        //TODO:
-        guard let item = selectedGPSData.first else {
-            print("Cannot openInMaps - item missing")
+        
+        var items: [MKMapItem] = []
+        var coordinates: [CLLocationCoordinate2D] = []
+        
+        var loopCount = 1
+        for item in selectedGPSData {
+            let coordinate = CLLocationCoordinate2DMake(item.latitude, item.longitude)
+            coordinates.append(coordinate)
+            let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+            let mapItem = MKMapItem(placemark: placemark)
+            mapItem.name = "Photo: \(loopCount)" //item.saved.debugDescription
+            items.append(mapItem)
+            loopCount += 1
+        }
+        
+        // let regionDistance:CLLocationDistance = 10000
+        guard let regionSpan = MKCoordinateRegion(coordinates: coordinates)  else {
             return
         }
-
-        let regionDistance:CLLocationDistance = 10000
-        let coordinates = CLLocationCoordinate2DMake(item.latitude, item.longitude)
-        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        
         let options = [
             MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
             MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
         ]
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "Last photo" //item.saved.debugDescription
-        mapItem.openInMaps(launchOptions: options)
+        MKMapItem.openMaps(with: items, launchOptions: options)
     }
 
     @ViewBuilder
