@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import MapKit
+import PhotosUI
 
 class HistoryContentViewModel: ObservableObject {
     @Published var showSettings: Bool = false
@@ -29,6 +30,8 @@ struct HistoryView: View {
     @State private var imageCount = 0
     @State var photoTaken = false
     
+    @State private var isPickerPresented: Bool = false
+    
     var body: some View {
         NavigationView {
             listView
@@ -36,6 +39,7 @@ struct HistoryView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
+                        HStack(spacing: 16) {
                         Button(action: {},
                                label: {
                             NavigationLink(destination: CameraView(imageCount: $imageCount)) {
@@ -44,7 +48,16 @@ struct HistoryView: View {
                             }
                         }
                         )
+                        Button(action: {
+                            isPickerPresented.toggle()
+                        }, label: {
+                            Image(systemName: "photo.circle")
+                                .foregroundColor(.orange)
+                        }
+                        )
+                        }
                     }
+                        
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
                             model.showSettings = true
@@ -111,6 +124,11 @@ struct HistoryView: View {
         .sheet(isPresented: $model.isSharePresented, content: {
             ShareSheet(selectedGPSData: self.selectedGPSData)
         })
+        .sheet(isPresented: $isPickerPresented) {
+//            let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
+//            PhotoPicker(configuration: configuration, isPresented: $isPickerPresented)
+            PhotoPicker(isPresented: $isPickerPresented)
+        }
     }
 
     func openInMaps() {
