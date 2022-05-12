@@ -11,6 +11,7 @@
 		2F158B9B282C0E9F0060E18F /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F158B9A282C0E9F0060E18F /* PhotoPicker.swift */; };
 		2F158B9D282D03340060E18F /* PhotosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F158B9C282D03340060E18F /* PhotosListView.swift */; };
 		2F158B9F282D06650060E18F /* HistoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F158B9E282D06650060E18F /* HistoryContentView.swift */; };
+		2F2CE469282D616000F975B0 /* HistoryView+Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2CE468282D616000F975B0 /* HistoryView+Observed.swift */; };
 		2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */; };
 		2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */; };
 		2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F05AD265E5EED00BEAB00 /* Preview Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		2F178E1F2742CAB000CD43DE /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2F178E202742CAB600CD43DE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2F178E212742CABF00CD43DE /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2F2CE468282D616000F975B0 /* HistoryView+Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryView+Observed.swift"; sourceTree = "<group>"; };
 		2F6F05A3265E5EED00BEAB00 /* PhotoGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGPSApp.swift; sourceTree = "<group>"; };
 		2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				2FFFD2362739835100F9AC14 /* HistoryView.swift */,
+				2F2CE468282D616000F975B0 /* HistoryView+Observed.swift */,
 				2F158B9E282D06650060E18F /* HistoryContentView.swift */,
 				2F158B9A282C0E9F0060E18F /* PhotoPicker.swift */,
 				2F7D5FE9273D558700D10A46 /* EmptyHistoryView.swift */,
@@ -501,6 +504,7 @@
 				2FD963FF273A753B00DD2A87 /* String+.swift in Sources */,
 				2FFFD2392739835100F9AC14 /* HistoryViewRow.swift in Sources */,
 				2FFAC769273E69D200F85164 /* DeviceRotationViewModifier.swift in Sources */,
+				2F2CE469282D616000F975B0 /* HistoryView+Observed.swift in Sources */,
 				2F7D5FEA273D558700D10A46 /* EmptyHistoryView.swift in Sources */,
 				2FD96401273A756A00DD2A87 /* Date+.swift in Sources */,
 				2FFFD243273983FF00F9AC14 /* UTI.swift in Sources */,

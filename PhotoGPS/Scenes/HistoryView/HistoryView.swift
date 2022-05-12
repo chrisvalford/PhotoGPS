@@ -10,14 +10,9 @@ import CoreData
 import MapKit
 import PhotosUI
 
-class HistoryContentViewModel: ObservableObject {
-    @Published var showSettings: Bool = false
-    @Published var isSharePresented: Bool = false
-}
-
 struct HistoryView: View {
+    @StateObject private var observed = Observed()
     @State private var selectedGPSData = [GPSData]()
-    @StateObject private var model = HistoryContentViewModel()
     @State private var captureCount = UserDefaults.standard.integer(forKey: "Captured")
     @State private var documentURL: URL?
     @State private var selectedCount = 0
@@ -54,7 +49,7 @@ struct HistoryView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        model.showSettings = true
+                        observed.showSettings = true
                     }, label: {
                         Image(systemName: "gearshape.circle")
                             .foregroundColor(.orange)
@@ -82,13 +77,13 @@ struct HistoryView: View {
                         //                            })
                         
                         Button(action: {
-                            model.isSharePresented = true
+                            observed.isSharePresented = true
                         }, label: {
                             Label("menu.share.text", systemImage: "doc.plaintext")
                         })
                         
                         Button(action: {
-                            model.isSharePresented = true
+                            observed.isSharePresented = true
                         }, label: {
                             Label("menu.share.csv", systemImage: "doc.text")
                         })
@@ -111,10 +106,10 @@ struct HistoryView: View {
             // Reset the badge count
             captureCount = 0
         }
-        .sheet(isPresented: $model.showSettings, content: {
+        .sheet(isPresented: $observed.showSettings, content: {
             SettingsView()
         })
-        .sheet(isPresented: $model.isSharePresented, content: {
+        .sheet(isPresented: $observed.isSharePresented, content: {
             ShareSheet(selectedGPSData: self.selectedGPSData)
         })
         .sheet(isPresented: $isPickerPresented, onDismiss: {}) {
