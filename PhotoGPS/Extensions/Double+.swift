@@ -9,21 +9,22 @@ import UIKit
 
 extension Double {
     func formatLongitude() -> String {
-        let lat = self.decimalDegrees()
+        let lng = self.decimalDegrees()
         var direction = "W"
-        if (lat.0 >= 0 && lat.1 >= 0 && lat.2 > 0) && lat.0 < 180 {
+        if (lng.0 >= 0 && lng.1 >= 0 && lng.2 > 0) && lng.0 < 180 {
             direction = "E"
         }
-        return "\(lat.0)º \(lat.1)' \(lat.2)\" \(direction)"
+        return "\(lng.0 < 0 ? lng.0 * -1 : lng.0)º \(lng.1 < 0 ? lng.1 * -1 : lng.1)' \(lng.2 < 0 ? lng.2 * -1 : lng.2)\" \(direction)"
     }
 
     func formatLatitude() -> String {
-        let lng = self.decimalDegrees()
+        let lat = self.decimalDegrees()
         var direction = "S"
-        if (lng.0 >= 0 && lng.1 >= 0 && lng.2 > 0) && lng.0 < 90 {
+        if (lat.0 >= 0 && lat.1 >= 0 && lat.2 > 0) && lat.0 < 90 {
             direction = "N"
         }
-        return "\(lng.0)º \(lng.1)' \(lng.2)\" \(direction)"
+        return "\(lat.0 < 0 ? lat.0 * -1 : lat.0)º \(lat.1 < 0 ? lat.1 * -1 : lat.1)' \(lat.2 < 0 ? lat.2 * -1 : lat.2)\" \(direction)"
+        //return "\(lng.0)º \(lng.1)' \(lng.2)\" \(direction)"
     }
 
     func formatHeading() -> String {

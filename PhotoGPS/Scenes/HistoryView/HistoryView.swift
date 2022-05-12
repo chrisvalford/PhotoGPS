@@ -29,11 +29,11 @@ struct HistoryView: View {
         NavigationView {
             HistoryContentView(selectedGPSData: $selectedGPSData,
                                selectedCount: $selectedCount)
-                .navigationTitle("PhotoGPS")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        HStack(spacing: 16) {
+            .navigationTitle("PhotoGPS")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack(spacing: 16) {
                         Button(action: {},
                                label: {
                             NavigationLink(destination: CameraView()) {
@@ -49,62 +49,62 @@ struct HistoryView: View {
                                 .foregroundColor(.orange)
                         }
                         )
-                        }
                     }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        model.showSettings = true
+                    }, label: {
+                        Image(systemName: "gearshape.circle")
+                            .foregroundColor(.orange)
+                    }
+                    )
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Menu(content: {
+                        //                            Button(action: {
+                        //                                buildFile(forFileType: .waypoints)
+                        //                            }, label: {
+                        //                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
+                        //                            })
                         
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                        //                            Button(action: {
+                        //                                buildFile(forFileType: .route)
+                        //                            }, label: {
+                        //                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
+                        //                            })
+                        
+                        //                            Button(action: {
+                        //                                buildFile(forFileType: .track)
+                        //                            }, label: {
+                        //                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
+                        //                            })
+                        
                         Button(action: {
-                            model.showSettings = true
+                            model.isSharePresented = true
                         }, label: {
-                            Image(systemName: "gearshape.circle")
-                                .foregroundColor(.orange)
-                        }
-                        )
+                            Label("menu.share.text", systemImage: "doc.plaintext")
+                        })
+                        
+                        Button(action: {
+                            model.isSharePresented = true
+                        }, label: {
+                            Label("menu.share.csv", systemImage: "doc.text")
+                        })
+                        
+                        Button(action: {
+                            openInMaps()
+                        }, label: {
+                            Label("menu.show.in.maps", systemImage: "map")
+                        })
+                        
+                    }) {
+                        Image(systemName: "square.and.arrow.up.circle")
                     }
-                    ToolbarItem(placement: .primaryAction) {
-                        Menu(content: {
-                            //                            Button(action: {
-                            //                                buildFile(forFileType: .waypoints)
-                            //                            }, label: {
-                            //                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
-                            //                            })
-
-                            //                            Button(action: {
-                            //                                buildFile(forFileType: .route)
-                            //                            }, label: {
-                            //                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
-                            //                            })
-
-                            //                            Button(action: {
-                            //                                buildFile(forFileType: .track)
-                            //                            }, label: {
-                            //                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
-                            //                            })
-
-                            Button(action: {
-                                model.isSharePresented = true
-                            }, label: {
-                                Label("menu.share.text", systemImage: "doc.plaintext")
-                            })
-
-                            Button(action: {
-                                model.isSharePresented = true
-                            }, label: {
-                                Label("menu.share.csv", systemImage: "doc.text")
-                            })
-
-                            Button(action: {
-                                openInMaps()
-                            }, label: {
-                                Label("menu.show.in.maps", systemImage: "map")
-                            })
-
-                        }) {
-                            Image(systemName: "square.and.arrow.up.circle")
-                        }
-                        .disabled(selectedCount == 0)
-                    }
-                }.accentColor(.orange)
+                    .disabled(selectedCount == 0)
+                }
+            }.accentColor(.orange)
         }
         .navigationViewStyle(.stack)
         .onAppear() {
@@ -121,7 +121,7 @@ struct HistoryView: View {
             PhotoPicker(isPresented: $isPickerPresented)
         }
     }
-
+    
     func openInMaps() {
         var items: [MKMapItem] = []
         var coordinates: [CLLocationCoordinate2D] = []

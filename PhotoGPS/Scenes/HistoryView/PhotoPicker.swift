@@ -42,7 +42,7 @@ struct PhotoPicker: UIViewControllerRepresentable {
             self.parent = parent
         }
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            parent.isPresented = false // Set isPresented to false because picking has finished.
+            parent.isPresented = false
             for result in results {
                 result.itemProvider.loadDataRepresentation(forTypeIdentifier: UTType.image.identifier,
                                                               completionHandler: { data, error in
@@ -68,12 +68,10 @@ struct PhotoPicker: UIViewControllerRepresentable {
                             let formatter = DateFormatter()
                             formatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
                             date = formatter.date(from: dateTimeOriginal) ?? Date()
-                            print(dateTimeOriginal)
-                            print(date.description)
                         }
                         print(gpsMetadata ?? "No GPS Data")
                         
-                        let context = PersistenceController.shared.container.newBackgroundContext()
+                        let context = PersistenceController.shared.container.viewContext
                         let gpsData = GPSData(context: context)
                         gpsData.identifier = UUID()
                         guard let latitude = gpsMetadata?["Latitude"] as? Double,
@@ -91,7 +89,6 @@ struct PhotoPicker: UIViewControllerRepresentable {
                         // gpsData.accuracy = gpsMetadata?["accuracy"]
                         gpsData.image = data
                         gpsData.saved = date
-                        print(gpsData)
                         do {
                             try context.save()
                         } catch {
