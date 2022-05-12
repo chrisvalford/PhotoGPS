@@ -12,7 +12,6 @@ struct CameraView: View {
     
     @ObservedObject private var headingService = HeadingService.shared
     @State private var cameraPrivacy = PrivacyPermissions.shared.cameraPrivacy
-    @Binding var imageCount: Int
     @State private var locationPrivacy = PrivacyPermissions.shared.locationPrivacy
     @State private var orientation = UIDeviceOrientation.unknown
     @State private var permissionsAlertIsVisible = false
@@ -29,11 +28,7 @@ struct CameraView: View {
         ZStack {
             CustomCameraView(
                 customCameraRepresentable: customCameraRepresentable,
-                imageCompletion: { success in
-                    if success == true {
-                        self.imageCount += 1
-                        print("Saved \(self.imageCount) positions")
-                    }
+                imageCompletion: { _ in
                 }
             )
                 .onAppear {
@@ -107,6 +102,6 @@ struct CameraView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraView(imageCount: .constant(0))
+        CameraView()
     }
 }

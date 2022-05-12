@@ -64,7 +64,7 @@ struct PhotoPicker: UIViewControllerRepresentable {
                         }
                         
                         var date = Date()
-                        if let dateTimeOriginal = exifData?["DateTimeOriginal"] as? String { // "2022:05:07 12:29:17"
+                        if let dateTimeOriginal = exifData?["DateTimeOriginal"] as? String {
                             let formatter = DateFormatter()
                             formatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
                             date = formatter.date(from: dateTimeOriginal) ?? Date()
@@ -73,7 +73,7 @@ struct PhotoPicker: UIViewControllerRepresentable {
                         }
                         print(gpsMetadata ?? "No GPS Data")
                         
-                        let context = PersistenceController.shared.container.viewContext
+                        let context = PersistenceController.shared.container.newBackgroundContext()
                         let gpsData = GPSData(context: context)
                         gpsData.identifier = UUID()
                         guard let latitude = gpsMetadata?["Latitude"] as? Double,
