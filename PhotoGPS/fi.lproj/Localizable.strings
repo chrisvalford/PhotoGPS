@@ -50,6 +50,7 @@
 "nophoto.tap2" = "Valitse vietävät valokuvatiedot napauttamalla ympyrää.";
 "nophoto.tap3" = "Vie napauttamalla jakamispainiketta.";
 "nophoto.tap4" = "Napauta asetuspainiketta muuttaaksesi asetuksiasi";
+"nophoto.tap5" = "Valitse Valokuvista napauttamalla kirjastopainiketta. Ne lisätään, jos ne sisältävät kelvollisia GPS-tietoja.";
 
 // UITesting
 "sample.short" = "Lyhyt tekstinäyte.";

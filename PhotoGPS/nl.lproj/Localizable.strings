@@ -50,6 +50,7 @@
 "nophoto.tap2" = "Tik op de cirkel om de fotogegevens te selecteren die u wilt exporteren.";
 "nophoto.tap3" = "Tik op de deelknop om te exporteren.";
 "nophoto.tap4" = "Tik op de instellingenknop om uw voorkeuren te wijzigen";
+"nophoto.tap5" = "Tik op de bibliotheekknop om uit Foto's te selecteren. Ze worden toegevoegd als ze geldige GPS-gegevens bevatten.";
 
 // UITesting
 "sample.short" = "Kort tekstvoorbeeld.";
