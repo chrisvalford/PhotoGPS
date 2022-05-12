@@ -50,6 +50,7 @@
 "nophoto.tap2" = "Tippen Sie auf den Kreis, um die zu exportierenden Fotodaten auszuwählen.";
 "nophoto.tap3" = "Tippen Sie zum Exportieren auf die Schaltfläche zum Teilen.";
 "nophoto.tap4" = "Tippen Sie auf die Schaltfläche Einstellungen, um Ihre Einstellungen zu ändern";
+"nophoto.tap5" = "Tippen Sie auf die Bibliotheksschaltfläche, um aus Fotos auszuwählen. Sie werden hinzugefügt, wenn sie gültige GPS-Daten enthalten.";
 
 // UITesting
 "sample.short" = "Kurzes Textbeispiel.";

@@ -50,6 +50,7 @@
 "nophoto.tap2" = "Tryk på cirklen for at vælge de fotodata, der skal eksporteres.";
 "nophoto.tap3" = "Tryk på deleknappen for at eksportere.";
 "nophoto.tap4" = "Tryk på indstillingsknappen for at ændre dine præferencer";
+"nophoto.tap5" = "Tryk på biblioteksknappen for at vælge fra Fotos. De vil blive tilføjet, hvis de indeholder gyldige GPS-data.";
 
 // UITesting
 "sample.short" = "Kort teksteksempel.";

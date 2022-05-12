@@ -50,6 +50,7 @@
 "nophoto.tap2" = "Tap the circle to select the photo data to export.";
 "nophoto.tap3" = "Tap the share button to export.";
 "nophoto.tap4" = "Tap the settings button to change your preferences";
+"nophoto.tap5" = "Tap the library button to select from Photos. They will be added if they contain valid GPS data.";
 
 // UITesting
 "sample.short" = "Short text sample.";

@@ -62,27 +62,36 @@ struct PhotoPicker: UIViewControllerRepresentable {
                             print("No EXIF data for \(result.itemProvider.suggestedName ?? "")")
                             return
                         }
-                        let dateTimeOriginal = exifData?["DateTimeOriginal"] as? String // "2022:05:07 12:29:17"
-                        print(dateTimeOriginal ?? "No date")
+                        
+                        var date = Date()
+                        if let dateTimeOriginal = exifData?["DateTimeOriginal"] as? String { // "2022:05:07 12:29:17"
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
+                            date = formatter.date(from: dateTimeOriginal) ?? Date()
+                            print(dateTimeOriginal)
+                            print(date.description)
+                        }
                         print(gpsMetadata ?? "No GPS Data")
                         
                         let context = PersistenceController.shared.container.viewContext
                         let gpsData = GPSData(context: context)
                         gpsData.identifier = UUID()
-                        gpsData.saved = Date()
                         guard let latitude = gpsMetadata?["Latitude"] as? Double,
-                              let longitude = gpsMetadata?["Latitude"] as? Double,
+                              let longitude = gpsMetadata?["Longitude"] as? Double,
+                              let latitudeRef = gpsMetadata?["LatitudeRef"] as? String,
+                              let longitudeRef = gpsMetadata?["LongitudeRef"] as? String,
                               let trueHeading = gpsMetadata?["ImgDirection"] as? Double,
                               let elevation = gpsMetadata?["Altitude"] as? Double else {
                             return
                         }
-                        gpsData.latitude = latitude
-                        gpsData.longitude = longitude
+                        gpsData.latitude = latitudeRef == "N" ? latitude : latitude * -1
+                        gpsData.longitude = longitudeRef == "E" ? longitude : longitude * -1
                         gpsData.trueHeading = trueHeading
                         gpsData.elevation = elevation
                         // gpsData.accuracy = gpsMetadata?["accuracy"]
                         gpsData.image = data
-                        
+                        gpsData.saved = date
+                        print(gpsData)
                         do {
                             try context.save()
                         } catch {
