@@ -11,6 +11,7 @@ import SwiftUI
 struct PhotoGPSApp: App {
 
     @AppStorage("ShowOnboarding") var showOnboarding: Bool = true
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
@@ -18,7 +19,7 @@ struct PhotoGPSApp: App {
                 Welcome(showOnboarding: $showOnboarding)
             } else {
                 HistoryView()
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
     }

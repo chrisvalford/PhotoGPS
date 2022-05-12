@@ -50,6 +50,7 @@
 "nophoto.tap2" = "Toca el cercle per seleccionar les dades de la foto per exportar.";
 "nophoto.tap3" = "Toqueu el botó de compartir per exportar.";
 "nophoto.tap4" = "Toqueu el botó de configuració per canviar les vostres preferències";
+"nophoto.tap5" = "Toqueu el botó de la biblioteca per seleccionar les fotos. S'afegiran si contenen dades GPS vàlides.";
 
 // UITesting
 "sample.short" = "Exemple de text breu.";

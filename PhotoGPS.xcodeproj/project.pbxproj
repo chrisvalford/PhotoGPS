@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2F158B77282BB2E30060E18F /* MKCoordinateRegion+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F158B76282BB2E30060E18F /* MKCoordinateRegion+.swift */; };
+		2F158B9B282C0E9F0060E18F /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F158B9A282C0E9F0060E18F /* PhotoPicker.swift */; };
+		2F158B9D282D03340060E18F /* PhotosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F158B9C282D03340060E18F /* PhotosListView.swift */; };
+		2F158B9F282D06650060E18F /* HistoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F158B9E282D06650060E18F /* HistoryContentView.swift */; };
 		2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F05A6265E5EED00BEAB00 /* PhotoGPSApp.swift */; };
 		2F6F05AB265E5EED00BEAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F05AA265E5EED00BEAB00 /* Assets.xcassets */; };
 		2F6F05AE265E5EED00BEAB00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F05AD265E5EED00BEAB00 /* Preview Assets.xcassets */; };
@@ -70,6 +73,9 @@
 
 /* Begin PBXFileReference section */
 		2F158B76282BB2E30060E18F /* MKCoordinateRegion+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+.swift"; sourceTree = "<group>"; };
+		2F158B9A282C0E9F0060E18F /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		2F158B9C282D03340060E18F /* PhotosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListView.swift; sourceTree = "<group>"; };
+		2F158B9E282D06650060E18F /* HistoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContentView.swift; sourceTree = "<group>"; };
 		2F178E1E2742CAA800CD43DE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2F178E1F2742CAB000CD43DE /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2F178E202742CAB600CD43DE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -317,8 +323,11 @@
 			isa = PBXGroup;
 			children = (
 				2FFFD2362739835100F9AC14 /* HistoryView.swift */,
+				2F158B9E282D06650060E18F /* HistoryContentView.swift */,
+				2F158B9A282C0E9F0060E18F /* PhotoPicker.swift */,
 				2F7D5FE9273D558700D10A46 /* EmptyHistoryView.swift */,
 				2FFFD2372739835100F9AC14 /* HistoryViewRow.swift */,
+				2F158B9C282D03340060E18F /* PhotosListView.swift */,
 			);
 			path = HistoryView;
 			sourceTree = "<group>";
@@ -500,6 +509,7 @@
 				2FFFD2382739835100F9AC14 /* HistoryView.swift in Sources */,
 				2FD963FC273A6A4600DD2A87 /* LatLongView.swift in Sources */,
 				2FFAC76D273E840A00F85164 /* ActivityViewController.swift in Sources */,
+				2F158B9D282D03340060E18F /* PhotosListView.swift in Sources */,
 				2FD963F9273A698900DD2A87 /* HeadingView.swift in Sources */,
 				2FE819DD273BEC2E00408C7A /* SettingsView.swift in Sources */,
 				2FE819D5273BD12800408C7A /* CGFloat+.swift in Sources */,
@@ -507,11 +517,13 @@
 				2F158B77282BB2E30060E18F /* MKCoordinateRegion+.swift in Sources */,
 				2FE819D3273BD08700408C7A /* CLLocation+.swift in Sources */,
 				2F6F05DB265E822400BEAB00 /* HeadingService.swift in Sources */,
+				2F158B9F282D06650060E18F /* HistoryContentView.swift in Sources */,
 				2FE819DA273BE2D800408C7A /* Welcome.swift in Sources */,
 				2FFFD242273983FF00F9AC14 /* GpxParse.swift in Sources */,
 				2FE9F00E265F88B300F7DBC1 /* CameraControlsView.swift in Sources */,
 				2F6F05B3265E5EED00BEAB00 /* PhotoGPS.xcdatamodeld in Sources */,
 				2F6F05A7265E5EED00BEAB00 /* PhotoGPSApp.swift in Sources */,
+				2F158B9B282C0E9F0060E18F /* PhotoPicker.swift in Sources */,
 				2FE9F00C265F889400F7DBC1 /* CustomCameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

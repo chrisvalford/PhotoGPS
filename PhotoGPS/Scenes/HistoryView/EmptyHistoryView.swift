@@ -21,6 +21,13 @@ struct EmptyHistoryView: View {
                 Text("nophoto.tap1")
             }
             HStack {
+                Image(systemName: "photo.circle")
+                    .foregroundColor(.orange)
+                    .font(.system(size: 50, weight: .medium))
+                    .foregroundColor(.orange)
+                Text("nophoto.tap5")
+            }
+            HStack {
                 Image(systemName: "checkmark.circle")
                     .font(.system(size: 50, weight: .medium))
                     .foregroundColor(.orange)

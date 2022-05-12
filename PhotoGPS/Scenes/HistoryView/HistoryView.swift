@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import MapKit
+import PhotosUI
 
 class HistoryContentViewModel: ObservableObject {
     @Published var showSettings: Bool = false
@@ -17,93 +18,98 @@ class HistoryContentViewModel: ObservableObject {
 struct HistoryView: View {
     @State private var selectedGPSData = [GPSData]()
     @StateObject private var model = HistoryContentViewModel()
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \GPSData.saved, ascending: false)],
-        animation: .default)
-    
-    private var saves: FetchedResults<GPSData>
     @State private var captureCount = UserDefaults.standard.integer(forKey: "Captured")
     @State private var documentURL: URL?
     @State private var selectedCount = 0
-    @State private var imageCount = 0
     @State var photoTaken = false
+    
+    @State private var isPickerPresented: Bool = false
     
     var body: some View {
         NavigationView {
-            listView
-                .navigationTitle("PhotoGPS")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+            HistoryContentView(selectedGPSData: $selectedGPSData,
+                               selectedCount: $selectedCount)
+            .navigationTitle("PhotoGPS")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack(spacing: 16) {
                         Button(action: {},
                                label: {
-                            NavigationLink(destination: CameraView(imageCount: $imageCount)) {
+                            NavigationLink(destination: CameraView()) {
                                 Image(systemName: "camera.viewfinder")
                                     .foregroundColor(.orange)
                             }
                         }
                         )
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            model.showSettings = true
+                            isPickerPresented.toggle()
                         }, label: {
-                            Image(systemName: "gearshape.circle")
+                            Image(systemName: "photo.circle")
                                 .foregroundColor(.orange)
                         }
                         )
                     }
-                    ToolbarItem(placement: .primaryAction) {
-                        Menu(content: {
-                            //                            Button(action: {
-                            //                                buildFile(forFileType: .waypoints)
-                            //                            }, label: {
-                            //                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
-                            //                            })
-
-                            //                            Button(action: {
-                            //                                buildFile(forFileType: .route)
-                            //                            }, label: {
-                            //                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
-                            //                            })
-
-                            //                            Button(action: {
-                            //                                buildFile(forFileType: .track)
-                            //                            }, label: {
-                            //                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
-                            //                            })
-
-                            Button(action: {
-                                model.isSharePresented = true
-                            }, label: {
-                                Label("menu.share.text", systemImage: "doc.plaintext")
-                            })
-
-                            Button(action: {
-                                model.isSharePresented = true
-                            }, label: {
-                                Label("menu.share.csv", systemImage: "doc.text")
-                            })
-
-                            Button(action: {
-                                openInMaps()
-                            }, label: {
-                                Label("menu.show.in.maps", systemImage: "map")
-                            })
-
-                        }) {
-                            Image(systemName: "square.and.arrow.up.circle")
-                        }
-                        .disabled(selectedCount == 0)
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        model.showSettings = true
+                    }, label: {
+                        Image(systemName: "gearshape.circle")
+                            .foregroundColor(.orange)
                     }
-                }.accentColor(.orange)
+                    )
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Menu(content: {
+                        //                            Button(action: {
+                        //                                buildFile(forFileType: .waypoints)
+                        //                            }, label: {
+                        //                                Label("Share as Waypoints", systemImage: "chart.bar.doc.horizontal")
+                        //                            })
+                        
+                        //                            Button(action: {
+                        //                                buildFile(forFileType: .route)
+                        //                            }, label: {
+                        //                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
+                        //                            })
+                        
+                        //                            Button(action: {
+                        //                                buildFile(forFileType: .track)
+                        //                            }, label: {
+                        //                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
+                        //                            })
+                        
+                        Button(action: {
+                            model.isSharePresented = true
+                        }, label: {
+                            Label("menu.share.text", systemImage: "doc.plaintext")
+                        })
+                        
+                        Button(action: {
+                            model.isSharePresented = true
+                        }, label: {
+                            Label("menu.share.csv", systemImage: "doc.text")
+                        })
+                        
+                        Button(action: {
+                            openInMaps()
+                        }, label: {
+                            Label("menu.show.in.maps", systemImage: "map")
+                        })
+                        
+                    }) {
+                        Image(systemName: "square.and.arrow.up.circle")
+                    }
+                    .disabled(selectedCount == 0)
+                }
+            }.accentColor(.orange)
         }
         .navigationViewStyle(.stack)
         .onAppear() {
             // Reset the badge count
             captureCount = 0
-            imageCount = saves.count
         }
         .sheet(isPresented: $model.showSettings, content: {
             SettingsView()
@@ -111,10 +117,12 @@ struct HistoryView: View {
         .sheet(isPresented: $model.isSharePresented, content: {
             ShareSheet(selectedGPSData: self.selectedGPSData)
         })
+        .sheet(isPresented: $isPickerPresented, onDismiss: {}) {
+            PhotoPicker(isPresented: $isPickerPresented)
+        }
     }
-
+    
     func openInMaps() {
-        
         var items: [MKMapItem] = []
         var coordinates: [CLLocationCoordinate2D] = []
         
@@ -139,48 +147,6 @@ struct HistoryView: View {
             MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
         ]
         MKMapItem.openMaps(with: items, launchOptions: options)
-    }
-
-    @ViewBuilder
-    var listView: some View {
-        if imageCount > 0 {
-            objectsListView
-        } else {
-            EmptyHistoryView()
-        }
-    }
-
-    var objectsListView: some View {
-        List {
-            ForEach(saves, id: \.identifier) { item in
-                NavigationLink(destination: HistoryDetailView(item: item)) {
-                    HistoryViewRow(gpsData: item, isSelected: selectedGPSData.contains(item)) { }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        if self.selectedGPSData.contains(item) {
-                            self.selectedGPSData.removeAll(where: { $0 == item })
-                            self.selectedCount -= 1
-                        } else {
-                            self.selectedGPSData.append(item)
-                            self.selectedCount += 1
-                        }
-                    }
-                }
-            }.onDelete(perform: self.deleteRows)
-        }
-    }
-
-    private func deleteRows(at indexSet: IndexSet) {
-        for index in indexSet {
-            let item = saves[index]
-            viewContext.delete(item)
-        }
-        do {
-            try viewContext.save()
-            imageCount -= 1
-        } catch {
-            print("Error saving context: \(error.localizedDescription)")
-        }
     }
 }
 
