@@ -24,7 +24,6 @@ extension Double {
             direction = "N"
         }
         return "\(lat.0 < 0 ? lat.0 * -1 : lat.0)º \(lat.1 < 0 ? lat.1 * -1 : lat.1)' \(lat.2 < 0 ? lat.2 * -1 : lat.2)\" \(direction)"
-        //return "\(lng.0)º \(lng.1)' \(lng.2)\" \(direction)"
     }
 
     func formatHeading() -> String {
@@ -43,4 +42,20 @@ extension Double {
     var degreesToRadians: Double { return Double(CGFloat(self).degreesToRadians) }
     var radiansToDegrees: Double { return Double(CGFloat(self).radiansToDegrees) }
 
+
+    /// Convert `Double` to `Decimal`, rounding it to `scale` decimal places.
+    ///
+    /// - Parameters:
+    ///   - scale: How many decimal places to round to. Defaults to `0`.
+    ///   - mode:  The preferred rounding mode. Defaults to `.plain`.
+    /// - Returns: The rounded `String` value.
+    
+    func roundedDecimal(to scale: Int = 0, mode: NSDecimalNumber.RoundingMode = .plain) -> String {
+        var decimalValue = Decimal(self)
+        var result = Decimal()
+        NSDecimalRound(&result, &decimalValue, scale, mode)
+        return result.description
+    }
+    
+    // .roundedDecimal(to: 1)
 }

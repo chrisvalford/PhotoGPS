@@ -40,13 +40,13 @@ struct HistoryDetailView: View {
                         Text("location.elevation")
                             .fontWeight(.semibold)
                         Spacer()
-                        Text("\(item.elevation) m")
+                        Text("\(item.elevation.roundedDecimal(to: 1)) m")
                     }
                     HStack {
                         Text("location.accuracy")
                             .fontWeight(.semibold)
                         Spacer()
-                        Text("\(item.accuracy)")
+                        Text("\(item.accuracy.roundedDecimal(to: 1))")
                     }
                 }
                 MapView(item: $item)
