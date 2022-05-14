@@ -106,7 +106,8 @@ struct HistoryView: View {
                 }
             }.accentColor(.orange)
         }
-        .navigationViewStyle(.stack)
+        //.navigationViewStyle(.stack)
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
             // Reset the badge count
             captureCount = 0
