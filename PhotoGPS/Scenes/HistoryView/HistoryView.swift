@@ -13,6 +13,7 @@ import PhotosUI
 class HistoryContentViewModel: ObservableObject {
     @Published var showSettings: Bool = false
     @Published var isSharePresented: Bool = false
+    @Published var forFileType: FileType = .text
 }
 
 struct HistoryView: View {
@@ -82,12 +83,14 @@ struct HistoryView: View {
                         //                            })
                         
                         Button(action: {
+                            model.forFileType = .text
                             model.isSharePresented = true
                         }, label: {
                             Label("menu.share.text", systemImage: "doc.plaintext")
                         })
                         
                         Button(action: {
+                            model.forFileType = .csv
                             model.isSharePresented = true
                         }, label: {
                             Label("menu.share.csv", systemImage: "doc.text")
@@ -116,7 +119,7 @@ struct HistoryView: View {
             SettingsView()
         })
         .sheet(isPresented: $model.isSharePresented, content: {
-            ShareSheet(selectedGPSData: self.selectedGPSData)
+            ShareSheet(selectedGPSData: self.selectedGPSData, forType: model.forFileType)
         })
         .sheet(isPresented: $isPickerPresented, onDismiss: {}) {
             PhotoPicker(isPresented: $isPickerPresented)

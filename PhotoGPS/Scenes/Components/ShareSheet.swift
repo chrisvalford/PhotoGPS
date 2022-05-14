@@ -12,9 +12,9 @@ struct ShareSheet: View {
     private var selectedGPSData = [GPSData]()
     private var url: URL
 
-    init(selectedGPSData: [GPSData]) {
+    init(selectedGPSData: [GPSData], forType: FileType) {
         self.selectedGPSData = selectedGPSData
-        self.url = FileBuilder.output(forType: .text, selectedGPSData: selectedGPSData)!
+        self.url = FileBuilder.output(forType: forType, selectedGPSData: selectedGPSData)!
     }
 
     var body: some View {
