@@ -76,11 +76,12 @@ struct HistoryView: View {
                         //                                Label("Share as a Route", systemImage: "chart.bar.doc.horizontal")
                         //                            })
                         
-                        //                            Button(action: {
-                        //                                buildFile(forFileType: .track)
-                        //                            }, label: {
-                        //                                Label("Share as a Track", systemImage: "chart.bar.doc.horizontal")
-                        //                            })
+                        Button(action: {
+                            model.forFileType = .track
+                            model.isSharePresented = true
+                        }, label: {
+                            Label("Share as your Track", systemImage: "chart.bar.doc.horizontal")
+                        })
                         
                         Button(action: {
                             model.forFileType = .text
