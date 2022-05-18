@@ -40,7 +40,7 @@
 "privacy.settings.change" = "Puoi modificare le tue impostazioni sulla privacy in qualsiasi momento";
 
 // Welcome
-"welcome.text1" = "Registra il tuo viaggio con fotografie, quindi esporta i dati sulla posizione sul tuo sistema GPS preferito.";
+"welcome.text1" = "Registra il tuo viaggio con le fotografie, quindi esporta i dati sulla loro posizione sul tuo sistema GPS preferito.";
 "welcome.text2" = "La tua rotta è inclusa in modo da poter fotografare un punto di riferimento e quindi tracciarlo su una carta nautica o una mappa.";
 "welcome.text3" = "Ideale come ausilio alla navigazione marittima, soprattutto quando scatti la foto per registrare la tua posizione quando vuoi, e non continuamente, risparmiando così la durata della batteria del tuo telefono.";
 

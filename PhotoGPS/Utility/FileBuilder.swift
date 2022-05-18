@@ -70,11 +70,10 @@ struct FileBuilder {
         outString = """
             <?xml version=\"1.0\" encoding=\"utf-8\"?>
             <gpx version=\"1.1\" creator=\"PhotoGPS\"
-            xmlns=\"http://www.topografix.com/GPX/1/1\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\">
-            <trk>
+            xmlns=\"http://www.topografix.com/GPX/1/1\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\">\n
             """
         outString.append("<name>\(fileName)</name>\n")
-        outString.append("<trkseg>\n")
+        outString.append("<trk>\n<trkseg>\n")
 
         for item in selectedGPSData {
             outString.append("<trkpt lat=\"\(item.latitude)\" lon=\"\(item.longitude)\">\n")
@@ -220,3 +219,61 @@ struct FileBuilder {
         return formatter.string(from: date)
     }
 }
+
+/*
+ Waypoint is a waypoint (“wpt” entity in the GPX file).
+
+ Route point (“rtept” entity in the GPX file) may, but does not have to, also be a waypoint.
+
+ All the navobjects with the exception of track points (“trkpt” entity in the GPX file) do have
+ a “GUID” in GPX produced by OpenCPN.
+
+ The “GUID” is the primary identifier used to see if the object already exists or not (with the
+ exception of “wpt” import, see below).
+
+ Two objects with the same “GUID” can not exist at the same time.
+
+ A waypoint may also be included in zero to many routes.
+
+ A route point may not exist without a route though (= must be included in 1 to many existing
+ routes and unlike a waypoint, it is also for example deleted with the last route it is a part of).
+
+ It is not possible to have the same waypoint in a layer and then import it from a GPX file.
+
+ The logic used for “wpt” entities during the import to determine duplicates is the “Name” and “lat” + “lon”,
+ (because we can not rely on the imported entity having the OpenCPN specific GUID extension during the import).
+
+ The “GUID” represents the internal globally unique identifier of the navobject in OpenCPN and is completely
+ irrelevant in the waypoint import from GPX as you can see above (It is used elsewhere for other purposes).
+
+ Import of a Route Gpx File with duplicate waypoints will result in a message, and the existing waypoint will be shared.
+ 
+ <gpx>
+ // Your intended route
+     <rte>
+         <rtept lat="13.09993" lon="77.58959">
+             <name>Start</name>
+             <cmt>Start of route</cmt>
+         </rtept>
+         <rtept lat="13.10052" lon="77.58847">
+             <name>Left</name>
+             <cmt>Turn left onto SH 9</cmt>
+         </rtept>
+     </rte>
+
+ // Your actual track through the water
+     <trk>
+         <trkseg>
+             <trkpt lat="13.09993" lon="77.58959">
+                 <ele>923.2</ele>
+             </trkpt>
+             <trkpt lat="13.10031" lon="77.58915">
+                 <ele>924.0</ele>
+             </trkpt>
+             <trkpt lat="13.1006699" lon="77.58872">
+                 <ele>924.1</ele>
+             </trkpt>
+         </trkseg>
+     </trk>
+ </gpx>
+*/
