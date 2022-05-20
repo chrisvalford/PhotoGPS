@@ -30,6 +30,7 @@
 "menu.share.text" = "Jaa tekstinä";
 "menu.share.csv" = "Jaa CSV-tiedostona";
 "menu.show.in.maps" = "Näytä Mapsissa";
+"menu.share.track" = "Jaa kappaleena";
 
 // Settings
 "privacy.allow.camera" = "Salli kamera";

@@ -80,7 +80,7 @@ struct HistoryView: View {
                             model.forFileType = .track
                             model.isSharePresented = true
                         }, label: {
-                            Label("Share as your Track", systemImage: "chart.bar.doc.horizontal")
+                            Label("menu.share.track", systemImage: "chart.bar.doc.horizontal")
                         })
                         
                         Button(action: {

@@ -30,6 +30,7 @@
 "menu.share.text" = "Als Text teilen";
 "menu.share.csv" = "Als CSV-Datei teilen";
 "menu.show.in.maps" = "In Karten anzeigen";
+"menu.share.track" = "Als eigenen Track teilen";
 
 // Settings
 "privacy.allow.camera" = "Kamera zulassen";
