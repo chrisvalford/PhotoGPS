@@ -1,0 +1,2 @@
+"NSCameraUsageDescription" = "A photo is the best reminder of your current position, it is not shared when you export your GPS data.";
+"NSLocationWhenInUseUsageDescription" = "Your location will be used to accuratly discover your position so you can share it with your other GPS systems.";

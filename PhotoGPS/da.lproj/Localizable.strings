@@ -30,6 +30,7 @@
 "menu.share.text" = "Del som tekst";
 "menu.share.csv" = "Del som en CSV";
 "menu.show.in.maps" = "Vis i Maps";
+"menu.share.track" = "Del som dit spor";
 
 // Settings
 "privacy.allow.camera" = "Tillad kamera";
