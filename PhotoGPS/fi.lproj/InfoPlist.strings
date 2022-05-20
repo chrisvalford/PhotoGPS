@@ -1,0 +1,2 @@
+"NSCameraUsageDescription" = "Valokuva on paras muistutus nykyisestä sijainnistasi, sitä ei jaeta, kun viet GPS-tietoja.";
+"NSLocationWhenInUseUsageDescription" = "Sijaintiasi käytetään sijaintisi tarkan selvittämiseen, jotta voit jakaa sen muiden GPS-järjestelmien kanssa.";
